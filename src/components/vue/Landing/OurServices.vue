@@ -17,6 +17,5 @@
 </template>
 <script setup>
 import StructureBasicBlock from "../_structure/basicBlock.vue";
-import ServiceCard from "../../ServiceCard.vue";
-import PaddingContainer from "../_structure/paddingContainer.vue";
+import ServiceCard from "../../vue/content/ServiceCard.vue";
 </script>
