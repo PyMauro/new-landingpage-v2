@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'Mango Grotesque';
+  src: url('../assets/font/Mango\ Grotesque-VF.ttf') format('ttf');
+  font-weight: 500 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+    --font-heading: 'Mango Grotesque', sans-serif;
+    --font-body: var(--font-body);
+
+    
+}
+
+
+@keyframes dots {
+  0% {
+    background-position:
+      0 0,
+      4px 4px;
+  }
+  100% {
+    background-position:
+      8px 0,
+      12px 4px;
+  }
+}
+
+/* Creamos una utilidad personalizada para animar */
+@utility animate-dots {
+  animation: dots 2s linear infinite;
+}

@@ -1,11 +1,65 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import HeroSection from '../components/vue/Landing/HeroSection.vue';
+import StructurePaddingContainer from '../components/vue/_structure/paddingContainer.vue';
+import BasicBlock from '../components/vue/_structure/basicBlock.vue';
+import LandingIntroSection from '../components/vue/Landing/IntroSection.vue';
+import LandingAboutUsSection from '../components/vue/Landing/aboutUsSection.vue';
+import LandingOurServices from '../components/vue/Landing/OurServices.vue';
 ---
 
 <Layout>
-	<Welcome />
+	<StructurePaddingContainer>
+		<HeroSection />
+	</StructurePaddingContainer>
+
+
+	    <!-- Intro section -->
+    <StructurePaddingContainer>
+        <LandingIntroSection></LandingIntroSection>
+    </StructurePaddingContainer>
+        
+    <!-- Sobre Nosotros -->
+    <LandingAboutUsSection></LandingAboutUsSection>
+
+
+    <!-- Nuestros Servicios -->
+    <StructurePaddingContainer>
+        <LandingOurServices></LandingOurServices>
+    </StructurePaddingContainer>
+
+<!-- Our Work -->
+
+    <StructurePaddingContainer>
+        <BasicBlock extra-borders="bottom-border">
+        <BasicBlock extra-borders="bottom-border" padding="padding">
+            <h2 class="font-semibold text-neutral-100 text-7xl font-heading"><span class="text-stone-700 pr-8">4.</span>Nuestro Trabajo Habla por Si Solo</h2>
+        </BasicBlock>
+
+                <div class="w-full h-screen"></div>
+        </BasicBlock>
+    </StructurePaddingContainer>
+
+<!--TODO: Blog Section -->
+
+<!-- <BasicBlock extra-borders="bottom-border">
+<template #no-padding>
+<BasicBlock extra-borders="bottom-border">
+    <h2 class="font-semibold text-neutral-100 text-7xl font-heading"><span class="text-stone-700 pr-8">5.</span>No solo le damos vida a negocios, tambien los ayudamos a creecer. </h2>
+</BasicBlock>
+</template>
+        <div class="w-full h-screen"></div>
+</BasicBlock> -->
+
+<!-- Contact Section -->
+
+
+<!-- <BasicBlock extra-borders="bottom-border">
+<template #no-padding>
+<BasicBlock extra-borders="bottom-border">
+    <h2 class="font-semibold text-neutral-100 text-7xl font-heading"><span class="text-stone-700 pr-8">6.</span>No dejes estar tu negocio, dale la ventaja que necesita en este nuevo mercado.</h2>
+</BasicBlock>
+</template>
+        <div class="w-full h-screen"></div>
+</BasicBlock> -->
 </Layout>

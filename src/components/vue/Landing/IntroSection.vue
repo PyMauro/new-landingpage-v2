@@ -1,0 +1,18 @@
+<template>
+        <StructureBasicBlock extra-borders="bottom-border"  padding="padding">
+        <template #no-padding>
+        <StructureBasicBlock extra-borders="bottom-border"  padding="padding">
+                <h2 class="font-semibold text-neutral-100 text-7xl font-heading"><span class="text-stone-700 pr-8">1.</span>Bienvenido al Mundo Moderno</h2>
+        </StructureBasicBlock>
+        </template>
+        <div class="flex flex-col gap-4 w-full">
+            <p class="font-body text-xl text-neutral-300">Un mundo donde la atención se volvió el nuevo oro y cada vez es mas escaso. Donde ya nadie tiene tiempo. Donde existen maquinas pensantes que incluso controlan negocios enteros. Y si, suena loco pero es el mundo en el que estamos ahora, y donde estas intentando hacer que tu negocio funcione.</p>
+            <img src="Indifference.png" alt="La indiferencia del consumidor" class="w-full h-auto rounded-lg shadow-lg"/>
+            <p class="font-body text-xl text-neutral-300">Hoy en dia, hay mucha mas exposición. Pero eso a su vez, trae mas competencia. Hoy, la visibilidad en redes se volvió la diferencia entre un negocio con futuro a uno que sobrevive. </p>
+        </div>
+    </StructureBasicBlock>
+</template>
+
+<script setup>
+import StructureBasicBlock from "../_structure/basicBlock.vue";
+</script>
