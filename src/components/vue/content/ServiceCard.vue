@@ -1,5 +1,5 @@
 <script setup>
-import BrandButton from "../components/vue/Brand/Button.vue"
+import BrandButton from "../Brand/Button.vue";
 const props = defineProps({
     serviceTitle: {
         type: String,
