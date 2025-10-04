@@ -1,57 +1,36 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/vue/Landing/HeroSection.vue';
-import StructurePaddingContainer from '../components/vue/_structure/paddingContainer.vue';
-import LandingPorfolioSection from '../components/vue/Landing/PorfolioSection.vue';
-import LandingIntroSection from '../components/vue/Landing/IntroSection.astro';
-import LandingAboutUsSection from '../components/vue/Landing/aboutUsSection.astro';
-import LandingOurServices from '../components/vue/Landing/OurServices.vue';
+import Layout from "../layouts/Layout.astro";
+import HeroSection from "../components/vue/Landing/HeroSection.vue";
+import StructurePaddingContainer from "../components/vue/_structure/paddingContainer.vue";
+import LandingPorfolioSection from "../components/vue/Landing/PorfolioSection.vue";
+import LandingIntroSection from "../components/vue/Landing/IntroSection.astro";
+import LandingAboutUsSection from "../components/vue/Landing/aboutUsSection.astro";
+import LandingOurServices from "../components/vue/Landing/OurServices.vue";
+import BasicBlock from "../components/vue/_structure/BasicBlock.vue";
+import ContactSection from "../components/vue/Landing/ContactSection.astro";
 ---
 
 <Layout>
-	<StructurePaddingContainer>
-		<HeroSection />
-	</StructurePaddingContainer>
+  <StructurePaddingContainer>
+    <HeroSection />
+  </StructurePaddingContainer>
 
+  <!-- Intro section -->
+  <StructurePaddingContainer>
+    <LandingIntroSection />
+  </StructurePaddingContainer>
 
-	    <!-- Intro section -->
-    <StructurePaddingContainer>
-        <LandingIntroSection></LandingIntroSection>
-    </StructurePaddingContainer>
-        
-    <!-- Sobre Nosotros -->
-    <LandingAboutUsSection></LandingAboutUsSection>
+  <!-- Sobre Nosotros -->
+  <LandingAboutUsSection />
 
+  <!-- Nuestros Servicios -->
+  <StructurePaddingContainer>
+    <LandingOurServices />
+  </StructurePaddingContainer>
 
-    <!-- Nuestros Servicios -->
-    <StructurePaddingContainer>
-        <LandingOurServices></LandingOurServices>
-    </StructurePaddingContainer>
+  <!-- Our Work -->
+  <LandingPorfolioSection />
 
-<!-- Our Work -->
-<LandingPorfolioSection></LandingPortfolioSection>
-
-
-<!--TODO: Blog Section -->
-
-<!-- <BasicBlock extra-borders="bottom-border">
-<template #no-padding>
-<BasicBlock extra-borders="bottom-border">
-    <h2 class="font-semibold text-neutral-100 text-7xl font-heading"><span class="text-stone-700 pr-8">5.</span>No solo le damos vida a negocios, tambien los ayudamos a creecer. </h2>
-</BasicBlock>
-</template>
-        <div class="w-full h-screen"></div>
-</BasicBlock> -->
-
-<!-- Contact Section -->
-
-
-<!-- <BasicBlock extra-borders="bottom-border">
-<template #no-padding>
-<BasicBlock extra-borders="bottom-border">
-    <h2 class="font-semibold text-neutral-100 text-7xl font-heading"><span class="text-stone-700 pr-8">6.</span>No dejes estar tu negocio, dale la ventaja que necesita en este nuevo mercado.</h2>
-</BasicBlock>
-</template>
-        <div class="w-full h-screen"></div>
-</BasicBlock> -->
+  <!-- Contact Section -->
+  <ContactSection/>
 </Layout>
