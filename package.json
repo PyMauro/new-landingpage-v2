@@ -15,5 +15,8 @@
     "astro-icon": "^1.1.5",
     "tailwindcss": "^4.1.14",
     "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@iconify-json/fa7-brands": "^1.2.0"
   }
 }

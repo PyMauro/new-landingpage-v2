@@ -26,6 +26,10 @@ importers:
       vue:
         specifier: ^3.5.22
         version: 3.5.22(typescript@5.9.3)
+    devDependencies:
+      '@iconify-json/fa7-brands':
+        specifier: ^1.2.0
+        version: 1.2.0
 
 packages:
 
@@ -363,6 +367,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@iconify-json/fa7-brands@1.2.0':
+    resolution: {integrity: sha512-OTdHSwRmycgQQXQr7wJQFyD08zj4OxoRfaWhCuI3a9MhbnHJApU4U2Qbp6hP4zicqOmQB9UII9+MA1IDNNLPlQ==}
 
   '@iconify/tools@4.1.4':
     resolution: {integrity: sha512-s6BcNUcCxQ3S6cvhlsoWzOuBt8qKXdVyXB9rT57uSJ/ARHD7dVM43+5ERBWn3tmkMWXeJ/s9DPVc3dUasayzeA==}
@@ -2856,6 +2863,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.10':
     optional: true
+
+  '@iconify-json/fa7-brands@1.2.0':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/tools@4.1.4':
     dependencies:
