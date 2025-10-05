@@ -6,8 +6,8 @@ import LandingPorfolioSection from "../components/vue/Landing/PorfolioSection.vu
 import LandingIntroSection from "../components/vue/Landing/IntroSection.astro";
 import LandingAboutUsSection from "../components/vue/Landing/aboutUsSection.astro";
 import LandingOurServices from "../components/vue/Landing/OurServices.vue";
-import BasicBlock from "../components/vue/_structure/BasicBlock.vue";
 import ContactSection from "../components/vue/Landing/ContactSection.astro";
+import BrandFooter from "../components/vue/_baseUi/BrandFooter.astro";
 ---
 
 <Layout>
@@ -23,6 +23,7 @@ import ContactSection from "../components/vue/Landing/ContactSection.astro";
   <!-- Sobre Nosotros -->
   <LandingAboutUsSection />
 
+
   <!-- Nuestros Servicios -->
   <StructurePaddingContainer>
     <LandingOurServices />
@@ -33,4 +34,7 @@ import ContactSection from "../components/vue/Landing/ContactSection.astro";
 
   <!-- Contact Section -->
   <ContactSection/>
+  
+    <!-- Brand Footer -->
+    <BrandFooter/>
 </Layout>
