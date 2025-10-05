@@ -1,0 +1,38 @@
+---
+// @ts-ignore
+import StructureBasicBlock from "../_structure/basicBlock.vue";
+import StructurePaddingContainer from "../_structure/paddingContainer.vue";
+---
+
+<footer class="w-full h-full border-t-3xl overflow-hidden mt-32 lg:mt-0">
+        <StructureBasicBlock
+          extra-borders="bottom-border"
+          class="bg-neutral-50 rounded-t-3xl"
+        >
+          <div slot="no-padding">
+            <StructurePaddingContainer padding="padding">
+              <!-- Header Footer -->
+              <StructureBasicBlock extra-borders="bottom-border" padding="padding">
+                <div class="w-full flex flex-col lg:flex-row px-2 gap-8 items-center justify-around lg:px-16">
+                    <img src="logo/hermes-logo.svg" alt="Estudio Hermes Logo" class="w-52 h-full"/>
+                    <h2 class="text-neutral-800 w-full lg:text-balance text-7xl font-black font-['Mango_Grotesque'] leading-[67.60px] ">No existe segunda oportunidad para una buena primera impresión.</h2>
+                </div>
+            </StructureBasicBlock>
+            <!-- Content -->
+             
+              <!--  -->
+              <StructureBasicBlock padding="padding">
+                <div class="h-full w-full"></div>
+              </StructureBasicBlock>
+            </StructurePaddingContainer>
+          </div>
+        </StructureBasicBlock>
+    </footer>
+
+<style>
+/*
+    .extrude-shadow {
+  color: #fbbf24;
+  filter: drop-shadow(2px 2px #000) drop-shadow(4px 4px 0 #000); 
+} */
+</style>
