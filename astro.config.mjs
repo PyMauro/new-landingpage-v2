@@ -6,13 +6,15 @@ import tailwindcss from '@tailwindcss/vite';
 
 import vue from '@astrojs/vue';
 
+import icon from "astro-icon";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
 
-  integrations: [vue()],
+  integrations: [vue(), icon()],
   experimental: {
         fonts: [{
             provider: fontProviders.google(),
