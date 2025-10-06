@@ -4,7 +4,7 @@
     <structure-basic-block extra-borders="bottom-border"  padding="padding">
         <template #no-padding>
         <structure-basic-block extra-borders="bottom-border">
-                <h2 class="font-semibold text-neutral-100 font-heading py-4"><span class="text-stone-700 pr-8">3.</span>Nuestros Servicios</h2>
+                <h2 class="font-semibold text-neutral-100 font-heading py-4"><span class="text-stone-700 pr-2 md:pr-8">3.</span>Nuestros Servicios</h2>
         </structure-basic-block>
                 <div class="w-full h-fit flex flex-col gap-2 p-4 md:p-8">
                         <ServiceCard service-title="Identidad Visual / Branding"/>
