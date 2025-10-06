@@ -4,6 +4,7 @@ import BrandButton from "../Brand/Button.vue";
 </script>
 
 <template>
+<section id="heroSection" class="w-full h-full">
         <StructureBasicBlock extra-borders="bottom-border" class="py-8">
         <StructureBasicBlock padding="padding">
             <div class="flex flex-col gap-4">
@@ -21,4 +22,5 @@ import BrandButton from "../Brand/Button.vue";
             </div>
         </StructureBasicBlock>
     </StructureBasicBlock>
+</section>
 </template>

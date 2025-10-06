@@ -1,5 +1,5 @@
 <template>
-
+<section id="portfolioSection" class="w-full h-full py-16 lg:py-32 px-6 lg:px-0">
     <StructureBasicBlock extra-borders="bottom-border" class="bg-neutral-100 rounded-3xl">
         <template #no-padding>
             <StructurePaddingContainer padding="padding">
@@ -31,7 +31,7 @@
             </StructurePaddingContainer>
         </template>
     </StructureBasicBlock>
-
+</section>
 
 </template>
 <script setup>

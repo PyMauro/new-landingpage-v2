@@ -5,24 +5,27 @@ import PaddingContainer from "../_structure/paddingContainer.vue";
 import ContactForm from '../functional/contactForm.vue'
 ---
 
-<PaddingContainer>
-  <BasicBlock extra-borders="bottom-border" padding="padding">
-    <h2
-      class="font-semibold text-neutral-100 text-7xl font-heading text-balance"
-    >
-      <span class="text-stone-100 pr-8">6.</span>No dejes estar tu negocio, dale
-      la ventaja que necesita en este nuevo mercado.
-    </h2>
-  </BasicBlock>
-  <BasicBlock extra-borders="bottom-border" padding="padding">
-    <div class="flex w-full h-screen flex-col md:flex-row gap-8">
-      <div class="w-full h-full flex justify-center flex-col px-8">
-        <p class="text-neutral-300 text-lg text-balance">
-          Estas a solo un paso de darle a tu negocio una ventaja sobre toda la
-          competencia y ponerlo en la primera plana de tus futuros clientes.
-        </p>
+<section id="contactSection" class="w-full h-full">
+
+  <PaddingContainer>
+    <BasicBlock extra-borders="bottom-border" padding="padding">
+      <h2
+        class="font-semibold text-neutral-100 text-7xl font-heading text-balance"
+      >
+        <span class="text-stone-100 pr-8">6.</span>No dejes estar tu negocio, dale
+        la ventaja que necesita en este nuevo mercado.
+      </h2>
+    </BasicBlock>
+    <BasicBlock extra-borders="bottom-border" padding="padding">
+      <div class="flex w-full h-screen flex-col md:flex-row gap-8">
+        <div class="w-full h-full flex justify-center flex-col px-8">
+          <p class="text-neutral-300 text-lg text-balance">
+            Estas a solo un paso de darle a tu negocio una ventaja sobre toda la
+            competencia y ponerlo en la primera plana de tus futuros clientes.
+          </p>
+        </div>
+        <ContactForm client:load/>
       </div>
-      <ContactForm client:load/>
-    </div>
-  </BasicBlock>
-</PaddingContainer>
+    </BasicBlock>
+  </PaddingContainer>
+</section>

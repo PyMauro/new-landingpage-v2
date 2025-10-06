@@ -1,4 +1,5 @@
 <template>    
+<section id="our-services" class="w-full h-full">
             <!-- Our Services -->
     <structure-basic-block extra-borders="bottom-border"  padding="padding">
         <template #no-padding>
@@ -14,6 +15,7 @@
                 </div>
         </template>
     </structure-basic-block>
+</section>
 </template>
 <script setup>
 import StructureBasicBlock from "../_structure/basicBlock.vue";
