@@ -16,9 +16,18 @@
     
 }
 
-.add-dots {
-  @apply absolute w-full top-0 left-0 h-full pointer-events-none border-white/30 before:content-[''] before:absolute before:inset-0  before:opacity-25 before:bg-[radial-gradient(rgb(255_255_255/_80%)_20%,transparent_20%),radial-gradient(rgb(255_255_255/_100%)_20%,transparent_20%)] before:bg-[length:8px_8px] before:[background-position:0_0,4px_4px] before:mix-blend-hard-light ;
+.add-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../assets/textures/Texturelabs_Grunge_halftone.webp') repeat;
+  background-blend-mode: multiply;
+  /* background-repeat: repeat; */
+  background-size: auto;
+  opacity: 0.1; /* controlás intensidad */
+  pointer-events: none;
 }
+
 
 @keyframes dots {
   0% {
