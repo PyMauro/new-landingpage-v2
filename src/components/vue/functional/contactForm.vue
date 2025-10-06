@@ -1,6 +1,6 @@
 <template>
   <form
-    class="z-10 w-full  h-fit bg-gradient-to-br from-violet-400 to-violet-500 max-w-[457px] px-4 py-8 rounded-2xl outline-2 outline-offset-[-2px] outline-neutral-900 inline-flex flex-col justify-start items-start gap-4"
+    class="z-10 w-full add-texture overflow-hidden h-fit bg-gradient-to-br from-violet-400 to-violet-500 max-w-[457px] px-4 py-8 rounded-2xl outline-2 outline-offset-[-2px] outline-neutral-900 inline-flex flex-col justify-start items-start gap-4"
     :class="shadow">
     <div class="h-full z-10 w-full flex flex-col justify-start items-start gap-0 ">
       <span id="nameInputSpan" class="w-full h-fit px-2 py-2 flex flex-col gap-1 overflow-clip ">
