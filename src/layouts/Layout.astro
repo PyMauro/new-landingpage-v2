@@ -14,13 +14,17 @@ import "../styles/global.css";
     <title>Astro Basics</title>
   </head>
   <body>
-    <div class="bg-stone-900 relative min-h-screen overflow-x-hidden">
+    <div class="bg-black relative min-h-screen overflow-x-hidden ">
       <StructurePaddingContainer>
+      <header>
         <BaseUiNavbar></BaseUiNavbar>
+      </header>
       </StructurePaddingContainer>
-      <div class="absolute w-full h-full bg-noise left-0 top-0 opacity-40">
-      </div>
-      <slot />
+      <!-- <div class="absolute w-full h-full bg-noise left-0 top-0 opacity-40">
+      </div> -->
+      <main class="add-texture">
+        <slot />
+      </main>
     </div>
   </body>
 </html>
