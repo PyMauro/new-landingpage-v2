@@ -4,7 +4,7 @@
         <template #no-padding>
             <StructurePaddingContainer padding="padding">
                 <structure-basic-block extra-borders="bottom-border" padding="padding">
-                    <h2 class="font-semibold text-black text-7xl font-heading"><span
+                    <h2 class="font-semibold text-black font-heading"><span
                             class="text-stone-700 pr-8">4.</span>Nuestro Trabajo Habla por Si Solo</h2>
                 </structure-basic-block>
                 <structure-basic-block padding="padding">

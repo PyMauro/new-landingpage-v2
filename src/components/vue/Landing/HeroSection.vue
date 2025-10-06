@@ -8,7 +8,7 @@ import BrandButton from "../Brand/Button.vue";
         <StructureBasicBlock extra-borders="bottom-border" class="py-8">
         <StructureBasicBlock padding="padding">
             <div class="flex flex-col gap-4">
-                <h1 class="font-heading text-[130px] text-balance text-white font-semibold leading-[110px] tracking-[-1.2%] max-w-5/6">
+                <h1 class="font-heading text-balance text-white font-semibold leading-[110px] tracking-[-1.2%] max-w-5/6">
                   <span class="text-amber-400">No existe segunda oportunidad </span> para una 
           buena primera impresión.
                 </h1>
