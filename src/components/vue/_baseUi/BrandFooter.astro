@@ -2,37 +2,152 @@
 // @ts-ignore
 import StructureBasicBlock from "../_structure/basicBlock.vue";
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
+import { Icon } from 'astro-icon/components'; 
+const thisYear = new Date().getFullYear();
+const actualYearString = thisYear.toString();
 ---
 
 <footer class="w-full h-full border-t-3xl overflow-hidden mt-32 lg:mt-0">
-        <StructureBasicBlock
-          extra-borders="bottom-border"
-          class="bg-neutral-50 rounded-t-3xl"
-        >
-          <div slot="no-padding">
-            <StructurePaddingContainer padding="padding">
-              <!-- Header Footer -->
-              <StructureBasicBlock extra-borders="bottom-border" padding="padding">
-                <div class="w-full flex flex-col lg:flex-row px-2 gap-8 items-center justify-around lg:px-16">
-                    <img src="logo/hermes-logo.svg" alt="Estudio Hermes Logo" class="w-52 h-full"/>
-                    <h2 class="text-neutral-800 w-full lg:text-balance text-7xl font-black font-['Mango_Grotesque'] leading-[67.60px] ">No existe segunda oportunidad para una buena primera impresión.</h2>
-                </div>
-            </StructureBasicBlock>
-            <!-- Content -->
-             
-              <!--  -->
-              <StructureBasicBlock padding="padding">
-                <div class="h-full w-full"></div>
-              </StructureBasicBlock>
-            </StructurePaddingContainer>
+  <StructureBasicBlock
+    class="bg-neutral-50 rounded-t-3xl"
+    extra-borders="bottom-border"
+  >
+    <div slot="no-padding">
+      <StructurePaddingContainer padding="padding">
+        <!-- Header Footer -->
+        <StructureBasicBlock extra-borders="bottom-border" padding="padding">
+          <div
+            class="w-full flex flex-col lg:flex-row px-2 gap-8 items-center justify-around lg:px-16"
+          >
+            <img
+              src="logo/hermes-logo.svg"
+              alt="Estudio Hermes Logo"
+              class="w-52 h-full"
+            />
+            <h2
+              class="text-neutral-800 w-full lg:text-balance text-7xl font-black font-['Mango_Grotesque'] leading-[67.60px]"
+            >
+              No existe segunda oportunidad para una buena primera impresión.
+            </h2>
           </div>
         </StructureBasicBlock>
-    </footer>
+        <!-- Content -->
 
-<style>
-/*
-    .extrude-shadow {
-  color: #fbbf24;
-  filter: drop-shadow(2px 2px #000) drop-shadow(4px 4px 0 #000); 
-} */
-</style>
+        <!--  -->
+        <StructureBasicBlock padding="padding">
+          <div class="h-full w-full flex flex-col">
+            <div
+              class="w-full h-fit flex flex-col md:flex-row px-2 md:px-4 gap-2"
+            >
+              <!-- Services Link -->
+              <div
+                class="w-full md:w-1/2 flex-col md:flex-row flex justify-center"
+              >
+                <h3 class="text-4xl font-semibold font-heading">
+                  Secciones de la pagina
+                </h3>
+                <ul class="flex flex-col gap-1 pl-4">
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >1. Introduccion</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >2. Sobre Hermes</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >3. Nuestro Servicios</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg">4. Blog</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >5. Contactanos</a>
+                  </li>
+                </ul>
+              </div>
+                            <!-- Services Link -->
+              <div
+                class="w-full md:w-1/2 flex flex-col md:flex-row justify-center"
+              >
+                <h3 class="text-4xl font-semibold font-heading">Servicios</h3>
+                <ul class="flex flex-col gap-1 pl-4">
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >Identidad Visual - Branding</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >Edicion de Video</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >Desarollo Web</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >Creacion de Contenido</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >Creacion de Contenido</a>
+                  </li>
+                  <li>
+                    <a href="" class="underline text-neutral-700 text-lg"
+                      >Diseño Grafico</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </StructureBasicBlock>
+      </StructurePaddingContainer>
+    </div>
+  </StructureBasicBlock>
+  <!-- Info Footer Section -->
+  <StructureBasicBlock
+    extra-borders="bottom-border"
+    class="bg-neutral-50"
+  >
+    <div slot="no-padding">
+      <StructurePaddingContainer padding="padding">
+          <StructureBasicBlock padding="padding">
+                            <div class="w-full flex flex-col ">
+                              <div class="flex flex-row justify-between items-center border-b border-neutral-700 ">
+                                <p class="text-5xl font-heading text-neutral-700">Estudio Hermes</p>
+                                <p class="font-heading text-5xl text-neutral-700">{ actualYearString}</p>
+                              </div>
+                              <!-- CopyRight -->
+                              <div class="flex flex-row justify-between items-center">
+                                <p class="text-lg text-neutral-700 font-body">© { actualYearString} Estudio Hermes. Todos los derechos reservados.</p>
+                                <!-- Social Links -->
+                                <ul class="w-fit">
+                                  <li class="inline-block px-2">
+                                    <a href="" class="flex flex-row items-center gap-1 ">
+                                      <Icon name="fa7-brands:instagram" class="text-neutral-700 w-6 h-6"/>
+                                      <span class="text-lg text-neutral-700 pb-1">Instagram</span>
+                                    </a>
+                                  </li>
+                                                                    <li class="inline-block px-2">
+                                    <a href="https://wa.me/543447402668" class="flex flex-row items-center gap-1 ">
+                                      <Icon name="fa7-brands:whatsapp" class="text-neutral-700 w-6 h-6"/>
+                                      <span class="text-lg text-neutral-700 pb-1">Whatsapp</span>
+                                    </a>
+                                  </li>
+                                  <li class="inline-block px-2">
+                                    <a href="" class="flex flex-row items-center gap-1 ">
+                                      <Icon name="fa7-brands:dribbble" class="text-neutral-700 w-6 h-6"/>
+                                      <span class="text-lg text-neutral-700 pb-1">Blog</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+          </StructureBasicBlock>
+      </StructurePaddingContainer>
+    </div>
+  </StructureBasicBlock>
+
+</footer>
