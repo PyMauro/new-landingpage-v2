@@ -9,8 +9,7 @@ import BrandButton from "../Brand/Button.vue";
         <StructureBasicBlock padding="padding">
             <div class="flex flex-col gap-4">
                 <h1 class="font-heading  text-white font-semibold  tracking-[-1.2%] md:max-w-5/6">
-                  <span class="text-amber-400">No existe segunda oportunidad </span>para una 
-          buena primera impresión.
+                  <span class="text-amber-400">No existe segunda ocasion, </span>para causar una buena primera impresión.
                 </h1>
                 <div class="flex flex-col gap-4">
                     <p class="font-body text-lg text-neutral-300 text-balance">Es por eso que debe dejar marca en la mente del consumidor. Esa es mi Especialidad. Asegurarte que tu negocio enamore a primera vista.</p>
