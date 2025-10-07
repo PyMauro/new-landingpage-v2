@@ -20,13 +20,13 @@ const props = defineProps({
         <div class="w-full h-full z-20">
             <div class="h-96 w-full aspect-video rounded-xl bg-slate-600">
             </div>
-            <div class="flex w-full flex-col gap-2 justify-center items-start">
+            <div class="flex w-full flex-col gap-4 sm:gap-2 justify-center items-start">
                 <div class="flex gap-1 py-2 w-full flex-wrap">
                     <Badge v-for="service in props.serviceType.split(',')" :key="service">
                         {{ service }}
                     </Badge>
                 </div>
-                <h3 class="font-semibold w-full  text-5xl font-heading text-neutral-700">
+                <h3 class="font-semibold w-full font-heading text-neutral-700">
                     {{ props.title }}
                 </h3>
                 <BrandButton text="Explorar Proyecto" bg-color="bg-amber-300" />
