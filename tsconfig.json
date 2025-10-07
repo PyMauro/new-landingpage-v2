@@ -10,9 +10,8 @@
   "compilerOptions": {
     "jsx": "preserve",
      "paths": {
-    "@components/*": ["src/components/*"],
-    "@assets/*": ["src/assets/*"]
-  },
-    "baseUrl": "."
+    "@components/*": ["./src/components/*"],
+    "@assets/*": ["./src/assets/*"]
+  }
   }
 }
