@@ -8,7 +8,7 @@
         <input type="text" id="nameInput" placeholder="Nombre y Apellido"
           class="w-full pl-5 h-full px-2 py-4 placeholder:pl-2 bg-violet-200" :class="shadow" />
       </span>
-      <span id="busisnessInputSpan" class="w-full h-fit px-2 py-2 flex flex-col gap-1 overflow-clip ">
+      <span id="busisnessInputSpan" class="w-full h-fit px-2 py-2 flex flex-col gap-1 overflow-clip " :class="usePersonalName? 'hidden' : ''">
         <label for="busisnessInput" class="pl-4 text-lg font-body" :class="usePersonalName? 'text-neutral-500' : ''" >Nombre de negocio/emprendimiento:</label>
         <input type="text" id="busisnessInput" placeholder="Nombre de negocio" :disabled="usePersonalName"
           class="w-full h-full pl-5 px-2 py-4 placeholder:pl-2 bg-violet-200 disabled:bg-neutral-400 disabled:opacity-50 " :class="shadow" />
