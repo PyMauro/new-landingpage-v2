@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Mango Grotesque';
-  src: url('../assets/font/Mango\ Grotesque-VF.ttf') format('ttf');
+  src: url('../assets/font/Mango-Grotesque-VF.ttf') format('ttf');
   font-weight: 500 900;
   font-style: normal;
   font-display: swap;
@@ -21,13 +21,13 @@
 
 @layer base {
   h1 { font-size: clamp(61px, 7vw, 130px); line-height: 1;font-family: var(--font-heading); }
-  h2 { font-size: clamp(49px, 5.6vw, 104px); line-height: 1.08;font-family: var(--font-heading); }
-  h3 { font-size: clamp(40px, 4.5vw, 83px); line-height: 1.12;font-family: var(--font-heading); }
-  h4 { font-size: clamp(31.07px, calc(15.2427px + 1.2873vw), 30.69px); line-height: 1.18;font-family: var(--font-heading); }
+  h2 { font-size: clamp(46px, 5.6vw, 104px); line-height: 1.08;font-family: var(--font-heading); }
+  h3 { font-size: clamp(34px, 4.5vw, 83px); line-height: 1.12;font-family: var(--font-heading); }
+  h4 { font-size: clamp(31.07px, calc(15.2427px + 1.2873vw), 40.69px); line-height: 1.18;font-family: var(--font-heading); }
 
   p  { font-size: clamp(18px, calc(16.1818px + 0.4848vw), 20px); line-height: 1.6;font-family: var(--font-body); }
 
-  p.caption  { font-size: clamp(16px, calc(16.1818px + 0.12vw), 18px); line-height: 1.6;font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.05em; }
+  p.caption  { font-size: clamp(16px, calc(16.1818px + 0.12vw), 18px); line-height: 1.6;font-family: var(--font-body);  letter-spacing: 0.05em; }
   
   p.input  { font-size: clamp(18px, 1.5vw, 22px); line-height: 1.6;font-family: (--font-body); }
     
