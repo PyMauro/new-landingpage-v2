@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import { fontProviders } from "astro/config";
+import { fileURLToPath } from 'node:url'
+
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -14,6 +16,12 @@ export default defineConfig({
     plugins: [tailwindcss()],
     server: {
       allowedHosts: ['.trycloudflare.com']
+    },
+    resolve: {
+      alias: {
+        '@assets' : fileURLToPath(new URL('./src/assets', import.meta.url)),
+        '@components' : fileURLToPath(new URL('./src/components', import.meta.url)),
+      }
     }
   },
 
@@ -24,17 +32,9 @@ export default defineConfig({
             name: "DM Mono",
             cssVariable: "--font-body"
         },
-        // {
-        //   name: 'Mango Grotesque',
-        //   cssVariable: '--font-heading',
-        //   provider:"local",
-        //   variants:[{
-        //     src: [
-        //       "./src/assets/font/Mango Grotesque.ttf"
-        //     ]
-        //   }]
-        // }
-      ]
-    }
+      ],
+    
+    },
+    
 
 });
