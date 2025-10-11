@@ -20,7 +20,7 @@
 
 
 @layer base {
-  h1 { font-size: clamp(61px, 7vw, 130px); line-height: 1;font-family: var(--font-heading); }
+  h1 { font-size: clamp(70px, 8vw, 140px); line-height: 0.8;font-family: var(--font-heading); }
   h2 { font-size: clamp(46px, 5.6vw, 104px); line-height: 1.08;font-family: var(--font-heading); }
   h3 { font-size: clamp(34px, 4.5vw, 83px); line-height: 1.12;font-family: var(--font-heading); }
   h4 { font-size: clamp(31.07px, calc(15.2427px + 1.2873vw), 40.69px); line-height: 1.18;font-family: var(--font-heading); }
@@ -41,7 +41,7 @@
   background-blend-mode: multiply;
   /* background-repeat: repeat; */
   background-size: auto;
-  opacity: 0.1; /* controlás intensidad */
+  opacity: 0.10; /* controlás intensidad */
   pointer-events: none;
 }
 
