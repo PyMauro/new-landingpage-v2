@@ -11,6 +11,10 @@ const props = defineProps({
         type: String,
         required: false,
         default: "Servicio1,Servicio2,Servicio3"
+    },
+    urlImage: {
+        type: String,
+        default: ""
     }
 });
 </script>
@@ -18,7 +22,8 @@ const props = defineProps({
     <article class="relative w-full bg-neutral-200 h-fit flex flex-col gap-4 overflow-hidden rounded-3xl p-3 border border-neutral-700">
         <div class="absolute add-dots left-0 top-0 opacity-70 rounded-full w-full h-full"></div>
         <div class="w-full h-full z-20">
-            <div class="h-96 w-full aspect-video rounded-xl bg-slate-600">
+            <img :src="urlImage" :alt="' Portada de' + props.title" v-if="urlImage" class="h-96 w-full aspect-video rounded-xl object-cover"/>
+            <div v-else class="h-96 w-full aspect-video rounded-xl bg-slate-600">
             </div>
             <div class="flex w-full flex-col gap-4 sm:gap-2 justify-center items-start">
                 <div class="flex gap-1 py-2 w-full flex-wrap">

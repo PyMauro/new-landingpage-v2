@@ -12,18 +12,26 @@
                             <div class="w-full flex flex-col gap-2">
                             <PortafolioCard
                                 title='Identidad Visual: Romina Macri, expandiendo la cardiología al publico.'
-                                serviceType='Desarollo Web, Gestion de Redes' />
+                                serviceType='Desarollo Web, Gestion de Redes'
+                                :url-image="rominaPortada.src"
+                                />
                             <PortafolioCard
                                 title='Branding: Femenina, un negocio amado por sus clientes.'
-                                serviceType='Branding, Desarollo Web, Consultoria' />
+                                serviceType='Branding, Desarollo Web, Consultoria'
+                                :url-image="femeninaPortada.src"
+                                />
 
                             <PortafolioCard
                                 title='Desarollo Web: Click Informativo, la voz de la sociedad.'
-                                serviceType='Identidad Visual, Desarollo Web' />
+                                serviceType='Identidad Visual, Desarollo Web'
+                                :url-image="clickInformativoPortada.src"
+                            />
 
                             <PortafolioCard
                                 title='Identidad Visual: SinGlu, comida casera, sin gluten y 100% organica.'
-                                serviceType='Identidad Visual' />
+                                serviceType='Identidad Visual' 
+                                :url-image="singluPortada.src"
+                            />
                             </div>
 
 
@@ -36,6 +44,12 @@
 </template>
 <script setup>
 import StructureBasicBlock from "../_structure/basicBlock.vue";
+import rominaPortada from '../../../assets/portfolio/romina-macri.png'
+import femeninaPortada from '../../../assets/portfolio/femenina.png'
+import clickInformativoPortada from '../../../assets/portfolio/click-informativo.png'
+import singluPortada from '../../../assets/portfolio/singlu.png'
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
 import PortafolioCard from "../../vue/content/PorfolioCard.vue";
+
+
 </script>
