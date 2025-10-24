@@ -10,28 +10,35 @@
                 <structure-basic-block padding="padding">
 
                             <div class="w-full flex flex-col gap-2">
+
+                            
                             <PortafolioCard
-                                title='Identidad Visual: Romina Macri, expandiendo la cardiología al publico.'
-                                serviceType='Desarollo Web, Gestion de Redes'
-                                :url-image="rominaPortada.src"
-                                />
+                                title='Identidad Visual: SinGlu, comida casera, sin gluten y 100% organica.'
+                                serviceType='Identidad Visual' 
+                                :url-image="singluPortada.src"
+                            />
                             <PortafolioCard
                                 title='Branding: Femenina, un negocio amado por sus clientes.'
                                 serviceType='Branding, Desarollo Web, Consultoria'
                                 :url-image="femeninaPortada.src"
                                 />
 
+
+                            
+                            <PortafolioCard
+                                title='Identidad Visual: Romina Macri, expandiendo la cardiología al publico.'
+                                serviceType='Desarollo Web, Gestion de Redes'
+                                :url-image="rominaPortada.src"
+                                />
+                            
                             <PortafolioCard
                                 title='Desarollo Web: Click Informativo, la voz de la sociedad.'
                                 serviceType='Identidad Visual, Desarollo Web'
                                 :url-image="clickInformativoPortada.src"
                             />
+                            
+                            
 
-                            <PortafolioCard
-                                title='Identidad Visual: SinGlu, comida casera, sin gluten y 100% organica.'
-                                serviceType='Identidad Visual' 
-                                :url-image="singluPortada.src"
-                            />
                             </div>
 
 
