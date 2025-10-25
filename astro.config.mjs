@@ -27,7 +27,12 @@ export default defineConfig({
     }
   },
 
-  integrations: [vue(), icon(), sanity()],
+  integrations: [vue(), icon(), sanity({
+      projectId: 'zahdcxw4',
+      dataset: 'production',
+      useCdn: false //cambiar esto si la build no va a ser estatica.
+  }
+  )],
   experimental: {
         fonts: [{
             provider: fontProviders.google(),
