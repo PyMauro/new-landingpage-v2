@@ -10,6 +10,8 @@ import vue from '@astrojs/vue';
 
 import icon from "astro-icon";
 
+import sanity from '@sanity/astro';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -25,7 +27,7 @@ export default defineConfig({
     }
   },
 
-  integrations: [vue(), icon()],
+  integrations: [vue(), icon(), sanity()],
   experimental: {
         fonts: [{
             provider: fontProviders.google(),
