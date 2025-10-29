@@ -9,10 +9,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Nohemi';
+  src: url('../assets/font/Mango-Grotesque-VF.ttf') format('ttf');
+}
+
 
 @theme {
     --font-heading: 'Mango Grotesque', sans-serif;
-    --font-body: var(--font-body);
+    --font-body: 'Nohemi', sans-serif;
 
     
 }
