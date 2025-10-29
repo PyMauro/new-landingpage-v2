@@ -2,6 +2,15 @@
 import BaseUiNavbar from "../components/vue/_baseUi/navbar.astro";
 import StructurePaddingContainer from "../components/vue/_structure/paddingContainer.vue";
 import "../styles/global.css";
+import Preloader from '@components/vue/Brand/Preloader.vue';
+interface Props {
+  title: string;
+  mainBgColor?: string;
+}
+
+
+const {title,mainBgColor} = Astro.props;
+
 ---
 
 <!doctype html>
@@ -10,10 +19,12 @@ import "../styles/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro Basics</title>
+    <title>{title}</title>
   </head>
   <body>
-    <div class="bg-black relative">
+    <div class:list={['relative', mainBgColor ? mainBgColor : 'bg-black']}>
+      <Preloader client:only="vue"/>
+      <div id="preloader-fallback" class="absolute left-0 top-0 w-full h-[200vh] z-20 bg-black"></div>
       <StructurePaddingContainer>
       <header>
         <BaseUiNavbar></BaseUiNavbar>
