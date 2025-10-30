@@ -1,25 +1,10 @@
 @import "tailwindcss";
-
-
-@font-face {
-  font-family: 'Mango Grotesque';
-  src: url('../assets/font/Mango-Grotesque-VF.ttf') format('ttf');
-  font-weight: 500 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Nohemi';
-  src: url('../assets/font/Mango-Grotesque-VF.ttf') format('ttf');
-}
-
+@import './fonts.css';
 
 @theme {
     --font-heading: 'Mango Grotesque', sans-serif;
     --font-body: 'Nohemi', sans-serif;
 
-    
 }
 
 

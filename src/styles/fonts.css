@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Mango Grotesque';
+  src: url('/fonts/Mango-Grotesque-VF.ttf') format('truetype');
+  font-weight: 500 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-VF.ttf') format('truetype');
+  font-weight: 100 300 400 500 700 900;
+}
