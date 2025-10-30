@@ -10,9 +10,9 @@ import ContactSection from "../components/vue/Landing/ContactSection.astro";
 import BrandFooter from "../components/vue/_baseUi/BrandFooter.astro";
 ---
 
-<Layout>
+<Layout title="Hermes Estudio">
     <StructurePaddingContainer>
-      <HeroSection />
+      <HeroSection client:load />
     </StructurePaddingContainer>
   
     <!-- Intro section -->
@@ -26,11 +26,12 @@ import BrandFooter from "../components/vue/_baseUi/BrandFooter.astro";
   
     <!-- Nuestros Servicios -->
     <StructurePaddingContainer>
-      <LandingOurServices />
+        
+      <LandingOurServices client:only/>
     </StructurePaddingContainer>
   
     <!-- Our Work -->
-    <LandingPorfolioSection />
+    <LandingPorfolioSection  client:only/>
   
     <!-- Contact Section -->
     <ContactSection/>

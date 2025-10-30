@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from 'astro:assets';
 //@ts-ignore
 import StructureBasicBlock from "../_structure/basicBlock.vue";
 import IndifferenceImage from "../../../assets/Indifference.png";
@@ -8,14 +8,17 @@ import IndifferenceImage from "../../../assets/Indifference.png";
 <section id="introSection" class="w-full h-full">
   <StructureBasicBlock extra-borders="bottom-border" padding="padding">
     <template #no-padding>
-      <StructureBasicBlock extra-borders="bottom-border" padding="padding">
-        <h2 class="font-semibold text-neutral-100 font-heading">
+      <StructureBasicBlock extra-borders="bottom-border" padding="padding" class="mt-8">
+        <!-- <h2 class="font-semibold text-neutral-100 font-heading">
           <span class="text-stone-700 pr-2 md:pr-8">1.</span>Bienvenido al Mundo Moderno
-        </h2>
+        </h2> -->
       </StructureBasicBlock>
     </template>
     <div class="flex flex-col gap-4 w-full">
-      <p class="font-body text-xl text-neutral-300">
+      <h2 text-split words-slide-up class="font-semibold text-neutral-100 font-heading">
+          <span class="text-stone-700 pr-2 md:pr-8">1.</span>Bienvenido al Mundo Moderno
+        </h2>
+      <p text-split words-slide-up class="font-body text-xl text-neutral-300">
         Un mundo donde la atención se volvió el nuevo oro y cada vez es mas
         escaso. Donde ya nadie tiene tiempo. Donde existen maquinas pensantes
         que incluso controlan negocios enteros. Y si, suena loco pero es el
@@ -23,11 +26,12 @@ import IndifferenceImage from "../../../assets/Indifference.png";
         negocio funcione.
       </p>
       <Image
-        src={IndifferenceImage}
-        alt="La indiferencia del consumidor"
-        class="w-full h-auto rounded-lg shadow-lg"
+      src={IndifferenceImage}
+      alt="La indiferencia del consumidor"
+      class="w-full h-auto rounded-lg shadow-lg"
+      data-animate="from-bottom"
       />
-      <p class="font-body text-xl text-neutral-300">
+      <p text-split words-slide-up class="font-body text-xl text-neutral-300">
         Hoy en dia, hay mucha mas exposición. Pero eso a su vez, trae mas
         competencia. Hoy, la visibilidad en redes se volvió la diferencia entre
         un negocio con futuro a uno que sobrevive.
@@ -35,3 +39,9 @@ import IndifferenceImage from "../../../assets/Indifference.png";
     </div>
   </StructureBasicBlock>
 </section>
+<script>
+//@ts-ignore
+import {initAllAnimations} from '@animations/initAnimations.js'
+
+initAllAnimations()
+</script>

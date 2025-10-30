@@ -1,12 +1,13 @@
 ---
-// @ts-ignore
 import { Image } from "astro:assets";
+// @ts-ignore
 import StructureBasicBlock from "../_structure/basicBlock.vue";
 import hermesLogo from  '../../../assets/logo/hermes-logo.svg'
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
 import { Icon } from 'astro-icon/components'; 
 const thisYear = new Date().getFullYear();
 const actualYearString = thisYear.toString();
+
 ---
 
 <footer class="w-full h-full border-t-3xl overflow-hidden mt-32 lg:mt-0">
@@ -30,7 +31,7 @@ const actualYearString = thisYear.toString();
 
             />
             <h2
-              class="text-neutral-800 w-full lg:text-balance font-black font-['Mango_Grotesque']"
+              class="text-neutral-800 w-full leading-16 lg:text-balance font-black font-['Mango_Grotesque']"
             >
               No existe segunda ocasion para causar una buena primera impresión.
             </h2>
@@ -53,22 +54,22 @@ const actualYearString = thisYear.toString();
                 </h3>
                 <ul class="flex flex-col gap-1 pl-4">
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#" class="underline text-neutral-700 text-lg"
                       >1. Introduccion</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#" class="underline text-neutral-700 text-lg"
                       >2. Sobre Hermes</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#" class="underline text-neutral-700 text-lg"
                       >3. Nuestro Servicios</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg">4. Blog</a>
+                    <a href="#" class="underline text-neutral-700 text-lg">4. Blog</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#" class="underline text-neutral-700 text-lg"
                       >5. Contactanos</a>
                   </li>
                 </ul>
@@ -80,27 +81,31 @@ const actualYearString = thisYear.toString();
                 <h3 class="font-semibold font-heading">Servicios</h3>
                 <ul class="flex flex-col gap-1 pl-4">
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
-                      >Identidad Visual - Branding</a>
+                    <a href="#our-services" class="underline text-neutral-700 text-lg"
+                      >Identidad Visual</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#our-services" class="underline text-neutral-700 text-lg"
+                      >Identidad Visual</a>
+                  </li>
+                  <li>
+                    <a href="#our-services" class="underline text-neutral-700 text-lg"
                       >Edicion de Video</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#our-services" class="underline text-neutral-700 text-lg"
                       >Desarollo Web</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#our-services" class="underline text-neutral-700 text-lg"
                       >Creacion de Contenido</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#our-services" class="underline text-neutral-700 text-lg"
                       >Creacion de Contenido</a>
                   </li>
                   <li>
-                    <a href="" class="underline text-neutral-700 text-lg"
+                    <a href="#our-services" class="underline text-neutral-700 text-lg"
                       >Diseño Grafico</a>
                   </li>
                 </ul>
