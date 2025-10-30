@@ -23,8 +23,8 @@ const {title,mainBgColor} = Astro.props;
   </head>
   <body>
     <div class:list={['relative', mainBgColor ? mainBgColor : 'bg-black']}>
-      <Preloader client:only="vue"/>
-      <div id="preloader-fallback" class="absolute left-0 top-0 w-full h-[200vh] z-20 bg-black"></div>
+      <Preloader client:only="vue"/> 
+      <div id="preloader-fallback" class="absolute left-0 top-0 w-full h-[200vh] z-20 bg-black"></div> 
       <StructurePaddingContainer>
       <header>
         <BaseUiNavbar></BaseUiNavbar>
@@ -32,7 +32,7 @@ const {title,mainBgColor} = Astro.props;
       </StructurePaddingContainer>
       <!-- <div class="absolute w-full h-full bg-noise left-0 top-0 opacity-40">
       </div> -->
-      <main class="add-texture">
+      <main class="add-texture overflow-x-hidden">
         <slot />
       </main>
     </div>
