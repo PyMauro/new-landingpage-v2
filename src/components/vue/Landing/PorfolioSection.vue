@@ -4,7 +4,7 @@
         <template #no-padding>
             <StructurePaddingContainer padding="padding">
                 <structure-basic-block extra-borders="bottom-border" padding="padding">
-                    <h2 class="font-semibold text-black font-heading"><span
+                    <h2 text-split words-slide-up class="font-semibold text-black font-heading"><span
                             class="text-stone-700 pr-2 md:pr-8">4.</span>Nuestro Trabajo Habla por Si Solo</h2>
                 </structure-basic-block>
                 <structure-basic-block padding="padding">
@@ -12,12 +12,14 @@
                             <div class="w-full flex flex-col gap-2">
 
                             
-                            <PortafolioCard
+                            <PortafolioCard 
+                                data-animate="from-bottom"
                                 title='Identidad Visual: SinGlu, comida casera, sin gluten y 100% organica.'
                                 serviceType='Identidad Visual' 
                                 :url-image="singluPortada.src"
                             />
-                            <PortafolioCard
+                            <PortafolioCard 
+                                data-animate="from-bottom"
                                 title='Branding: Femenina, un negocio amado por sus clientes.'
                                 serviceType='Branding, Desarollo Web, Consultoria'
                                 :url-image="femeninaPortada.src"
@@ -25,13 +27,15 @@
 
 
                             
-                            <PortafolioCard
+                            <PortafolioCard 
+                                data-animate="from-bottom"
                                 title='Identidad Visual: Romina Macri, expandiendo la cardiología al publico.'
                                 serviceType='Desarollo Web, Gestion de Redes'
                                 :url-image="rominaPortada.src"
                                 />
                             
-                            <PortafolioCard
+                            <PortafolioCard 
+                                data-animate="from-bottom"
                                 title='Desarollo Web: Click Informativo, la voz de la sociedad.'
                                 serviceType='Identidad Visual, Desarollo Web'
                                 :url-image="clickInformativoPortada.src"
@@ -57,6 +61,11 @@ import clickInformativoPortada from '../../../assets/portfolio/click-informativo
 import singluPortada from '../../../assets/portfolio/singlu.png'
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
 import PortafolioCard from "../../vue/content/PorfolioCard.vue";
+import {initAllAnimations} from '@animations/initAnimations.js'
 
+
+window.addEventListener('finishedPreloader', () => {
+        initAllAnimations()
+})
 
 </script>

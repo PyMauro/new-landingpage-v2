@@ -15,30 +15,30 @@ import { Image } from 'astro:assets';
           <div slot="no-padding">
             <StructurePaddingContainer padding="padding">
               <StructureBasicBlock extra-borders="bottom-border" padding="padding">
-                <h2 class="font-semibold text-black font-heading">
+                <h2 text-split words-slide-up class="font-semibold text-black font-heading">
                   <span class="text-stone-700 pr-2 lg:pr-8">2.</span>Hermes, es mas que un
                   estudio de diseño.
                 </h2>
               </StructureBasicBlock>
               <StructureBasicBlock padding="padding">
                 <div class="w-full md:w-2/3 flex flex-col gap-4 h-fit py-4 md:py-16 relative">
-                  <p class="text-stone-700 ">
+                  <p text-split words-slide-up class="text-stone-700 ">
                     Cuando cree hermes lo hice mirando de cerca en redes como negocios
                     Estadounidenses o europeos tenían marcas tan atrapantes y nosotros,
                     latinos, lleno de cultura y diversidad, estábamos rodeados de
                     negocios sin alma y sin estética.
                   </p>
-                  <p class="text-stone-700  font-bold">
+                  <p text-split words-slide-up class="text-stone-700  font-bold">
                     De ahi me pregunte, ¿Que puedo hacer para cambiar esto?.
                   </p>
-                  <p class="text-stone-700 ">
+                  <p text-split words-slide-up class="text-stone-700 ">
                     Ahi entendí que la realidad es que como emprendedores
                     supervivientes, no tenemos el tiempo para aprender todas las
                     herramientas, seguir las tendencias, manejar las redes, y dedicarle
                     tiempo a promocionar nuestro negocio. Ya todo nuestro tiempo se lo
                     lleva el hacer que funcione, o bueno, eso se cree.
                   </p>
-                  <p class="text-stone-700 ">
+                  <p text-split words-slide-up class="text-stone-700 ">
                     Es ahi donde <span class="font-bold"
                       >mi misión se volvió clara, ayudar a instituciones, negocios y
                       emprendedores a destacar en esta nueva era digital
@@ -47,9 +47,10 @@ import { Image } from 'astro:assets';
                     velocidad del cambio.
                   </p>
                   <Image
-                    src={MeImg}
-                    alt="Primera plana de Mauro sentado sobre un sofa futon, imagen con ruido vectorial."
-                    class="relative md:absolute w-full -right-1/12 md:-right-3/4 md:-top-32 md:w-3/5 z-10"
+                  src={MeImg}
+                  alt="Primera plana de Mauro sentado sobre un sofa futon, imagen con ruido vectorial."
+                  class="relative md:absolute w-full -right-1/12 md:-right-3/4 md:-top-32 md:w-3/5 z-10"
+                  data-animate="blur-up"
                   />
                 </div>
               </StructureBasicBlock>
@@ -57,3 +58,9 @@ import { Image } from 'astro:assets';
           </div>
         </StructureBasicBlock>
 </section>
+<script>
+  //@ts-ignore
+  import {initAllAnimations} from '@animations/initAnimations.js'
+  
+  initAllAnimations()
+</script>
