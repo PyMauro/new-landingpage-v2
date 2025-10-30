@@ -8,7 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
 window.addEventListener("finishedPreloader", () => {
-  gsap.from("#hero-image", {
+
+  gsap.from("#hero-image", {  
     y: 200,
     opacity: 0,
     duration: 1,
