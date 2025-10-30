@@ -15,10 +15,11 @@ import sanity from '@sanity/astro';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()],
     server: {
-      allowedHosts: ['.trycloudflare.com']
+      host: true,
+      allowedHosts: ['all']
     },
+    plugins: /** @type {any} */ (tailwindcss()),
     resolve: {
       alias: {
         '@assets' : fileURLToPath(new URL('./src/assets', import.meta.url)),
