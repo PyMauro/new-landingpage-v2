@@ -166,7 +166,7 @@ import ContactForm from '@components/vue/functional/contactForm.vue';
     </section>
      <!-- END Nuestro Proceso -->
     <!-- START Nuestra Propuesta -->
-    <section>     
+    <section data-animate="blur-up">     
         <StructurePaddingContainer>
             <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full">
                 <StructureBasicBlock padding="no-padding" class="relative px-2 ">
@@ -243,7 +243,18 @@ import ContactForm from '@components/vue/functional/contactForm.vue';
 
 </Layout>
 <!-- @ts-ignore -->
-<script type="module"  src="../../../src/animations/allAnimations.ts" />
+<script>
+    window.addEventListener("finishedPreloader", async () => {
+        //@ts-ignore
+        const { initAllAnimations } = await import("@animations/initAnimations.js");
+        initAllAnimations();
+    })
+
+    
+ 
+
+</script>
+
 
 
 
