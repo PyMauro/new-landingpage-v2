@@ -24,6 +24,7 @@ export default defineConfig({
       alias: {
         '@assets' : fileURLToPath(new URL('./src/assets', import.meta.url)),
         '@components' : fileURLToPath(new URL('./src/components', import.meta.url)),
+        '@animations' : fileURLToPath(new URL('./src/animations', import.meta.url)),
       }
     }
   },
