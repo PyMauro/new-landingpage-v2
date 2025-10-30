@@ -28,7 +28,8 @@ onMounted(() => {
       tl.to(preloaderContent, { y: '-150%', duration: 1,ease:'power4.out' }, "+=1")
       .to(preloaderContainer, { opacity: 0, duration: 0.8 }, "-=1")
       .set(preloaderContainer, { display: 'none' })
-
+    }).finally(() => {
+      window.dispatchEvent(new CustomEvent('finishedPreloader'))
     })
     
 })
