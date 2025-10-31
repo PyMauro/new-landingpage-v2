@@ -16,9 +16,13 @@ import sanity from '@sanity/astro';
 export default defineConfig({
   output: 'static',
   vite: {
+    preview: {
+            host: true,
+            allowedHosts: ['true','.trycloudflare.com']
+    },
     server: {
       host: true,
-      allowedHosts: ['all','.trycloudflare.com']
+      allowedHosts: ['.trycloudflare.com']
     },
     plugins: /** @type {any} */ (tailwindcss()),
     resolve: {
