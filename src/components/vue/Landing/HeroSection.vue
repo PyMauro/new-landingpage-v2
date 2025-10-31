@@ -15,6 +15,9 @@ onMounted(() => {
 
 <template>
 <section id="heroSection" class="w-full h-full">
+            <StructureBasicBlock extra-borders="bottom-border" class="py-12">
+                
+            </StructureBasicBlock>
         <StructureBasicBlock extra-borders="bottom-border" class="py-8">
         <StructureBasicBlock padding="padding">
             <div class="flex flex-col gap-4">

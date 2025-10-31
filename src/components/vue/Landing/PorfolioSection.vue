@@ -16,13 +16,13 @@
                                 data-animate="from-bottom"
                                 title='Identidad Visual: SinGlu, comida casera, sin gluten y 100% organica.'
                                 serviceType='Identidad Visual' 
-                                :url-image="singluPortada.src"
+                                :url-image="singluPortada"
                             />
                             <PortafolioCard 
                                 data-animate="from-bottom"
                                 title='Branding: Femenina, un negocio amado por sus clientes.'
                                 serviceType='Branding, Desarollo Web, Consultoria'
-                                :url-image="femeninaPortada.src"
+                                :url-image="femeninaPortada"
                                 />
 
 
@@ -31,14 +31,14 @@
                                 data-animate="from-bottom"
                                 title='Identidad Visual: Romina Macri, expandiendo la cardiología al publico.'
                                 serviceType='Desarollo Web, Gestion de Redes'
-                                :url-image="rominaPortada.src"
+                                :url-image="rominaPortada"
                                 />
                             
                             <PortafolioCard 
                                 data-animate="from-bottom"
                                 title='Desarollo Web: Click Informativo, la voz de la sociedad.'
                                 serviceType='Identidad Visual, Desarollo Web'
-                                :url-image="clickInformativoPortada.src"
+                                :url-image="clickInformativoPortada"
                             />
                             
                             
@@ -54,15 +54,17 @@
 
 </template>
 <script setup>
-import StructureBasicBlock from "../_structure/basicBlock.vue";
-import rominaPortada from '../../../assets/portfolio/romina-macri.png'
-import femeninaPortada from '../../../assets/portfolio/femenina.png'
-import clickInformativoPortada from '../../../assets/portfolio/click-informativo.png'
-import singluPortada from '../../../assets/portfolio/singlu.png'
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
+import StructureBasicBlock from "../_structure/basicBlock.vue";
 import PortafolioCard from "../../vue/content/PorfolioCard.vue";
 import {initAllAnimations} from '@animations/initAnimations.js'
 
+
+// rutas seguras para build y deploy
+const rominaPortada = new URL("../../../assets/portfolio/romina-macri.png", import.meta.url).href;
+const femeninaPortada = new URL("../../../assets/portfolio/femenina.png", import.meta.url).href;
+const clickInformativoPortada = new URL("../../../assets/portfolio/click-informativo.png", import.meta.url).href;
+const singluPortada = new URL("../../../assets/portfolio/singlu.png", import.meta.url).href;
 
 window.addEventListener('finishedPreloader', () => {
         initAllAnimations()

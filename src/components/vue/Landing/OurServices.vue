@@ -11,17 +11,17 @@
                                 </structure-basic-block>
                                 <div class="w-full h-fit flex flex-col gap-2 p-4 md:p-8">
                                         <ServiceCard data-animate="from-bottom" service-title="Identidad Visual"
-                                                url-image="src\assets\services\branding-portada.webp" />
+                                                :url-image="identidadVisual" />
                                         <ServiceCard data-animate="from-bottom" service-title="Branding" bg-color="bg-orange-300"
-                                                url-image="src\assets\services\branding-portada.webp" />
+                                                :url-image="branding" />
                                         <ServiceCard data-animate="from-bottom" service-title="Edicion de Video" bg-color="bg-amber-300"
-                                                url-image="src\assets\services\edicion-de-video-portada .jpg" />
+                                                :url-image="edicionVideo" />
                                         <ServiceCard data-animate="from-bottom" service-title="Diseño Grafico" bg-color="bg-emerald-300"
-                                                url-image="src\assets\services\diseño-grafico-portada.webp" />
+                                                :url-image="disenoGrafico" />
                                         <ServiceCard data-animate="from-bottom" service-title="Desarollo Web" bg-color="bg-violet-300"
-                                                url-image="src\assets\services\desarollo-web-portada.png" />
+                                                :url-image="desarrolloWeb" />
                                         <ServiceCard data-animate="from-bottom" service-title="Gestion de Redes" bg-color="bg-stone-950"
-                                                url-image="src\assets\services\gestion-de-redes-portada.png" />
+                                                :url-image="gestionRedes" />
                                 </div>
                         </template>
                 </structure-basic-block>
@@ -31,6 +31,14 @@
 import StructureBasicBlock from "../_structure/basicBlock.vue";
 import ServiceCard from "../../vue/content/ServiceCard.vue";
 import {initAllAnimations} from '@animations/initAnimations.js'
+
+const identidadVisual = new URL("../../../assets/services/branding-portada.webp", import.meta.url).href;
+const branding = new URL("../../../assets/services/branding-portada.webp", import.meta.url).href;
+const edicionVideo = new URL("../../../assets/services/edicion-de-video-portada.jpg", import.meta.url).href;
+const disenoGrafico = new URL("../../../assets/services/diseño-grafico-portada.webp", import.meta.url).href;
+const desarrolloWeb = new URL("../../../assets/services/desarollo-web-portada.png", import.meta.url).href;
+const gestionRedes = new URL("../../../assets/services/gestion-de-redes-portada.png", import.meta.url).href;
+
 
 
 window.addEventListener('finishedPreloader', () => {
