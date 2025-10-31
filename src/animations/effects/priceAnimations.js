@@ -22,7 +22,7 @@ export function initPriceAnimation() {
         newPrice,
         { opacity: 0, scale: 1.2, y: 15 },
         { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "back.out(1.7)" },
-        "-=0.3"
+        "-=0.5"
       );
 
     createScrollTrigger(block, tl);
