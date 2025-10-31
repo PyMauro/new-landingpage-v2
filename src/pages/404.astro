@@ -1,0 +1,33 @@
+---
+import Layout from "src/layouts/Layout.astro";
+import StructurePaddingContainer from '@components/vue/_structure/paddingContainer.vue'
+import StructureBasicBlock from '@components/vue/_structure/basicBlock.vue'
+import BrandButton from "@components/vue/Brand/Button.vue";
+---
+<Layout title="Lo sentimosss" showPreloader={false} >
+    <section class="w-full h-[12vh] md:h-[6vh] flex justify-center"></section>
+    <StructurePaddingContainer padding="no-padding">
+        <StructureBasicBlock >
+            <div class="w-full h-24"></div>
+        </StructureBasicBlock>
+        </StructurePaddingContainer>            
+                <StructurePaddingContainer padding="no-padding" class=" overflow-y-hidden">
+                    <StructureBasicBlock extra-borders="full-borders" padding="no-padding">
+                        <div class="px-4 w-full flex flex-col items-center gap-2 py-8">
+
+                            <h1 class="font-body text-center font-bold text-4xl md:text-7xl text-white">Lo sentimos,<br> Estamos actualizando nuestro Portafolio y paginas de servicios. </h1>
+                            <p class="text-xl text-center text-neutral-300">Las paginas de servicios y Portafolio estan siendo actualizadas para darte la mayor informacion y asesoria posible a la hora de decidir y conocernos. <strong>Volveran a estar activas el 1 de Noviembre.</strong></p>
+                        </div>
+                    </StructureBasicBlock>
+                     <StructureBasicBlock extra-borders="full-borders" padding="padding" class="h-full">
+                        <div class="w-full flex justify-center items-center">
+                            <BrandButton id="back-to-home" text="Volver al inicio" bg-color="bg-amber-300" />
+                        </div>
+                    </StructureBasicBlock>
+                </StructurePaddingContainer>
+                <script>
+                    document.getElementById('back-to-home')?.addEventListener('click',() => {
+                        window.location.href = '/'
+                    })
+                </script>
+</Layout>
