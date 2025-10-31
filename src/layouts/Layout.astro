@@ -8,10 +8,11 @@ interface Props {
   title: string;
   mainBgColor?: string;
   showPreloader?: boolean; // 👈 nuevo prop
+  ogImage: string;
 }
 
 // Valores por defecto
-const { title, mainBgColor, showPreloader = true } = Astro.props;
+const { title, mainBgColor, showPreloader = true,ogImage = '/menu-media.png' } = Astro.props;
 ---
 
 <!doctype html>
@@ -29,7 +30,7 @@ const { title, mainBgColor, showPreloader = true } = Astro.props;
     />
 
     <!-- Open Graph -->
-    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta
