@@ -14,10 +14,11 @@ import sanity from '@sanity/astro';
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
   vite: {
     server: {
       host: true,
-      allowedHosts: ['all']
+      allowedHosts: ['all','.trycloudflare.com']
     },
     plugins: /** @type {any} */ (tailwindcss()),
     resolve: {
