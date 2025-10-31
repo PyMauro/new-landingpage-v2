@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 //@ts-ignore
 import StructureBasicBlock from "../_structure/basicBlock.vue";
-import IndifferenceImage from "../../../assets/Indifference.png";
+import IndifferenceImage from "../../../assets/phone-epidemic.webp";
 ---
 
 <section id="introSection" class="w-full h-full">
@@ -28,7 +28,7 @@ import IndifferenceImage from "../../../assets/Indifference.png";
       <Image
       src={IndifferenceImage}
       alt="La indiferencia del consumidor"
-      class="w-full h-auto rounded-lg shadow-lg"
+      class="w-full h-auto md:h-80 md:object-cover rounded-lg shadow-lg"
       data-animate="from-bottom"
       />
       <p text-split words-slide-up class="font-body text-xl text-neutral-300">
