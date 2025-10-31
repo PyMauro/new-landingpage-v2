@@ -16,7 +16,12 @@ const props = defineProps({
         type: String,
         default: ""
     }
+
+    
 });
+function redirectTo(path) {
+  window.location.href = path
+}
 </script>
 <template>
     <article class="relative w-full bg-neutral-200 h-fit flex flex-col gap-4 overflow-hidden rounded-3xl p-3 border border-neutral-700">
@@ -34,7 +39,7 @@ const props = defineProps({
                 <h3 class="font-semibold w-full font-heading text-neutral-700">
                     {{ props.title }}
                 </h3>
-                <BrandButton text="Explorar Proyecto" bg-color="bg-amber-300" />
+                <BrandButton text="Explorar Proyecto" bg-color="bg-amber-300" @click="() => redirectTo('/404')"/>
             </div>
         </div>
     </article>
