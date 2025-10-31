@@ -1,279 +1,629 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import ContentBlock from '@components/campaign/contentBlock.astro'
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import ContentBlock from "@components/campaign/contentBlock.astro";
 // Imagenes
-import destacandoEnLaMultitud from '@assets/spots/asegurate-una-buena-temporada-assets/destaca-en-la-multitud.png';
-import SosteniendoBandeja from '@assets/spots/asegurate-una-buena-temporada-assets/hero-image-mobile.png';
-import AlquilamePorfavor from '@assets/spots/asegurate-una-buena-temporada-assets/alquilame-pls.png';
-import identidad1 from '@assets/spots/asegurate-una-buena-temporada-assets/Identidad-1.png';
-import identidad2 from '@assets/spots/asegurate-una-buena-temporada-assets/Identidad-2.png';
-import identidad3 from '@assets/spots/asegurate-una-buena-temporada-assets/Identidad-3.png';
-import identidad4 from '@assets/spots/asegurate-una-buena-temporada-assets/Identidad-4.png';
-import identidad5 from '@assets/spots/asegurate-una-buena-temporada-assets/Identidad-5.png';
+import destacandoEnLaMultitud from "@assets/spots/asegurate-una-buena-temporada-assets/destaca-en-la-multitud.png";
+import SosteniendoBandeja from "@assets/spots/asegurate-una-buena-temporada-assets/hero-image-mobile.png";
+import AlquilamePorfavor from "@assets/spots/asegurate-una-buena-temporada-assets/alquilame-pls.png";
+import identidad1 from "@assets/spots/asegurate-una-buena-temporada-assets/Identidad-1.png";
+import identidad2 from "@assets/spots/asegurate-una-buena-temporada-assets/Identidad-2.png";
+import identidad3 from "@assets/spots/asegurate-una-buena-temporada-assets/Identidad-3.png";
+import identidad4 from "@assets/spots/asegurate-una-buena-temporada-assets/Identidad-4.png";
+import identidad5 from "@assets/spots/asegurate-una-buena-temporada-assets/Identidad-5.png";
+import ejemplo6 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-6.webp"
+import ejemplo7 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-7.webp"
+import ejemplo8 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-8.webp"
+import ejemplo9 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-9.webp"
+import ejemplo10 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-10.webp"
+import ejemplo11 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-11.webp"
+import ejemplo12 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-12.webp"
+import ejemplo13 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-13.webp"
+import ejemplo14 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-14.webp"
+import ejemplo15 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-15.webp"
+import ejemplo16 from "@assets/spots/asegurate-una-buena-temporada-assets/ejemplo-16.webp"
 // @ts-ignore
 import StructureBasicBlock from "../../components/vue/_structure/basicBlock.vue";
 import StructurePaddingContainer from "../../components/vue/_structure/paddingContainer.vue";
-import ContactForm from '@components/vue/functional/contactForm.vue';
+import ContactForm from "@components/vue/functional/contactForm.vue";
 ---
-<Layout title="Asegurate una buena temporada" mainBgColor='bg-yellow-200' >
-    <!-- START Hero section Intro -->
-    <StructurePaddingContainer>
-        <section class="w-full h-full overflow-x-hidden">
-            <StructureBasicBlock extra-borders="bottom-border" class="py-8">
-                <StructureBasicBlock padding="padding" class="relative">
-                    <div class="w-full flex flex-col justify-center">
-                        <span class="py-6 w-full">
-                            <h1 id="hero-title" class="heading font-heading text-8xl md:text-[120px] text-balance text-center">Cada vez hay <strong class="font-bold">más ofertas,</strong> pero <strong class="font-bold">menos reservas</strong>... </h1>
-                        </span>
-                        <Image id='hero-image' class="relative -right-[5%] bottom-12 md:bottom-20 w-full" src={SosteniendoBandeja} alt='mano sosteniendo bandeja' />
-                        <span words-slide-up  class="h-fit font-body text-xl font-semibold text-center">Por eso hoy mas que nunca, dependes de enamorar a cada curioso con ganas de alquilar.</span>
-                        
-                    </div>
-                </StructureBasicBlock>
-            </StructureBasicBlock>
-        </section>
-    </StructurePaddingContainer>
-    <!-- END Hero section Intro -->
-    <!-- START El problema section -->
-    <section class="w-full h-full">
-    <StructurePaddingContainer>
-                    <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full">
-                        <StructureBasicBlock padding="no-padding" class="relative px-2 ">
-                            <ContentBlock blocktitle="El problema" basepadding={true} darkMode={true}>
-                                <div class="flex flex-col gap-2 items-center py-4 font-body font-medium justify-center">
-                                    <p words-slide-up  class="leading-[95%] md:text-center">Hoy, todos muestran lo mismo. Fotos iguales, precios parecidos, mensajes vacíos. Pero los turistas ya no eligen igual que antes</p>
-                                    <div class="w-full flex justify-center pl-0 lg:pl-16">
-                                        <Image data-animate='blur-up' src={AlquilamePorfavor} alt='Alquilame porfavor'  />
-                                    </div>
-                                    <p words-slide-up  class="leading-[95%] md:text-center"><strong  class="font-bold text-white">Ya no alcanza con tener buenas fotos ni precios competitivos.</strong> 
-<strong   class="font-bold text-white">Los turistas</strong> no buscan el más barato: <strong   class="font-bold text-white">buscan confianza</strong>, buscan asegurarse una experiencia inolvidable.</p>
-                                <p words-slide-up class="leading-[95%] md:text-center"><strong   class="font-bold text-white">El problema no es la falta de turistas, es la falta de conexión.</strong> Porque hoy no se trata solo de que te encuentren, sino de generarles algo.</p>
-                                <p words-slide-up  class="py-4 font-body font-extrabold leading-[80%] text-center text-2xl"> Y si tu comunicación no refleja lo que hace único a tu alojamiento... alguien más se lleva esa reserva.</p>
-                            </div>
-                            </ContentBlock>
-                        </StructureBasicBlock>
-                    </StructureBasicBlock>
-    </StructurePaddingContainer>
-    </section>
-    <!-- END El problema section -->
-    <!-- START La solucion section -->
-     <section>
-        <StructurePaddingContainer>
-        <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full">
-            <StructureBasicBlock padding="no-padding" class="relative px-2 ">
-                <ContentBlock blocktitle="Tu solucion" darkMode={true} >
-                    <div class="flex flex-col">
 
-                        <div class="w-full relative h-[432px]">
-                            <Image data-animate='from-bottom' quality="mid" class="w-[98.5%] h-[256px] left-1 relative object-cover rounded-t-[30px] [&>img]:rounded-t-4xl top-1" src={destacandoEnLaMultitud} alt='destacando en la multitud' />
-                                <div class="w-full bg-gradient-to-t h-[260px] from-[#121113] to-[#121113]/0 absolute top-0 rounded-t-4xl"></div>
-                                <span class="px-4">
-                                    <h2 text-split words-slide-from-right class="heading z-20 font-body text-center text-5xl font-bold">Destacar, enamorar<br> a primera vista </h2>
-                                </span>
-                            </div>
-                            <div class="flex flex-col items-center w-full">
-                                <div class="px-4 w-fit py-4">
-                                    <p words-slide-up class="text-center">Te prometo que nadie, jamás, va a discutir tu precio o pensar dos veces en reservar si tu identidad visual se ve asi...</p>
-                                </div>
-                                <div class="w-fit flex flex-col gap-2 px-2 py-2">
-                                    <Image data-animate='from-bottom' src={identidad1} alt='identidad visual 1'/>
-                                    <Image data-animate='from-bottom' src={identidad2} alt='identidad visual 2'/>
-                                    <Image data-animate='from-bottom' src={identidad3} alt='identidad visual 3'/>
-                                    <Image data-animate='from-bottom' src={identidad4} alt='identidad visual 4'/>
-                                    <Image data-animate='from-bottom' src={identidad5} alt='identidad visual 5' class='rounded-b-[26px]'/>
-                                </div>
-                            </div>
-                        </div>
-                        
-                </ContentBlock>
-            </StructureBasicBlock>
+<Layout
+  title="Asegurate una buena temporada"
+  mainBgColor="bg-yellow-200"
+>
+  <!-- START Hero section Intro -->
+  <StructurePaddingContainer>
+    <section class="w-full h-full overflow-x-hidden">
+      <StructureBasicBlock extra-borders="bottom-border" class="py-8">
+        <StructureBasicBlock padding="padding" class="relative">
+          <div class="w-full flex flex-col justify-center">
+            <span class="py-6 w-full">
+              <h1
+                id="hero-title"
+                class="heading font-heading text-8xl md:text-[120px] text-balance text-center"
+              >
+                Cada vez hay <strong class="font-bold">más ofertas,</strong> pero
+                <strong class="font-bold">menos reservas</strong>...
+              </h1>
+            </span>
+            <Image
+              id="hero-image"
+              class="relative -right-[5%] bottom-12 md:bottom-20 w-full"
+              src={SosteniendoBandeja}
+              alt="mano sosteniendo bandeja"
+            />
+            <span
+              words-slide-up
+              class="h-fit font-body text-xl font-semibold text-center"
+              >Por eso hoy mas que nunca, dependes de enamorar a cada curioso
+              con ganas de alquilar.</span
+            >
+          </div>
         </StructureBasicBlock>
-        </StructurePaddingContainer>
+      </StructureBasicBlock>
     </section>
-    <!-- END La solucion Section -->
-        <!-- START Nuestro Proceso -->
-         <section>
-         <!-- <StructurePaddingContainer> -->
-            <!-- <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full"> -->
-                <!-- <ContentBlock blocktitle='Nuestro Proceso' basepadding={false} darkMode={true}> -->
+  </StructurePaddingContainer>
+  <!-- END Hero section Intro -->
+  <!-- START El problema section -->
+  <section class="w-full h-full">
+    <StructurePaddingContainer>
+      <StructureBasicBlock
+        extra-borders="bottom-border"
+        class="py-8 min-h-full"
+      >
+        <StructureBasicBlock padding="no-padding" class="relative px-2">
+          <ContentBlock
+            blocktitle="El problema"
+            basepadding={true}
+            darkMode={true}
+          >
+            <div
+              class="flex flex-col gap-2 items-center py-4 font-body font-medium justify-center"
+            >
+              <p words-slide-up class="leading-[95%] md:text-center">
+                Hoy, todos muestran lo mismo. Fotos iguales, precios parecidos,
+                mensajes vacíos. Pero los turistas ya no eligen igual que antes
+              </p>
+              <div class="w-full flex justify-center pl-0 lg:pl-16">
+                <Image
+                  data-animate="blur-up"
+                  src={AlquilamePorfavor}
+                  alt="Alquilame porfavor"
+                />
+              </div>
+              <p words-slide-up class="leading-[95%] md:text-center">
+                <strong class="font-bold text-white"
+                  >Ya no alcanza con tener buenas fotos ni precios competitivos.</strong
+                >
+                <strong class="font-bold text-white">Los turistas</strong> no buscan
+                el más barato: <strong class="font-bold text-white"
+                  >buscan confianza</strong
+                >, buscan asegurarse una experiencia inolvidable.
+              </p>
+              <p words-slide-up class="leading-[95%] md:text-center">
+                <strong class="font-bold text-white"
+                  >El problema no es la falta de turistas, es la falta de
+                  conexión.</strong
+                > Porque hoy no se trata solo de que te encuentren, sino de generarles
+                algo.
+              </p>
+              <p
+                words-slide-up
+                class="py-4 font-body font-extrabold leading-[80%] text-center text-2xl"
+              >
+                Y si tu comunicación no refleja lo que hace único a tu
+                alojamiento... alguien más se lleva esa reserva.
+              </p>
+            </div>
+          </ContentBlock>
+        </StructureBasicBlock>
+      </StructureBasicBlock>
+    </StructurePaddingContainer>
+  </section>
+  <!-- END El problema section -->
+  <!-- START La solucion section -->
+  <section>
+    <StructurePaddingContainer>
+      <StructureBasicBlock
+        extra-borders="bottom-border"
+        class="py-8 min-h-full"
+      >
+        <StructureBasicBlock padding="no-padding" class="relative px-2">
+          <ContentBlock blocktitle="Tu solucion" darkMode={true}>
+            <div class="flex flex-col">
+              <div class="w-full relative h-[432px]">
+                <Image
+                  data-animate="from-bottom"
+                  quality="mid"
+                  class="w-[98.5%] h-[256px] left-1 relative object-cover rounded-t-[30px] [&>img]:rounded-t-4xl top-1"
+                  src={destacandoEnLaMultitud}
+                  alt="destacando en la multitud"
+                />
+                <div
+                  class="w-full bg-gradient-to-t h-[260px] from-[#121113] to-[#121113]/0 absolute top-0 rounded-t-4xl"
+                >
+                </div>
+                <span class="px-4">
+                  <h2
+                    text-split
+                    words-slide-from-right
+                    class="heading z-20 font-body text-center text-5xl font-bold"
+                  >
+                    Destacar, enamorar<br /> a primera vista
+                  </h2>
+                </span>
+              </div>
+              <div class="flex flex-col items-center w-full">
+                <div class="px-4 w-fit py-4">
+                  <p words-slide-up class="text-center">
+                    Te prometo que nadie, jamás, va a discutir tu precio o
+                    pensar dos veces en reservar si tu identidad visual se ve
+                    asi...
+                  </p>
+                </div>
+               <div class="grid grid-cols-2 md:grid-cols-3  gap-2 grid-flow-dense auto-rows-[150px] px-2 py-2">
+  <div class="col-span-2 row-span-2 md:col-span-1 overflow-hidden rounded-lg">
+      <Image data-animate='from-bottom' src={identidad2} alt="identidad 2" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+</div>
+<div class="col-span-2 row-span-4 md:row-span-2 overflow-hidden rounded-lg">
+      <Image data-animate='from-bottom' src={identidad1} alt="identidad 1" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-2 row-span-2 overflow-hidden rounded-lg">
+    <Image data-animate='from-bottom' src={identidad3} alt="identidad 3" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-2 overflow-hidden rounded-lg">
+    <Image data-animate='from-bottom' src={identidad4} alt="identidad 4" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-1 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={identidad5} alt="identidad 5" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+    <div class="col-span-1 row-span-1 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo6} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-3 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo7} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div  class="col-span-1 row-span-3 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo8} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-3 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo9} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-1 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo10} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-1 md:row-span-2 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo11} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-3 md:row-span-2 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo12} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-2 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo13} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-2 row-span-4 md:row-span-2 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo14} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-2 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo15} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+  <div class="col-span-1 row-span-2 overflow-hidden rounded-[16px]">
+    <Image data-animate='from-bottom' src={ejemplo16} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  </div>
+</div>
+                <!-- <div class="w-fit grid grid-cols-3 gap-2 px-2 py-2">
+                                    <Image class="col-span-1 row-span-1" data-animate='from-bottom' src={identidad1} alt='identidad visual 1'/>
+                                    <Image class="col-span-2 row-span-2" data-animate='from-bottom' src={identidad2} alt='identidad visual 2'/>
+                                    <Image class="col-span-2 row-span-1" data-animate='from-bottom' src={identidad3} alt='identidad visual 3'/>
+                                    <Image class="col-span-1 row-span-2" data-animate='from-bottom' src={identidad4} alt='identidad visual 4'/>
+                                    <Image class="col-span-1 row-span-1" data-animate='from-bottom' src={identidad5} alt='identidad visual 5' class='rounded-[16px]'/>
+                                </div> -->
+              </div>
+            </div>
+          </ContentBlock>
+        </StructureBasicBlock>
+      </StructureBasicBlock>
+    </StructurePaddingContainer>
+  </section>
+  <!-- END La solucion Section -->
+  <!-- START Nuestro Proceso -->
+  <section>
+    <!-- <StructurePaddingContainer> -->
+    <!-- <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full"> -->
+    <!-- <ContentBlock blocktitle='Nuestro Proceso' basepadding={false} darkMode={true}> -->
     <div class="bg-black text-white py-8 w-full">
-    <div class="w-full  flex flex-col items-start md:flex-row my-12 md:my-24">
-      <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
-        <p words-slide-up class="ml-2 text-amber-300 uppercase tracking-loose">Como trabajamos</p>
-        <h2 words-slide-up class="text-4xl font-body font-semibold md:text-5xl mb-2">Lo que va a pasar luego de contactarnos</h2>
-        <p words-slide-up class="text-base text-gray-50 mb-4">
-          No creemos que el desarollo de una identidad sea un trabajo individual, sino un trabajo en equipo junto al cliente, para asegurarnos de asesorarte y guiarte, para poder entender que es lo mas eficiente para tu negocio,y una vez das el okey, volver tu idea realidad.
-        </p>
-      </div>
-      <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
-        <div class="mx-auto w-full h-full">
-          <div class="relative wrap overflow-hidden p-10 h-full">
-            <div class="border-2-2 border-yellow-555 absolute h-full border"
-              style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
-            <div class="border-2-2 border-yellow-555 absolute h-full border"
-              style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"></div>
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1 w-5/12 px-1 py-4 text-right">
-                <p class="mb-3 font-body text-amber-300 text-base font-light">DIA 1</p>
-                <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">Reunion inicial</h4>
-                <p words-slide-up class="text-base leading-snug text-gray-50 text-opacity-100">
-                 Luego de la primer llamada y el formulario de Brief, tomamos toda la informacion y la usamos para realizar una investigacion base sobre tendencias, psicologia del color, estilos graficos, tono comunicacional. Para definir asi un moodboard donde presentaremos la direccion creativa sugerida. 
-                </p>
+      <div class="w-full flex flex-col items-start md:flex-row my-12 md:my-24">
+        <div
+          class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8"
+        >
+          <p
+            words-slide-up
+            class="ml-2 text-amber-300 uppercase tracking-loose"
+          >
+            Como trabajamos
+          </p>
+          <h2
+            words-slide-up
+            class="text-4xl font-body font-semibold md:text-5xl mb-2"
+          >
+            Lo que va a pasar luego de contactarnos
+          </h2>
+          <p words-slide-up class="text-base text-gray-50 mb-4">
+            No creemos que el desarollo de una identidad sea un trabajo
+            individual, sino un trabajo en equipo junto al cliente, para
+            asegurarnos de asesorarte y guiarte, para poder entender que es lo
+            mas eficiente para tu negocio,y una vez das el okey, volver tu idea
+            realidad.
+          </p>
+        </div>
+        <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
+          <div class="mx-auto w-full h-full">
+            <div class="relative wrap overflow-hidden p-10 h-full">
+              <div
+                class="border-2-2 border-yellow-555 absolute h-full border"
+                style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
+              >
               </div>
-            </div>
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1  w-5/12 px-1 py-4 text-left">
-                <p class="mb-3 font-body text-amber-300 text-base font-light">DIA 1 a 2</p>
-                <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">Presentacion Direccion Creativa</h4>
-                <p words-slide-up class="text-base leading-snug text-gray-50 text-opacity-100">
-                 Presentamos en una segunda reunion la direccion creativa que creemos optima, ahi mostraremos el moodboard, un collage al que se llega recopilando inspiracion de diferentes fuentes donde te mostramos un compilado de como vamos a hacer "sentir" tu identidad visual.
-                </p>
+              <div
+                class="border-2-2 border-yellow-555 absolute h-full border"
+                style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"
+              >
               </div>
-            </div>
-            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-              <div class="order-1 w-5/12"></div>
-              <div class="order-1 w-5/12 px-1 py-4 text-right">
-                <p class="mb-3 font-body text-amber-300 text-base font-light">DIA 2 a 6<p/>
-                <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">Desarollo Creativo</h4>
-                <p words-slide-up class="text-base leading-snug text-gray-50 text-opacity-100">
-                  Una vez que tenemos tu Okey, me pondre a desarollar la presencia visual de tu negocio, usando como referencia y guia la direccion creativa que aprobaste. 
-                </p>
+              <div
+                class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+              >
+                <div class="order-1 w-5/12"></div>
+                <div class="order-1 w-5/12 px-1 py-4 text-right">
+                  <p class="mb-3 font-body text-amber-300 text-base font-light">
+                    DIA 1
+                  </p>
+                  <h4
+                    words-slide-up
+                    class="mb-3 font-bold text-3xl md:text-4xl font-body"
+                  >
+                    Reunion inicial
+                  </h4>
+                  <p
+                    words-slide-up
+                    class="text-base leading-snug text-gray-50 text-opacity-100"
+                  >
+                    Luego de la primer llamada y el formulario de Brief, tomamos
+                    toda la informacion y la usamos para realizar una
+                    investigacion base sobre tendencias, psicologia del color,
+                    estilos graficos, tono comunicacional. Para definir asi un
+                    moodboard donde presentaremos la direccion creativa
+                    sugerida.
+                  </p>
+                </div>
               </div>
-            </div>
+              <div
+                class="mb-8 flex justify-between items-center w-full right-timeline"
+              >
+                <div class="order-1 w-5/12"></div>
+                <div class="order-1 w-5/12 px-1 py-4 text-left">
+                  <p class="mb-3 font-body text-amber-300 text-base font-light">
+                    DIA 1 a 2
+                  </p>
+                  <h4
+                    words-slide-up
+                    class="mb-3 font-bold text-3xl md:text-4xl font-body"
+                  >
+                    Presentacion Direccion Creativa
+                  </h4>
+                  <p
+                    words-slide-up
+                    class="text-base leading-snug text-gray-50 text-opacity-100"
+                  >
+                    Presentamos en una segunda reunion la direccion creativa que
+                    creemos optima, ahi mostraremos el moodboard, un collage al
+                    que se llega recopilando inspiracion de diferentes fuentes
+                    donde te mostramos un compilado de como vamos a hacer
+                    "sentir" tu identidad visual.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+              >
+                <div class="order-1 w-5/12"></div>
+                <div class="order-1 w-5/12 px-1 py-4 text-right">
+                  <p class="mb-3 font-body text-amber-300 text-base font-light">
+                    DIA 2 a 6<p></p>
+                    <h4
+                      words-slide-up
+                      class="mb-3 font-bold text-3xl md:text-4xl font-body"
+                    >
+                      Desarollo Creativo
+                    </h4>
+                    <p
+                      words-slide-up
+                      class="text-base leading-snug text-gray-50 text-opacity-100"
+                    >
+                      Una vez que tenemos tu Okey, me pondre a desarollar la
+                      presencia visual de tu negocio, usando como referencia y
+                      guia la direccion creativa que aprobaste.
+                    </p>
+                  </p>
+                </div>
 
-            <div class="mb-8 flex justify-between items-center w-full right-timeline">
-              <div class="order-1 w-5/12"></div>
+                <div
+                  class="mb-8 flex justify-between items-center w-full right-timeline"
+                >
+                  <div class="order-1 w-5/12"></div>
 
-              <div class="order-1  w-5/12 px-1 py-4">
-                <p class="mb-3 font-body text-amber-300 text-base font-light">DIA 6 a 7</p>
-                <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">Presentacion y Revision</h4>
-                <p words-slide-up class="text-base leading-snug text-gray-50 text-opacity-100">
-                  El dia de la verdad, aca nos contactaremos una vez el trabajo este listo y tengamos la identidad visual completada. En esta etapa correran las 2 revisiones en donde podras sugerir cambios, consultar y realizar modificaciones. Una vez aprobada la identidad visual, desarollaremos el contenido 100% homogeneo con la identidad creada.
-                </p>
+                  <div class="order-1 w-5/12 px-1 py-4">
+                    <p
+                      class="mb-3 font-body text-amber-300 text-base font-light"
+                    >
+                      DIA 6 a 7
+                    </p>
+                    <h4
+                      words-slide-up
+                      class="mb-3 font-bold text-3xl md:text-4xl font-body"
+                    >
+                      Presentacion y Revision
+                    </h4>
+                    <p
+                      words-slide-up
+                      class="text-base leading-snug text-gray-50 text-opacity-100"
+                    >
+                      El dia de la verdad, aca nos contactaremos una vez el
+                      trabajo este listo y tengamos la identidad visual
+                      completada. En esta etapa correran las 2 revisiones en
+                      donde podras sugerir cambios, consultar y realizar
+                      modificaciones. Una vez aprobada la identidad visual,
+                      desarollaremos el contenido 100% homogeneo con la
+                      identidad creada.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- </ContentBlock> -->
+      <!-- <StructureBasicBlock/> -->
+      <!-- </StructurePaddingContainer> -->
     </div>
-  </div>
-                <!-- </ContentBlock> -->
-                <!-- <StructureBasicBlock/> -->
-        <!-- </StructurePaddingContainer> -->
-    </section>
-     <!-- END Nuestro Proceso -->
+    <!-- END Nuestro Proceso -->
     <!-- START Nuestra Propuesta -->
-    <section data-animate="blur-up">     
-        <StructurePaddingContainer>
-            <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full">
-                <StructureBasicBlock padding="no-padding" class="relative px-2 ">
-                    <ContentBlock blocktitle="propuesta" darkMode={false} basepadding={true} >
-                        <div class="w-full md:w-3/4 md:flex md:flex-col md:items-center ">
-                            <h2 text-split words-slide-from-right class="font-body text-4xl md:text-[54px] font-bold text-center leading-[95%] p-2">Tu identidad
-    visual a medida + contenido publicitable</h2>
-    <p words-slide-up class="font-light font-body leading-[95%] text-center">Esta oferta es vigente desde el 30 de octubre hasta el 8 de noviembre o hasta completar cupos, luego vuelve a su precio normal.</p>
-                        <div class="w-full flex items-center gap-2 flex-col md:gap-4 md:justify-center md:flex-row  py-4">
-                            <span class="dinamic-el-container font-body text-violet-950 text-2xl font-semibold text-center px-4 h-full w-full bg-violet-300 flex gap-2 items-center justify-center border-2 border-neutral-950  py-1 rounded-4xl"><p text-split words-slide-up>Listo en</p><span text-split words-slide-up class="font-bold text-amber-100">1</span> <p text-split words-slide-up>Semana</p></span>
-                            <span class="dinamic-el-container font-body text-violet-950 text-2xl text-center px-4 h-full w-full font-semibold bg-violet-300  border-2 border-neutral-950 py-1 rounded-4xl flex gap-2 items-center justify-center"><p text-split words-slide-up>Solo</p><span class="font-bold text-amber-200 flex justify-center items-center px-3 py-1 rounded-2xl w-fit bg-purple-950 text-split" words-slide-up>10</span><p text-split words-slide-up>Cupos Restantes</p></span>
-                        </div>
-                        <div class="font-bold text-3xl">
-                            <div class="py-2">
-                            <h3 words-slide-up class="font-body">Identidad Visual:</h3>
-                            <div class="flex flex-col gap-2">
-                                <ul class="list-none marker:text-3xl gap-2 marker:align-middle marker:self-center marker: marker:text-purple-600 marker:font-bold ">
-                                    <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">Logo Profesional</li>
-                                    <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">Variaciones de Logo</li>
-                                    <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">Paleta de colores</li>
-                                    <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">Tipografia + combinaciones de tipografias</li>
-                                    <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">3 aplicables <span class="font-light text-neutral-800">(papelería, cartelería, publicidad, uniformes, lo que necesites)</span></li>
-                                    <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">Manual de marca</li>
-                                    <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">2 Revisiones</li>
-                                </ul>
-                            </div>
-                            </div>
-                            <div class="py-2">
-                                <h3 words-slide-up class="font-body">Contenido:</h3>
-                                <p words-slide-up class="font-light font-body leading-[95%]">Todo el contenido no es al azar, definimos antes una estrategia de comunicación basada en la identidad visual y orientada al publico que buscar llegar.</p>
-                                <div class="flex flex-col gap-2">
-                                    <ul class="list-none marker:text-3xl gap-2 marker:align-middle marker:self-center marker: marker:text-purple-600 marker:font-bold ">
-                                        <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">5 historias/ estados</li>
-                                        <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">3 Carrouseles</li>
-                                        <li words-slide-up class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain    leading-7 align-middle pl-8 text-lg">1 Reel optimizado para publicidad</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="price-block flex gap-2 items-center justify-between py-4">
-                                <span words-slide-up class="w-1/2 text-xl font-body font-semibold leading-[95%]">
-                                    Todo por tan solo una inversion unica de:
-                                </span>
-                                <span class="w-1/2 flex flex-col items-end gap-0 md:text-3xl">
-                                    <p class="old-price text-2xl text-neutral-500">$125.000</p>
-                                    <p class="new-price font-extrabold font-body text-3xl md:text-4xl text-purple-700">$85.000</p>
-                                </span>
-                            </div>
-                        </div>
-                        </div>
-                    </ContentBlock>
-                </StructureBasicBlock>
-            </StructureBasicBlock>
-        </StructurePaddingContainer>
+    <section data-animate="blur-up">
+      <StructurePaddingContainer>
+        <StructureBasicBlock
+          extra-borders="bottom-border"
+          class="py-8 min-h-full"
+        >
+          <StructureBasicBlock padding="no-padding" class="relative px-2">
+            <ContentBlock
+              blocktitle="propuesta"
+              darkMode={false}
+              basepadding={true}
+            >
+              <div class="w-full md:w-3/4 md:flex md:flex-col md:items-center">
+                <h2
+                  text-split
+                  words-slide-from-right
+                  class="font-body text-4xl md:text-[54px] font-bold text-center leading-[95%] p-2"
+                >
+                  Tu identidad visual a medida + contenido publicitable
+                </h2>
+                <p
+                  words-slide-up
+                  class="font-light font-body leading-[95%] text-center"
+                >
+                  Esta oferta es vigente desde el 30 de octubre hasta el 8 de
+                  noviembre o hasta completar cupos, luego vuelve a su precio
+                  normal.
+                </p>
+                <div
+                  class="w-full flex items-center gap-2 flex-col md:gap-4 md:justify-center md:flex-row py-4"
+                >
+                  <span
+                    class="dinamic-el-container font-body text-violet-950 text-2xl font-semibold text-center px-4 h-full w-full bg-violet-300 flex gap-2 items-center justify-center border-2 border-neutral-950 py-1 rounded-4xl"
+                    ><p text-split words-slide-up>Listo en</p><span
+                      text-split
+                      words-slide-up
+                      class="font-bold text-amber-100">1</span
+                    >
+                    <p text-split words-slide-up>Semana</p></span
+                  >
+                  <span
+                    class="dinamic-el-container font-body text-violet-950 text-2xl text-center px-4 h-full w-full font-semibold bg-violet-300 border-2 border-neutral-950 py-1 rounded-4xl flex gap-2 items-center justify-center"
+                    ><p text-split words-slide-up>Solo</p><span
+                      class="font-bold text-amber-200 flex justify-center items-center px-3 py-1 rounded-2xl w-fit bg-purple-950 text-split"
+                      words-slide-up>10</span
+                    ><p text-split words-slide-up>Cupos Restantes</p></span
+                  >
+                </div>
+                <div class="font-bold text-3xl">
+                  <div class="py-2">
+                    <h3 words-slide-up class="font-body">Identidad Visual:</h3>
+                    <div class="flex flex-col gap-2">
+                      <ul
+                        class="list-none marker:text-3xl gap-2 marker:align-middle marker:self-center marker: marker:text-purple-600 marker:font-bold"
+                      >
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          Logo Profesional
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          Variaciones de Logo
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          Paleta de colores
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          Tipografia + combinaciones de tipografias
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          3 aplicables <span class="font-light text-neutral-800"
+                            >(papelería, cartelería, publicidad, uniformes, lo
+                            que necesites)</span>
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          Manual de marca
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          2 Revisiones
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <h3 words-slide-up class="font-body">Contenido:</h3>
+                    <p
+                      words-slide-up
+                      class="font-light font-body leading-[95%]"
+                    >
+                      Todo el contenido no es al azar, definimos antes una
+                      estrategia de comunicación basada en la identidad visual y
+                      orientada al publico que buscar llegar.
+                    </p>
+                    <div class="flex flex-col gap-2">
+                      <ul
+                        class="list-none marker:text-3xl gap-2 marker:align-middle marker:self-center marker: marker:text-purple-600 marker:font-bold"
+                      >
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          5 historias/ estados
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          3 Carrouseles
+                        </li>
+                        <li
+                          words-slide-up
+                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
+                        >
+                          1 Reel optimizado para publicidad
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div
+                    class="price-block flex gap-2 items-center justify-between py-4"
+                  >
+                    <span
+                      words-slide-up
+                      class="w-1/2 text-xl font-body font-semibold leading-[95%]"
+                    >
+                      Todo por tan solo una inversion unica de:
+                    </span>
+                    <span
+                      class="w-1/2 flex flex-col items-end gap-0 md:text-3xl"
+                    >
+                      <p class="old-price text-2xl text-neutral-500">
+                        $125.000
+                      </p>
+                      <p
+                        class="new-price font-extrabold font-body text-3xl md:text-4xl text-purple-700"
+                      >
+                        $85.000
+                      </p>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ContentBlock>
+          </StructureBasicBlock>
+        </StructureBasicBlock>
+      </StructurePaddingContainer>
     </section>
     <!-- END Nuestra propuesta Section -->
 
     <!-- START Contact Section -->
     <section>
-        <StructurePaddingContainer>
-            <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full">
-                <div class="w-full flex flex-col gap-4 py-4 items-center">
-                    <div class="flex flex-col gap-2"><h2 text-split words-slide-from-right class="heading font-body text-center font-bold leading-[95%] tracking-tight py-4 text-balance">Volver tu alojamiento un iman de reservas esta a solo 1 click de distancia, ¿Te lo vas a perder?</h2>
-                    </div>
-                    <ContactForm client:load />
-                    <div class="px-4 text-lg text-neutral-600 text-balance text-center">
-                        <p>Oferta valida solo por contratacion dentro del rango del 30 de Octubre al 8 de Noviembre o hasta completar los 10 cupos. Una vez cumplida una de las condiciones, el precio del paquete vuelve al valor nominal natural de los servicios. </p>
-                    </div>
-                </div>
-            </StructureBasicBlock>  
+      <StructurePaddingContainer>
+        <StructureBasicBlock
+          extra-borders="bottom-border"
+          class="py-8 min-h-full"
+        >
+          <div class="w-full flex flex-col gap-4 py-4 items-center">
+            <div class="flex flex-col gap-2">
+              <h2
+                text-split
+                words-slide-from-right
+                class="heading font-body text-center font-bold leading-[95%] tracking-tight py-4 text-balance"
+              >
+                Volver tu alojamiento un iman de reservas esta a solo 1 click de
+                distancia, ¿Te lo vas a perder?
+              </h2>
+            </div>
+            <ContactForm client:load />
+            <div class="px-4 text-lg text-neutral-600 text-balance text-center">
+              <p>
+                Oferta valida solo por contratacion dentro del rango del 30 de
+                Octubre al 8 de Noviembre o hasta completar los 10 cupos. Una
+                vez cumplida una de las condiciones, el precio del paquete
+                vuelve al valor nominal natural de los servicios.
+              </p>
+            </div>
+          </div>
+        </StructureBasicBlock>
+      </StructurePaddingContainer>
+      <!-- END Contact Section -->
     </section>
-    <!-- END Contact Section -->
-
-
-</Layout>
-<!-- @ts-ignore -->
-<script>
-    window.addEventListener("finishedPreloader", async () => {
+    <!-- @ts-ignore -->
+    <script>
+      window.addEventListener("finishedPreloader", async () => {
         //@ts-ignore
-        const { initAllAnimations } = await import("@animations/initAnimations.js");
+        const { initAllAnimations } = await import(
+          "@animations/initAnimations.js"
+        );
         initAllAnimations();
-    })
+      });
+    </script>
 
-    
- 
-
-</script>
-
-
-
-
-<style>
-
-p {
-    font-family: 'DM Sans',sans-serif;
-}
-.heading {
-  color: #ffffff; /* relleno */
-  text-shadow:
-    2px 0 #181818, -2px 0 #181818, 0 2px #181818, 0 -2px #181818,
-    1px 1px #181818, -1px -1px #181818, 1px -1px #181818, -1px 1px #181818,
-    0.025em 0.025em 0 #181818,
-    0.030em 0.030em 0 #181818,
-    0.045em 0.045em 0 #181818,
-    0.060em 0.060em 0 #181818,
-    0.075em 0.075em 0 #181818,
-    0.090em 0.090em 0 #181818,
-    0.105em 0.105em 0 #181818;    
-}
-</style>
+    <style>
+      p {
+        font-family: "DM Sans", sans-serif;
+      }
+      .heading {
+        color: #ffffff; /* relleno */
+        text-shadow:
+          2px 0 #181818,
+          -2px 0 #181818,
+          0 2px #181818,
+          0 -2px #181818,
+          1px 1px #181818,
+          -1px -1px #181818,
+          1px -1px #181818,
+          -1px 1px #181818,
+          0.025em 0.025em 0 #181818,
+          0.03em 0.03em 0 #181818,
+          0.045em 0.045em 0 #181818,
+          0.06em 0.06em 0 #181818,
+          0.075em 0.075em 0 #181818,
+          0.09em 0.09em 0 #181818,
+          0.105em 0.105em 0 #181818;
+      }
+    </style>
+  </section></Layout
+>
