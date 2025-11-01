@@ -31,6 +31,7 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
 <Layout
   title="Asegurate una buena temporada"
   mainBgColor="bg-yellow-200"
+  showPreloader={false}
 >
   <!-- START Hero section Intro -->
   <StructurePaddingContainer>
@@ -81,9 +82,12 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
             <div
               class="flex flex-col gap-2 items-center py-4 font-body font-medium justify-center"
             >
-              <p words-slide-up class="leading-[95%] md:text-center">
-                Hoy, todos muestran lo mismo. Fotos iguales, precios parecidos,
-                mensajes vacíos. Pero los turistas ya no eligen igual que antes
+            <h2 class="font-white font-boy">
+                Hoy, todos muestran lo mismo.
+            </h2>
+              <p words-slide-up class="font-body leading-[95%] md:text-center text-lg md:text-xl">
+                 Fotos iguales, precios parecidos,
+                mensajes vacíos. 
               </p>
               <div class="w-full flex justify-center pl-0 lg:pl-16">
                 <Image
@@ -92,29 +96,16 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
                   alt="Alquilame porfavor"
                 />
               </div>
-              <p words-slide-up class="leading-[95%] md:text-center">
-                <strong class="font-bold text-white"
-                  >Ya no alcanza con tener buenas fotos ni precios competitivos.</strong
-                >
-                <strong class="font-bold text-white">Los turistas</strong> no buscan
-                el más barato: <strong class="font-bold text-white"
-                  >buscan confianza</strong
-                >, buscan asegurarse una experiencia inolvidable.
+              <p words-slide-up class="font-body leading-[95%] py-2 text-center text-xl md:text-2xl">
+                Pero los turistas ya no eligen igual que antes. Ya no buscan <i>“un lugar”</i> ,<br class="hidden md:block"/> buscan una experiencia que los convenza antes de reservar.
               </p>
-              <p words-slide-up class="leading-[95%] md:text-center">
-                <strong class="font-bold text-white"
-                  >El problema no es la falta de turistas, es la falta de
-                  conexión.</strong
-                > Porque hoy no se trata solo de que te encuentren, sino de generarles
-                algo.
-              </p>
-              <p
-                words-slide-up
-                class="py-4 font-body font-extrabold leading-[80%] text-center text-2xl"
-              >
-                Y si tu comunicación no refleja lo que hace único a tu
-                alojamiento... alguien más se lleva esa reserva.
-              </p>
+              <div class="w-fit bg-gradient-to-br from-violet-500/20 to-violet-950/20 py-8 px-4 rounded-3xl border-4 border-amber-500">
+                  <p words-slide-up class="font-body leading-[95%] text-center text-xl md:text-2xl">
+                      <strong class="font-bold text-white"> No es que falten turistas, Falta conexion. <br> Y si tu comunicación no transmite <br>confianza, emoción y coherencia...</strong>
+                        
+                    </p>
+                    <p class="text-center py-2"><strong class="uppercase font-bold text-center font-body text-3xl text-amber-200">La reserva se la lleva otro.</strong></p>
+              </div>
             </div>
           </ContentBlock>
         </StructureBasicBlock>
@@ -148,19 +139,21 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
                   <h2
                     text-split
                     words-slide-from-right
-                    class="heading z-20 font-body text-center text-5xl font-bold"
+                    class="heading z-20 font-body text-center font-bold text-5xl md:text-6xl"
                   >
-                    Destacar, enamorar<br /> a primera vista
+                    SOLUCION: <br class="md:hidden"/> Destacar, <br class="hidden md:block"/>enamorar  <br class="md:hidden"/>a primera vista
                   </h2>
                 </span>
               </div>
-              <div class="flex flex-col items-center w-full">
-                <div class="px-4 w-fit py-4">
-                  <p words-slide-up class="text-center">
-                    Te prometo que nadie, jamás, va a discutir tu precio o
-                    pensar dos veces en reservar si tu identidad visual se ve
-                    asi...
+              <div class="flex flex-col items-center w-full ">
+                <div class="px-4 w-fit pb-8">
+                  <p words-slide-up class="text-center font-body leading-6">
+                   Te prometo que nadie va a discutir tu precio ni dudar en reservar cuando tu alojamiento se vea como un lugar donde quieren estar.
                   </p>
+                  <p words-slide-up class="text-center py-2 leading-6">
+                    Estas identidades visuales están pensadas <br class="md:hidden"/> para lograr exactamente eso: <br>
+                    <strong>despertar deseo y confianza al instante.</strong>
+                </p>
                 </div>
                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 grid-flow-dense auto-rows-[150px] px-2 py-2">
   <div class="col-span-2 row-span-2 md:col-span-1 overflow-hidden rounded-lg">
@@ -212,13 +205,6 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
     <Image data-animate='from-bottom' src={ejemplo16} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
   </div>
 </div>
-                <!-- <div class="w-fit grid grid-cols-3 gap-2 px-2 py-2">
-                                    <Image class="col-span-1 row-span-1" data-animate='from-bottom' src={identidad1} alt='identidad visual 1'/>
-                                    <Image class="col-span-2 row-span-2" data-animate='from-bottom' src={identidad2} alt='identidad visual 2'/>
-                                    <Image class="col-span-2 row-span-1" data-animate='from-bottom' src={identidad3} alt='identidad visual 3'/>
-                                    <Image class="col-span-1 row-span-2" data-animate='from-bottom' src={identidad4} alt='identidad visual 4'/>
-                                    <Image class="col-span-1 row-span-1" data-animate='from-bottom' src={identidad5} alt='identidad visual 5' class='rounded-[16px]'/>
-                                </div> -->
               </div>
             </div>
           </ContentBlock>
@@ -229,164 +215,122 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
   <!-- END La solucion Section -->
   <!-- START Nuestro Proceso -->
   <section>
-    <!-- <StructurePaddingContainer> -->
-    <!-- <StructureBasicBlock extra-borders="bottom-border" class="py-8 min-h-full"> -->
-    <!-- <ContentBlock blocktitle='Nuestro Proceso' basepadding={false} darkMode={true}> -->
-    <div class="bg-black text-white py-8 w-full">
-      <div class="w-full flex flex-col items-start md:flex-row my-12 md:my-24">
-        <div
-          class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8"
-        >
-          <p
-            words-slide-up
-            class="ml-2 text-amber-300 uppercase tracking-loose"
-          >
-            Como trabajamos
-          </p>
-          <h2
-            words-slide-up
-            class="text-4xl font-body font-semibold md:text-5xl mb-2"
-          >
-            Lo que va a pasar luego de contactarnos
-          </h2>
-          <p words-slide-up class="text-base text-gray-50 mb-4">
-            No creemos que el desarollo de una identidad sea un trabajo
-            individual, sino un trabajo en equipo junto al cliente, para
-            asegurarnos de asesorarte y guiarte, para poder entender que es lo
-            mas eficiente para tu negocio,y una vez das el okey, volver tu idea
-            realidad.
-          </p>
-        </div>
-        <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
-          <div class="mx-auto w-full h-full">
-            <div class="relative wrap overflow-hidden p-10 h-full">
-              <div
-                class="border-2-2 border-yellow-555 absolute h-full border"
-                style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
-              >
-              </div>
-              <div
-                class="border-2-2 border-yellow-555 absolute h-full border"
-                style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"
-              >
-              </div>
-              <div
-                class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-              >
-                <div class="order-1 w-5/12"></div>
-                <div class="order-1 w-5/12 px-1 py-4 text-right">
-                  <p class="mb-3 font-body text-amber-300 text-base font-light">
-                    DIA 1
-                  </p>
-                  <h4
-                    words-slide-up
-                    class="mb-3 font-bold text-3xl md:text-4xl font-body"
-                  >
-                    Reunion inicial
-                  </h4>
-                  <p
-                    words-slide-up
-                    class="text-base leading-snug text-gray-50 text-opacity-100"
-                  >
-                    Luego de la primer llamada y el formulario de Brief, tomamos
-                    toda la informacion y la usamos para realizar una
-                    investigacion base sobre tendencias, psicologia del color,
-                    estilos graficos, tono comunicacional. Para definir asi un
-                    moodboard donde presentaremos la direccion creativa
-                    sugerida.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="mb-8 flex justify-between items-center w-full right-timeline"
-              >
-                <div class="order-1 w-5/12"></div>
-                <div class="order-1 w-5/12 px-1 py-4 text-left">
-                  <p class="mb-3 font-body text-amber-300 text-base font-light">
-                    DIA 1 a 2
-                  </p>
-                  <h4
-                    words-slide-up
-                    class="mb-3 font-bold text-3xl md:text-4xl font-body"
-                  >
-                    Presentacion Direccion Creativa
-                  </h4>
-                  <p
-                    words-slide-up
-                    class="text-base leading-snug text-gray-50 text-opacity-100"
-                  >
-                    Presentamos en una segunda reunion la direccion creativa que
-                    creemos optima, ahi mostraremos el moodboard, un collage al
-                    que se llega recopilando inspiracion de diferentes fuentes
-                    donde te mostramos un compilado de como vamos a hacer
-                    "sentir" tu identidad visual.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
-              >
-                <div class="order-1 w-5/12"></div>
-                <div class="order-1 w-5/12 px-1 py-4 text-right">
-                  <p class="mb-3 font-body text-amber-300 text-base font-light">
-                    DIA 2 a 6<p></p>
-                    <h4
-                      words-slide-up
-                      class="mb-3 font-bold text-3xl md:text-4xl font-body"
-                    >
-                      Desarollo Creativo
-                    </h4>
-                    <p
-                      words-slide-up
-                      class="text-base leading-snug text-gray-50 text-opacity-100"
-                    >
-                      Una vez que tenemos tu Okey, me pondre a desarollar la
-                      presencia visual de tu negocio, usando como referencia y
-                      guia la direccion creativa que aprobaste.
-                    </p>
-                  </p>
-                </div>
+  <div class="bg-black text-white py-8 w-full font-body">
+    <div class="w-full flex flex-col items-start md:flex-row my-12 md:my-24">
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
+        <p words-slide-up class="ml-2  font-body text-amber-300 uppercase tracking-loose">
+          Como trabajamos
+        </p>
+        <h2 words-slide-up class="text-4xl font-body font-semibold md:text-5xl mb-2">
+          Lo que va a pasar luego de contactarnos
+        </h2>
+        <p words-slide-up class="text-base  md:text-lg md:leading-5  font-body text-gray-50 mb-4">
+          No creemos que el desarrollo de una identidad sea un trabajo
+          individual, sino un trabajo en equipo junto al cliente, para
+          asegurarnos de asesorarte y guiarte, entender qué es lo más eficiente
+          para tu negocio, y una vez das el okey, volver tu idea realidad.
+        </p>
+      </div>
 
-                <div
-                  class="mb-8 flex justify-between items-center w-full right-timeline"
-                >
-                  <div class="order-1 w-5/12"></div>
+      <!-- COLUMNA DERECHA -->
+      <!-- COLUMNA DERECHA: timeline (corregido responsive) -->
+<div class="ml-0 md:ml-12 lg:w-2/3 sticky">
+  <div class="mx-auto w-full h-full">
+    <div class="relative wrap overflow-hidden p-10 h-full">
+      <!-- Líneas centrales: solo en md+ (evitan crear hueco en mobile) -->
+      <div
+        class="border-2-2 border-yellow-555 absolute h-full border hidden md:block"
+        style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
+      ></div>
+      <div
+        class="border-2-2 border-yellow-555 absolute h-full border hidden md:block"
+        style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"
+      ></div>
 
-                  <div class="order-1 w-5/12 px-1 py-4">
-                    <p
-                      class="mb-3 font-body text-amber-300 text-base font-light"
-                    >
-                      DIA 6 a 7
-                    </p>
-                    <h4
-                      words-slide-up
-                      class="mb-3 font-bold text-3xl md:text-4xl font-body"
-                    >
-                      Presentacion y Revision
-                    </h4>
-                    <p
-                      words-slide-up
-                      class="text-base leading-snug text-gray-50 text-opacity-100"
-                    >
-                      El dia de la verdad, aca nos contactaremos una vez el
-                      trabajo este listo y tengamos la identidad visual
-                      completada. En esta etapa correran las 2 revisiones en
-                      donde podras sugerir cambios, consultar y realizar
-                      modificaciones. Una vez aprobada la identidad visual,
-                      desarollaremos el contenido 100% homogeneo con la
-                      identidad creada.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- DÍA 1 -->
+      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+        <!-- spacer: oculto en mobile, visible en md (evita espacio en mobile) -->
+        <div class="order-1 hidden md:block md:w-5/12"></div>
+
+        <!-- contenido: full width en mobile, 5/12 en md -->
+        <div class="order-1 w-full md:w-5/12 px-1 py-4 text-left md:text-right">
+          <p class="mb-3 font-body text-amber-300 text-base md:text-lg md:leading-5 font-light">DÍA 1</p>
+          <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">
+            Reunión inicial
+          </h4>
+          <p words-slide-up class="text-base md:text-lg md:leading-5 font-body leading-snug text-gray-50 text-opacity-100">
+            Luego de la primer llamada y el formulario de Brief, tomamos
+            toda la información y la usamos para realizar una
+            investigación base sobre tendencias, psicología del color,
+            estilos gráficos y tono comunicacional. Así definimos un
+            moodboard donde presentaremos la dirección creativa sugerida.
+          </p>
         </div>
       </div>
-      <!-- </ContentBlock> -->
-      <!-- <StructureBasicBlock/> -->
-      <!-- </StructurePaddingContainer> -->
+
+      <!-- DÍA 1 a 2 -->
+      <div class="mb-8 flex justify-between items-center w-full right-timeline">
+        <div class="order-1 hidden md:block md:w-5/12"></div>
+
+        <div class="order-1 w-full md:w-5/12 px-1 py-4 text-left">
+          <p class="mb-3 font-body text-amber-300 text-base md:text-lg md:leading-5 font-light">DÍA 1 a 2</p>
+          <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">
+            Presentación Dirección Creativa
+          </h4>
+          <p words-slide-up class="text-base md:text-lg md:leading-5 leading-snug text-gray-50 text-opacity-100">
+            Presentamos en una segunda reunión la dirección creativa que
+            creemos óptima, mostrando el moodboard: un collage que recopila
+            inspiración de diferentes fuentes donde te mostramos cómo va a
+            “sentirse” tu identidad visual.
+          </p>
+        </div>
+      </div>
+
+      <!-- DÍA 2 a 6 -->
+      <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+        <div class="order-1 hidden md:block md:w-5/12"></div>
+
+        <div class="order-1 w-full md:w-5/12 px-1 py-4 text-left md:text-right">
+          <p class="mb-3 font-body text-amber-300 text-base md:text-lg md:leading-5 font-light">DÍA 2 a 6</p>
+          <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">
+            Desarrollo Creativo
+          </h4>
+          <p words-slide-up class="text-base md:text-lg md:leading-5 font-body leading-snug text-gray-50 text-opacity-100">
+            Una vez que tenemos tu Okey, me pondré a desarrollar la
+            presencia visual de tu negocio, usando como referencia la
+            dirección creativa aprobada.
+          </p>
+        </div>
+      </div>
+
+      <!-- DÍA 6 a 7 -->
+      <div class="mb-8 flex justify-between items-center w-full right-timeline">
+        <div class="order-1 hidden md:block md:w-5/12"></div>
+
+        <div class="order-1 w-full md:w-5/12 px-1 py-4 text-left">
+          <p class="mb-3 font-body text-amber-300 text-base md:text-lg md:leading-5 font-light">DÍA 6 a 7</p>
+          <h4 words-slide-up class="mb-3 font-bold text-3xl md:text-4xl font-body">
+            Presentación y Revisión
+          </h4>
+          <p words-slide-up class="text-base md:text-lg md:leading-5 font-body leading-snug text-gray-50 text-opacity-100">
+            El día de la verdad: acá nos contactaremos una vez el trabajo
+            esté listo y tengamos la identidad visual completada. En esta
+            etapa corren las 2 revisiones, donde podrás sugerir cambios y
+            realizar modificaciones. Una vez aprobada, desarrollaremos el
+            contenido 100% coherente con la nueva identidad.
+          </p>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
     <!-- END Nuestro Proceso -->
     <!-- START Nuestra Propuesta -->
     <section data-animate="blur-up">
@@ -401,45 +345,49 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
               darkMode={false}
               basepadding={true}
             >
-              <div class="w-full md:w-3/4 md:flex md:flex-col md:items-center">
+              <div class="w-full md:flex md:flex-col md:items-center">
                 <h2
                   text-split
                   words-slide-from-right
-                  class="font-body text-4xl md:text-[54px] font-bold text-center leading-[95%] p-2"
+                  class="font-body text-4xl md:text-6xl font-bold text-center leading-[95%] p-2"
                 >
-                  Tu identidad visual a medida + contenido publicitable
+                  <span class="text-violet-700">7 días para transformar tu alojamiento</span>, en una marca profesional que atrae reservas
                 </h2>
                 <p
                   words-slide-up
                   class="font-light font-body leading-[95%] text-center"
                 >
-                  Esta oferta es vigente desde el 30 de octubre hasta el 8 de
-                  noviembre o hasta completar cupos, luego vuelve a su precio
-                  normal.
+                  Esta oferta especial está disponible solo hasta el 8 de noviembre o hasta agotar los 10 cupos.
+Después, el paquete vuelve a su valor original.
                 </p>
                 <div
                   class="w-full flex items-center gap-2 flex-col md:gap-4 md:justify-center md:flex-row py-4"
                 >
                   <span
-                    class="dinamic-el-container font-body text-violet-950 text-2xl font-semibold text-center px-4 h-full w-full bg-violet-300 flex gap-2 items-center justify-center border-2 border-neutral-950 py-1 rounded-4xl"
-                    ><p text-split words-slide-up>Listo en</p><span
-                      text-split
-                      words-slide-up
-                      class="font-bold text-amber-100">1</span
-                    >
-                    <p text-split words-slide-up>Semana</p></span
-                  >
+                    class="dinamic-el-container font-body text-neutral-800 text-2xl font-semibold text-center px-4 h-full w-full bg-gradient-to-br from-neutral-300/10 to-neutral-600/10 flex gap-2 items-center justify-center border-2 border-neutral-950 py-1 rounded-4xl">
+                    <p text-split words-slide-up>Listo en</p>
+                    <span text-split words-slide-up class="font-bold text-violet-700"><p>1 Semana</p></span>
+                
+                </span>
                   <span
-                    class="dinamic-el-container font-body text-violet-950 text-2xl text-center px-4 h-full w-full font-semibold bg-violet-300 border-2 border-neutral-950 py-1 rounded-4xl flex gap-2 items-center justify-center"
-                    ><p text-split words-slide-up>Solo</p><span
-                      class="font-bold text-amber-200 flex justify-center items-center px-3 py-1 rounded-2xl w-fit bg-purple-950 text-split"
-                      words-slide-up>10</span
-                    ><p text-split words-slide-up>Cupos Restantes</p></span
+                    class="dinamic-el-container font-body text-neutral-800 text-2xl text-center px-4 h-full w-full font-semibold bg-gradient-to-br from-neutral-300/10 to-neutral-600/10 border-2 border-neutral-950 py-1 rounded-4xl flex gap-2 items-center justify-center"
+                    ><p text-split words-slide-up>Solo</p>
+                    <span
+                      class="font-bold text-violet-700 flex justify-center items-center px-1 rounded-xl w-fit text-split"
+                      words-slide-up><p class="font-bold">10</p>
+                    </span>
+                      <p text-split words-slide-up class="text-violet-700">Cupos Restantes</p></span
                   >
                 </div>
                 <div class="font-bold text-3xl">
                   <div class="py-2">
                     <h3 words-slide-up class="font-body">Identidad Visual:</h3>
+                    <p
+                      words-slide-up
+                      class="font-light font-body leading-[95%] py-1"
+                    >
+                      Todo lo que necesitás para que tu marca inspire confianza y profesionalismo:
+                    </p>
                     <div class="flex flex-col gap-2">
                       <ul
                         class="list-none marker:text-3xl gap-2 marker:align-middle marker:self-center marker: marker:text-purple-600 marker:font-bold"
@@ -448,13 +396,7 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
                           words-slide-up
                           class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
                         >
-                          Logo Profesional
-                        </li>
-                        <li
-                          words-slide-up
-                          class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
-                        >
-                          Variaciones de Logo
+                          Logo Profesional y sus variaciones 
                         </li>
                         <li
                           words-slide-up
@@ -466,7 +408,7 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
                           words-slide-up
                           class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
                         >
-                          Tipografia + combinaciones de tipografias
+                          Tipografia y combinaciones
                         </li>
                         <li
                           words-slide-up
@@ -486,21 +428,21 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
                           words-slide-up
                           class="relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-[25%] before:w-4 before:h-4 before:bg-[url('@assets/spots/asegurate-una-buena-temporada-assets/asterik.svg')] before:bg-no-repeat before:bg-contain leading-7 align-middle pl-8 text-lg"
                         >
-                          2 Revisiones
+                          2 Revisiones incluidas
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div class="py-2">
-                    <h3 words-slide-up class="font-body">Contenido:</h3>
+                    <h3 words-slide-up class="font-body">Contenido Estratégico:</h3>
                     <p
                       words-slide-up
-                      class="font-light font-body leading-[95%]"
+                      class=" font-body leading-[95%]"
                     >
-                      Todo el contenido no es al azar, definimos antes una
-                      estrategia de comunicación basada en la identidad visual y
-                      orientada al publico que buscar llegar.
+                      No son solo publicaciones: es comunicación diseñada para convertir.
                     </p>
+                    <p  words-slide-up
+                      class="font-light font-body leading-[95%] py-2"> Todo basado en una estrategia de comunicación creada a partir de tu identidad visual y orientada al público que querés atraer.</p>
                     <div class="flex flex-col gap-2">
                       <ul
                         class="list-none marker:text-3xl gap-2 marker:align-middle marker:self-center marker: marker:text-purple-600 marker:font-bold"
@@ -570,19 +512,19 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
               <h2
                 text-split
                 words-slide-from-right
-                class="heading font-body text-center font-bold leading-[95%] tracking-tight py-4 text-balance"
+                class="heading font-body text-center px-1 font-bold leading-[95%] tracking-tight py-4 text-balance"
               >
                 Volver tu alojamiento un iman de reservas esta a solo 1 click de
                 distancia, ¿Te lo vas a perder?
               </h2>
+              <p  text-split
+                words-slide-from-right class="text-xl font-medium font-body text-center px-8" >👉 Reservá tu cita ahora y asegurá tu cupo antes del 8 de noviembre.</p>
             </div>
             <ContactForm client:load />
             <div class="px-4 text-lg text-neutral-600 text-balance text-center">
               <p>
-                Oferta valida solo por contratacion dentro del rango del 30 de
-                Octubre al 8 de Noviembre o hasta completar los 10 cupos. Una
-                vez cumplida una de las condiciones, el precio del paquete
-                vuelve al valor nominal natural de los servicios.
+                   Oferta válida solo por contratación entre el 30 de octubre y el 8 de noviembre o hasta agotar los 10 cupos disponibles. Una vez cumplida una de las condiciones, el precio vuelve a su valor original.
+                
               </p>
             </div>
           </div>
