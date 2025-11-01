@@ -24,13 +24,16 @@
     </div>
 
     <div
-      class="menu-overlay fixed top-0 left-0 w-full h-screen text-white overflow-hidden z-[1] bg-[#0f0f0f] will-change-[clip-path]"
+      class="menu-overlay fixed top-0 left-0 w-full h-screen text-white overflow-hidden z-1 bg-[#0f0f0f] will-change-[clip-path]"
       style="clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)">
       <div
         class="menu-overlay-content fixed top-0 left-0 w-full h-screen flex transform -translate-y-1/2 will-change-transform pointer-events-auto">
-        <div class="menu-media-wrapper flex-[2] opacity-0 will-change-opacity">
+        <div class="menu-media-wrapper flex-2 opacity-0 will-change-opacity">
           <img
-            src="/menu-media.png"
+            src="/menu-media.webp"
+            width="1514"
+            loading="lazy"
+            height="948"
             alt="estudio hermes mascot"
             class="w-full h-full object-cover rounded-xl opacity-25" />
         </div>
@@ -46,7 +49,7 @@
               <div><a href="#contactSection" class="menu-link text-white md:text-[2.5rem] font-body text-[1.5rem] font-medium leading-[1.2]">Contactar</a></div>
             </div>
 <!-- 
-            <div class="menu-col flex flex-col justify-center gap-[0.1rem] flex-[2]">
+            <div class="menu-col flex flex-col justify-center gap-[0.1rem] flex-2">
               <div class="menu-tag"><a href="#" class="text-[#5f5f5f] text-[1.5rem] font-medium">Edición</a></div>
               <div class="menu-tag"><a href="#" class="text-[#5f5f5f] text-[1.5rem] font-medium">Desarrollo Web</a></div>
               <div class="menu-tag"><a href="#" class="text-[#5f5f5f] text-[1.5rem] font-medium">Diseño de Marca</a></div>
@@ -59,7 +62,7 @@
             <div class="menu-col flex flex-col gap-[0.1rem] flex-[3]">
               <p class="text-[0.95rem] font-medium text-[#5f5f5f]"><span class="whitespace-nowrap">Colón, Entre Ríos</span>, Argentina</p>
             </div>
-            <div class="menu-col flex flex-col pb-4 gap-[0.1rem] flex-[2]">
+            <div class="menu-col flex flex-col pb-4 gap-[0.1rem] flex-2">
               <p class="text-[0.95rem] font-medium text-[#5f5f5f]">+54 3447 40-2668</p>
               <p class="text-[0.95rem] font-medium text-[#5f5f5f]">hermesagenciaweb@gmail.com</p>
             </div>

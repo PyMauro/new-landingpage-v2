@@ -34,10 +34,10 @@ import {initAllAnimations} from '@animations/initAnimations.js'
 
 const identidadVisual = new URL("../../../assets/services/branding-portada.webp", import.meta.url).href;
 const branding = new URL("../../../assets/services/branding-portada.webp", import.meta.url).href;
-const edicionVideo = new URL("../../../assets/services/edicion-de-video-portada.jpg", import.meta.url).href;
+const edicionVideo = new URL("../../../assets/services/edicion-de-video-portada.webp", import.meta.url).href;
 const disenoGrafico = new URL("../../../assets/services/diseño-grafico-portada.webp", import.meta.url).href;
-const desarrolloWeb = new URL("../../../assets/services/desarollo-web-portada.png", import.meta.url).href;
-const gestionRedes = new URL("../../../assets/services/gestion-de-redes-portada.png", import.meta.url).href;
+const desarrolloWeb = new URL("../../../assets/services/desarollo-web-portada.webp", import.meta.url).href;
+const gestionRedes = new URL("../../../assets/services/gestion-de-redes-portada.webp", import.meta.url).href;
 
 
 

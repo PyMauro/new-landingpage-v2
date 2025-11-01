@@ -61,10 +61,10 @@ import {initAllAnimations} from '@animations/initAnimations.js'
 
 
 // rutas seguras para build y deploy
-const rominaPortada = new URL("../../../assets/portfolio/romina-macri.png", import.meta.url).href;
-const femeninaPortada = new URL("../../../assets/portfolio/femenina.png", import.meta.url).href;
-const clickInformativoPortada = new URL("../../../assets/portfolio/clickInformativo.png", import.meta.url).href;
-const singluPortada = new URL("../../../assets/portfolio/singlu.png", import.meta.url).href;
+const rominaPortada = new URL("../../../assets/portfolio/romina-macri.webp", import.meta.url).href;
+const femeninaPortada = new URL("../../../assets/portfolio/femenina.webp", import.meta.url).href;
+const clickInformativoPortada = new URL("../../../assets/portfolio/clickInformativo.webp", import.meta.url).href;
+const singluPortada = new URL("../../../assets/portfolio/singlu.webp", import.meta.url).href;
 
 window.addEventListener('finishedPreloader', () => {
         initAllAnimations()

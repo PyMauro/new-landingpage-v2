@@ -25,7 +25,7 @@ function redirectTo(path) {
 </script>
 <template>
     <article class="w-full relative add-texture overflow-hidden h-fit flex flex-col gap-4 lg:flex-row rounded-3xl p-3" :class="props.bgColor">
-        <img v-if="urlImage" :src=props.urlImage :alt="' Portada de' + props.serviceTitle" class="w-full h-64 max-w-none  lg:max-w-3/4 aspect-video rounded-xl object-cover"/>
+        <img loading="lazy" v-if="urlImage" :src=props.urlImage :alt="' Portada de' + props.serviceTitle" class="w-full h-64 max-w-none  lg:max-w-3/4 aspect-video rounded-xl object-cover"/>
         <div v-else class="w-full h-64 max-w-none sm:max-w-3/4 aspect-video rounded-xl bg-slate-600">
         </div>
         <div class="flex flex-col gap-4 sm:gap-2 justify-center items-start w-full max-w-none md:max-w-1/3">
