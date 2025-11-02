@@ -1,14 +1,35 @@
+/* Mango Grotesque - Títulos */
 @font-face {
-  font-family: 'Mango Grotesque';
-  src: url('/fonts/Mango-Grotesque-VF.ttf') format('truetype');
-  font-weight: 500 900;
+  font-family: "Mango Grotesque";
+  src: url("/fonts/MangoGrotesque-800.woff2") format("woff2");
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
+/* Nohemi - Light para captions */
 @font-face {
-  font-family: 'Nohemi';
-  src: url('/fonts/Nohemi-VF.ttf') format('truetype');
-  font-weight: 100 300 400 500 700 900;
+  font-family: "Nohemi";
+  src: url("/fonts/Nohemi-200.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Nohemi - Regular para body */
+@font-face {
+  font-family: "Nohemi";
+  src: url("/fonts/Nohemi-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Nohemi - Bold para subtítulos */
+@font-face {
+  font-family: "Nohemi";
+  src: url("/fonts/Nohemi-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }
