@@ -50,7 +50,10 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
             </span>
             <Image
               id="hero-image"
-              class="relative -right-[5%] bottom-12 md:bottom-20 w-full"
+              format="webp"
+              fetchpriority='high'
+              loading="eager"
+              class="relative -right-[5%] aspect-[1094/1222] bottom-12 md:bottom-20 w-full"
               src={SosteniendoBandeja}
               alt="mano sosteniendo bandeja"
             />
@@ -126,8 +129,8 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
               <div class="w-full relative h-[432px]">
                 <Image
                   data-animate="from-bottom"
-                  quality="mid"
-                  class="w-[98.5%] h-[256px] left-1 relative object-cover rounded-t-[30px] [&>img]:rounded-t-4xl top-1"
+                  quality="70"
+                  class="w-[98.5%] h-64 left-1 relative object-cover rounded-t-[30px] [&>img]:rounded-t-4xl top-1"
                   src={destacandoEnLaMultitud}
                   alt="destacando en la multitud"
                 />
@@ -157,52 +160,52 @@ import ContactForm from "@components/vue/functional/contactForm.vue";
                 </div>
                <div class="grid grid-cols-2 md:grid-cols-3  gap-2 grid-flow-dense auto-rows-[150px] px-2 py-2">
   <div class="col-span-2 row-span-2 md:col-span-1 overflow-hidden rounded-lg">
-      <Image data-animate='from-bottom' src={identidad2} alt="identidad 2" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+      <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={identidad2} alt="identidad 2" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
 </div>
 <div class="col-span-2 row-span-4 md:row-span-2 overflow-hidden rounded-lg">
-      <Image data-animate='from-bottom' src={identidad1} alt="identidad 1" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+      <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={identidad1} alt="identidad 1" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
   <div class="col-span-2 row-span-2 overflow-hidden rounded-lg">
-    <Image data-animate='from-bottom' src={identidad3} alt="identidad 3" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={identidad3} alt="identidad 3" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
   <div class="col-span-1 row-span-2 overflow-hidden rounded-lg">
-    <Image data-animate='from-bottom' src={identidad4} alt="identidad 4" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={identidad4} alt="identidad 4" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-1 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={identidad5} alt="identidad 5" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-1 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={identidad5} alt="identidad 5" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-    <div class="col-span-1 row-span-1 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo6} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+    <div class="col-span-1 row-span-1 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo6} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-3 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo7} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-3 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo7} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div  class="col-span-1 row-span-3 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo8} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div  class="col-span-1 row-span-3 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo8} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-3 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo9} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-3 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo9} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-1 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo10} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-1 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo10} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-1 md:row-span-2 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo11} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-1 md:row-span-2 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo11} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-3 md:row-span-2 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo12} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-3 md:row-span-2 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo12} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-2 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo13} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-2 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo13} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-2 row-span-4 md:row-span-2 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo14} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-2 row-span-4 md:row-span-2 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo14} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-2 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo15} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-2 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo15} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
-  <div class="col-span-1 row-span-2 overflow-hidden rounded-[16px]">
-    <Image data-animate='from-bottom' src={ejemplo16} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-[16px]" />
+  <div class="col-span-1 row-span-2 overflow-hidden rounded-2xl">
+    <Image loading='lazy' format="webp" quality="70" data-animate='from-bottom' src={ejemplo16} alt="identidad 6" class="w-full h-full object-cover overflow-hidden rounded-2xl" />
   </div>
 </div>
               </div>
@@ -520,7 +523,7 @@ Después, el paquete vuelve a su valor original.
               <p  text-split
                 words-slide-from-right class="text-xl font-medium font-body text-center px-8" >👉 Reservá tu cita ahora y asegurá tu cupo antes del 8 de noviembre.</p>
             </div>
-            <ContactForm client:load />
+            <ContactForm client:visible />
             <div class="px-4 text-lg text-neutral-600 text-balance text-center">
               <p>
                    Oferta válida solo por contratación entre el 30 de octubre y el 8 de noviembre o hasta agotar los 10 cupos disponibles. Una vez cumplida una de las condiciones, el precio vuelve a su valor original.
@@ -535,8 +538,8 @@ Después, el paquete vuelve a su valor original.
     <!-- @ts-ignore -->
     <script>
       window.addEventListener("finishedPreloader", async () => {
-        //@ts-ignore
         const { initAllAnimations } = await import(
+        //@ts-ignore
           "@animations/initAnimations.js"
         );
         initAllAnimations();
