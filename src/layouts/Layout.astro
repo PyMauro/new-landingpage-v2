@@ -29,7 +29,7 @@ const { title, mainBgColor, showPreloader = true } = Astro.props;
     />
 
     <!-- Open Graph -->
-    <meta property="og:image" content='/menu-media.png' />
+    <meta property="og:image" content='/menu-media.webp' />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta
@@ -45,6 +45,15 @@ const { title, mainBgColor, showPreloader = true } = Astro.props;
       content="Hermes: evolución, estrategia, diseño y empatía. Creamos marcas que enamoran a primera vista."
     />
     <meta name="twitter:image" content="/og-image.jpg" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FPX8SHDQ7C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FPX8SHDQ7C');
+</script>
   </head>
 
   <body>
