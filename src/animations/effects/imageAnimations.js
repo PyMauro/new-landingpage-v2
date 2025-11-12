@@ -5,7 +5,7 @@ export function initImageAnimations() {
     "from-bottom": (el) =>
       gsap.fromTo(el,
         { opacity: 0, y: 80, scale: 0.95 },
-        { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: "power1.out" }),
+        { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: "power3.out" }),
     "blur-up": (el) =>
       gsap.fromTo(
         el,
