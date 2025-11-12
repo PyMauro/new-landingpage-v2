@@ -5,7 +5,7 @@ export function initImageAnimations() {
     "from-bottom": (el) =>
       gsap.fromTo(el,
         { opacity: 0, y: 80, scale: 0.95 },
-        { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: "power3.out" }),
+        { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power3.in" }),
     "blur-up": (el) =>
       gsap.fromTo(
         el,
@@ -25,7 +25,7 @@ export function initImageAnimations() {
 
     ScrollTrigger.create({
       trigger: el,
-      start: "top 85%",
+      start: "top 90%",
       onEnter: () => tl.play(),
     });
   });

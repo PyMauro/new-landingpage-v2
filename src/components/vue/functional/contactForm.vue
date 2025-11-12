@@ -1,19 +1,19 @@
 <template>
   <form
    @submit.prevent="handleSubmit"
-    class="z-10 w-full add-texture overflow-hidden h-fit bg-gradient-to-br from-violet-400 to-violet-500 max-w-[457px] px-4 py-8 rounded-2xl outline-2 outline-offset-[-2px] outline-neutral-900 inline-flex flex-col justify-start items-start gap-4"
+    class="z-10 w-full add-texture overflow-hidden h-fit bg-gradient-to-br from-stone-800 to-stone-950 max-w-[457px] px-4 py-8 rounded-2xl outline-2 outline-offset-[-2px] outline-neutral-900 inline-flex flex-col justify-start items-start gap-4"
     :class="shadow">
     <div class="h-full z-10 w-full flex flex-col justify-start items-start gap-0 ">
       <span id="nameInputSpan" class="w-full h-fit px-2 py-2 flex flex-col gap-1 overflow-clip ">
-        <label for="nameInput" class="pl-4 text-lg font-body">Nombre:</label>
+        <label for="nameInput" class="pl-4 text-lg font-body text-neutral-200">Nombre:</label>
         <input type="text" v-model="nombre" id="nameInput" placeholder="Nombre y Apellido"
-          class="w-full pl-5 h-full px-2 py-4 placeholder:pl-2 bg-violet-200" :class="shadow" />
+          class="w-full pl-5 h-full px-2 py-4 placeholder:pl-2 placeholder:text-neutral-400 bg-neutral-600" :class="shadow" />
       </span>
       
       <span id="busisnessInputSpan" class="w-full h-fit px-2 py-2 flex flex-col gap-1 overflow-clip " :class="usePersonalName? 'hidden' : ''">
-        <label for="busisnessInput" class="pl-4 text-lg font-body" :class="usePersonalName? 'text-neutral-500' : ''" >Nombre de tu emprendimiento:</label>
+        <label for="busisnessInput" class="pl-4 text-lg font-body text-neutral-200" :class="usePersonalName? 'text-neutral-500' : ''" >Nombre de tu emprendimiento:</label>
         <input type="text" v-model="nombreEmprendimiento" id="busisnessInput" placeholder="Nombre de negocio" :disabled="usePersonalName"
-          class="w-full h-full pl-5 px-2 py-4 placeholder:pl-2 bg-violet-200 disabled:bg-neutral-400 disabled:opacity-50 " :class="shadow" />
+          class="w-full h-full pl-5 px-2 py-4 placeholder:pl-2 placeholder:text-neutral-400 bg-neutral-600 disabled:bg-neutral-400 disabled:opacity-50 " :class="shadow" />
       </span> 
       
       <div class="w-full h-fit py-2 gap-2" >
@@ -45,18 +45,18 @@
       </div>
        
       <span id="PhoneInputSpan" class="w-full h-fit px-2 py-2 flex flex-col gap-1 overflow-clip " v-if="!preferEmail">
-        <label for="phoneInput" class="pl-4 text-lg font-body">Telefono:</label>
+        <label for="phoneInput" class="pl-4 text-lg font-body text-neutral-200">Telefono:</label>
         <input type="tel" v-model="telefono" id="phoneInput" placeholder="Numero de Telefono"
-          class="w-full h-full pl-5 px-2 py-4 placeholder:pl-2 bg-violet-200" :class="shadow" />
+          class="w-full h-full pl-5 px-2 py-4 placeholder:pl-2 placeholder:text-neutral-400 bg-neutral-600" :class="shadow" />
       </span>
 
             <span id="emailInputSpan" class="w-full h-fit px-2 py-2 flex flex-col gap-1 overflow-clip " v-if="preferEmail">
-        <label for="emailInput" class="pl-4 text-lg font-body">Correo electronico:</label>
+        <label for="emailInput" class="pl-4 text-lg font-body text-neutral-200">Correo electronico:</label>
         <input type="email" v-model="email" id="emailInput" placeholder="correo electronico"
-          class="w-full h-full pl-5 px-2 py-4 placeholder:pl-2 bg-violet-200" :class="shadow" />
+          class="w-full h-full pl-5 px-2 py-4 placeholder:pl-2 placeholder:text-neutral-400 bg-neutral-600" :class="shadow" />
       </span>
-      <span class="w-full h-fit py-4 px-2">
-        <BrandBtn text="Reservar Cita Ahora" bg-color="bg-amber-300" class="w-full ml-2" />
+      <span class="w-full h-fit py-2 px-2">
+        <BrandBtn text="Reservar Cita Ahora" bg-color="bg-amber-300" class="w-full h-full" />
       </span>
     </div>
 

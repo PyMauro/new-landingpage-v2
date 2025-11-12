@@ -90,8 +90,8 @@ onMounted(() => {
               Identidad, web y contenido diseñados para convertir clientes de verdad, Basta de verte Amateur.
             </p>
             <div class="px-6 md:px-0 flex flex-col md:flex-row justify-center gap-4 w-full py-4 font-light">
-              <BrandButton text="Agendar Cita" bgColor="bg-amber-400 text-stone-800 px-4" :action="() => scrollTo('#contactSection')" />
-              <BrandButton text="Ver Servicios" bgColor="bg-violet-400 text-stone-800 px-4" :action="() => scrollTo('#our-services')" />
+              <BrandButton text="Agendar Cita" bgColor="bg-amber-400 text-stone-800 px-4" href="#contactSection" />
+              <BrandButton text="Ver Servicios" bgColor="bg-violet-400 text-stone-800 px-4" href="#our-services" />
             </div>
           </div>
         </div>

@@ -28,9 +28,6 @@ const props = defineProps({
     extraBorders: {
         type: String,
         default: 'no-extra-borders',
-        validator: (value: string) => {
-            return ['no-extra-borders', 'full-borders','top-border','bottom-border'].includes(value);
-        },
     },
        padding: {
             type: String,
