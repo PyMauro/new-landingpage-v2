@@ -10,12 +10,12 @@
 
 
 @layer base {
-  h1 { font-size: clamp(70px, 8vw, 140px); line-height: 0.8;font-family: var(--font-heading); }
-  h2 { font-size: clamp(46px, 5.6vw, 104px); line-height: 1.08;font-family: var(--font-heading); }
-  h3 { font-size: clamp(34px, 4.5vw, 83px); line-height: 1.12;font-family: var(--font-heading); }
+  h1 { font-size: clamp(80px, 8vw, 140px); line-height: 0.8;font-family: var(--font-heading); }
+  h2 { font-size: clamp(70px, 6.2vw, 104px); line-height: 0.8;font-family: var(--font-heading); }
+  h3 { font-size: clamp(34px, 4.1vw, 83px); line-height: 1;font-family: var(--font-heading); }
   h4 { font-size: clamp(31.07px, calc(15.2427px + 1.2873vw), 40.69px); line-height: 1.18;font-family: var(--font-heading); }
 
-  p  { font-size: clamp(18px, calc(16.1818px + 0.4848vw), 20px); line-height: 1.6;font-family: var(--font-body);font-weight: 400; }
+  p  { font-size: clamp(18px, calc(16.1818px + 0.4848vw), 22px); line-height: 1.1;font-family: var(--font-body);font-weight: 300; }
 
   p.caption  { font-size: clamp(16px, calc(16.1818px + 0.12vw), 18px); line-height: 1.6;font-family: var(--font-body);font-weight: 200 ;  letter-spacing: 0.05em; }
   
