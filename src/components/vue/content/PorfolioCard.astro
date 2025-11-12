@@ -11,13 +11,13 @@ const redirectTo = (url: string) => window.location.href = url;
 
   <article
   data-animate="from-bottom"
-  class="relative w-full bg-neutral-200 h-fit flex flex-col gap-4 overflow-hidden rounded-3xl p-3 border border-neutral-700">
+  class="relative w-full bg-[#100B00] h-fit flex flex-col gap-4 overflow-hidden rounded-3xl p-3 border border-neutral-700 card-shadow">
     <div class="absolute add-dots left-0 top-0 opacity-70 rounded-full w-full h-full"></div>
   
     <div class="w-full h-full z-20">
       {urlImage ? (
         <Image
-          loading="lazy"
+          fetchpriority='high'
           src={urlImage}
           widths={[320, 640, 855, 1200]}
           format="webp"
@@ -34,8 +34,9 @@ const redirectTo = (url: string) => window.location.href = url;
             <Badge key={service}>{service}</Badge>
           ))}
         </div>
-  
-        <h3 class="font-semibold  w-full font-heading text-neutral-700">{title}</h3>
+        <div class="w-full md:w-[90%]">
+          <h3 class="font-semibold  w-full font-heading text-neutral-300"><span class="text-amber-300">{services[0]}:</span> {title}</h3>
+        </div>
   
         <BrandButton
           client:load
@@ -46,5 +47,19 @@ const redirectTo = (url: string) => window.location.href = url;
       </div>
     </div>
   </article>
+
+<style >
+  .card-shadow {
+    box-shadow:
+  2px 3px 0 #27272A,
+  1px -1px 0 #F8FAFC,
+  -1px -1px 0 #F8FAFC,
+  -1px 1px 0 #F8FAFC,
+  1px 4px 0 #F8FAFC,
+  4px 2px 0 #F8FAFC,
+  4px 4px 0 #F8FAFC,
+  3px 4px 0 #F8FAFC;
+  }
+</style>
 
 
