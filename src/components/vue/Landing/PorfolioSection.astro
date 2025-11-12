@@ -3,7 +3,7 @@ import StructureBasicBlock from "../_structure/basicBlock.vue";
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
 import PortafolioCard from "@components/vue/content/PorfolioCard.astro";
 import sinGlu from '@assets/portfolio/singlu.webp'
-import femenina from '@assets/portfolio/femenina.webp'
+import cariciasDeSol from '@assets/portfolio/caricias-de-sol.webp'
 import rominaMacri from '@assets/portfolio/romina-macri.webp'
 import clickInformativo from '@assets/portfolio/clickInformativo.webp'
 import Badge from "../_baseUi/badge.vue";
@@ -13,12 +13,14 @@ const cards = [
   {
     title: 'SinGlu, comida casera, sin gluten y 100% organica.',
     serviceType: 'Identidad Visual',
-    urlImage: sinGlu
+    urlImage: sinGlu,
+    projectSlug:'trabajos/singlu'
   },
   {
-    title: 'Femenina, un negocio amado por sus clientes.',
-    serviceType: 'Branding, Desarollo Web, Consultoria',
-    urlImage: femenina
+    title: 'Caricia de Sol, La union perfecta de Mar y calidez humana.',
+    serviceType: 'Identidad Visual',
+    urlImage: cariciasDeSol,
+        projectSlug:'trabajos/caricias-de-sol'
   },
   {
     title: 'Romina Macri, expandiendo la cardiología al publico.',
@@ -58,6 +60,7 @@ const cards = [
                   title={card.title}
                   serviceType={card.serviceType}
                   urlImage={card.urlImage}
+                  projectSlug={card.projectSlug}
                 />
               </div>
             ))}
