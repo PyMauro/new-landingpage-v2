@@ -10,29 +10,22 @@ import ContactSection from "@components/vue/Landing/ContactSection.astro";
 import BrandFooter from "@components/vue/_baseUi/BrandFooter.astro";
 ---
 
-<Layout title="Hermes Estudio">
-    <StructurePaddingContainer>
+<Layout title="Hermes Estudio" showPreloader={true}>
       <HeroSection client:only="vue" />
-    </StructurePaddingContainer>
-  
-    <!-- Intro section -->
-    <StructurePaddingContainer>
-      <LandingIntroSection />
-    </StructurePaddingContainer>
-  
-    <!-- Sobre Nosotros -->
-    <LandingAboutUsSection />
-  
-  
+    
+    <!-- Our Work -->
+    <LandingPorfolioSection/>
+
     <!-- Nuestros Servicios -->
     <StructurePaddingContainer>
-        
       <LandingOurServices />
     </StructurePaddingContainer>
   
-    <!-- Our Work -->
-    <LandingPorfolioSection/>
-  
+      <!-- Sobre Nosotros -->
+    <LandingAboutUsSection />
+
+
+
     <!-- Contact Section -->
     <ContactSection/>
     
