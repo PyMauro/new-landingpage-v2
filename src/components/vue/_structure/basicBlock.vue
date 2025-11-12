@@ -1,18 +1,21 @@
 <template>
-  <div
-    class="w-full border-l border-r border-l-stone-700 border-r-stone-700"
-    :class="{
+  <!-- 
+   :class="{
       'border-t border-b border-t-stone-700 border-b-stone-700': props.extraBorders === 'full-borders',
       'border-t border-t-stone-700': props.extraBorders === 'top-border',
       'border-b border-b-stone-700': props.extraBorders === 'bottom-border',
-    }"
+    }" -->
+
+    <!-- border-l border-r border-l-stone-700 border-r-stone-700 -->
+  <div
+    class="w-full" 
   >
     <slot name="no-padding" />
 
     <div
-      class="w-full py-8"
+      class="w-full "
       :class="{
-        'p-4': props.padding === 'padding',
+        'p-4 py-8': props.padding === 'padding',
       }"
     >
       <slot />
@@ -25,9 +28,6 @@ const props = defineProps({
     extraBorders: {
         type: String,
         default: 'no-extra-borders',
-        validator: (value: string) => {
-            return ['no-extra-borders', 'full-borders','top-border','bottom-border'].includes(value);
-        },
     },
        padding: {
             type: String,

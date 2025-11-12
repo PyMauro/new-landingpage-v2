@@ -5,30 +5,28 @@ import PaddingContainer from "../_structure/paddingContainer.vue";
 import ContactForm from '../functional/contactForm.vue'
 ---
 
-<section id="contactSection" class="w-full">
-
-  <PaddingContainer>
-    <BasicBlock extra-borders="bottom-border" padding="padding">
-      <h2
-        text-split words-slide-up
-        class="font-semibold text-neutral-100 font-heading text-balance"
-      >
-        <span class="text-stone-600 pr-2 md:pr-4">5.</span>No dejes estar tu negocio, dale
-        la ventaja que necesita en este nuevo mercado.
-      </h2>
-    </BasicBlock>
-    <BasicBlock extra-borders="bottom-border" padding="padding">
-      <div class="flex w-full h-full flex-col md:flex-row gap-8 items-center">
-        <div class="w-full h-full flex justify-center flex-col px-8">
-          <p text-split words-slide-up class="text-neutral-300 text-lg text-balance">
-            Estas a solo un paso de darle a tu negocio una ventaja sobre toda la
-            competencia y ponerlo en la primera plana de tus futuros clientes.
-          </p>
+<section id="contactSection" class="w-full p-1 md:p-4">
+    <PaddingContainer class="bg-linear-to-br from-orange-400 to-amber-500 flex flex-row rounded-3xl">
+      <BasicBlock extra-borders="bottom-border" padding="padding" >
+        <div class="w-full flex flex-col md:flex-row justify-between">
+          <div class="flex flex-col gap-4 w-full py-8 items-center md:items-start">
+            <h2
+              text-split words-slide-up
+              class="font-semibold  heading font-heading text-balance text-center md:text-left"
+            >
+              <span class=" text-violet-300">RESERVA TU DIAGNOSTICO </span> <span class="text-neutral-100 ">DE MARCA</span> <span class=" text-violet-300">GRATUITO!</span> 
+            </h2>
+            <p text-split words-slide-up class="text-neutral-700 text-balance text-center md:text-left">
+                  Estas a solo un paso de darle a tu negocio una ventaja sobre toda la
+                  competencia y ponerlo en la primera plana de tus futuros clientes.
+                </p>
+          </div>
+          <div class="flex w-full h-full flex-col md:flex-row gap-8 justify-center items-center">
+            <ContactForm client:visible  data-animate="blur-up"/>
+          </div>
         </div>
-        <ContactForm client:visible  data-animate="blur-up"/>
-      </div>
-    </BasicBlock>
-  </PaddingContainer>
+      </BasicBlock>
+      </PaddingContainer>
 </section>
 <script>
   //@ts-ignore

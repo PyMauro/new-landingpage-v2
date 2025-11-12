@@ -1,6 +1,8 @@
 <template>
-    <span class="inline-flex items-center rounded-3xl  px-4 py-1 text-xs font-medium  text-neutral-700 inset-ring inset-black">
-        <slot></slot>
+    <span class="inline-flex items-center rounded-3xl border-amber-600 px-4 py-3  text-neutral-500 inset-ring inset-ring-amber-300/40">
+        <p class="caption">
+            <slot></slot>
+        </p>
     </span>
 </template>
 <script setup>

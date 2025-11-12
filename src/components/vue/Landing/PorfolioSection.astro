@@ -3,57 +3,68 @@ import StructureBasicBlock from "../_structure/basicBlock.vue";
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
 import PortafolioCard from "@components/vue/content/PorfolioCard.astro";
 import sinGlu from '@assets/portfolio/singlu.webp'
-import femenina from '@assets/portfolio/femenina.webp'
+import cariciasDeSol from '@assets/portfolio/caricias-de-sol.webp'
 import rominaMacri from '@assets/portfolio/romina-macri.webp'
 import clickInformativo from '@assets/portfolio/clickInformativo.webp'
-
+import Badge from "../_baseUi/badge.vue";
 
 const animatedEntry = true
 const cards = [
   {
-    title: 'Identidad Visual: SinGlu, comida casera, sin gluten y 100% organica.',
+    title: 'SinGlu, comida casera, sin gluten y 100% organica.',
     serviceType: 'Identidad Visual',
-    urlImage: sinGlu
+    urlImage: sinGlu,
+    projectSlug:'trabajos/singlu'
   },
   {
-    title: 'Branding: Femenina, un negocio amado por sus clientes.',
-    serviceType: 'Branding, Desarollo Web, Consultoria',
-    urlImage: femenina
+    title: 'Caricia de Sol, La union perfecta de Mar y calidez humana.',
+    serviceType: 'Identidad Visual',
+    urlImage: cariciasDeSol,
+        projectSlug:'trabajos/caricias-de-sol'
   },
   {
-    title: 'Identidad Visual: Romina Macri, expandiendo la cardiología al publico.',
-    serviceType: 'Desarollo Web, Gestion de Redes',
+    title: 'Romina Macri, expandiendo la cardiología al publico.',
+    serviceType: 'Identidad Visual, Gestion de Redes',
     urlImage: rominaMacri
   },
   {
-    title: 'Desarollo Web: Click Informativo, la voz de la sociedad.',
-    serviceType: 'Identidad Visual, Desarollo Web',
+    title: 'Click Informativo, la voz de la sociedad.',
+    serviceType: 'Desarollo Web, Identidad Visual',
     urlImage: clickInformativo
   }
 ];
 ---
 
 <section id="portfolioSection" class="w-full">
-  <StructureBasicBlock extraBorders="bottom-border" class="bg-neutral-100 rounded-3xl">
+  <StructureBasicBlock extraBorders="bottom-border" class="bg-black rounded-3xl">
     <StructurePaddingContainer padding="padding">
-      <StructureBasicBlock extraBorders="bottom-border" padding="padding">
-        <h2 text-split words-slide-up class="font-semibold text-black font-heading">
-          <span class="text-stone-700 pr-2 md:pr-8">4.</span>Nuestro Trabajo Habla por Si Solo
-        </h2>
+      <StructureBasicBlock extraBorders="no-borders" padding="padding">
+        <div class="w-full flex justify-center items-center gap-4 flex-col">
+          <Badge bgColor="bg-black">
+            Conoce nuestro Trabajo
+          </Badge>
+          <h2 text-split words-slide-up class="font-semibold text-neutral-300 font-heading w-full md:w-1/2 text-center">
+            NUESTRO TRABAJO DELATA <span class="text-amber-300">NUESTRA CALIDAD</span>
+          </h2>
+          <p class="text-neutral-500 md:w-2/3 text-center text-balance">Desde identidades visuales, branding y Desarrollo web. Lo que tengas en mente, te lo hacemos realidad. <span class="text-amber-300 opacity-80"> No hay limites.</span></p>
+        </div>
       </StructureBasicBlock>
 
       <StructureBasicBlock padding="padding">
-        <div class="w-full flex flex-col gap-2">
-          {cards.map(card => (
-            <div>
-              <PortafolioCard
-              
-                title={card.title}
-                serviceType={card.serviceType}
-                urlImage={card.urlImage}
-              />
-            </div>
-          ))}
+        <div class="w-full  flex flex-col gap-4 items-center ">
+          <div class="w-full gap-4 md:max-w-3/4  flex flex-col">
+            {cards.map(card => (
+              <div>
+                <PortafolioCard
+                
+                  title={card.title}
+                  serviceType={card.serviceType}
+                  urlImage={card.urlImage}
+                  projectSlug={card.projectSlug}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </StructureBasicBlock>
     </StructurePaddingContainer>
