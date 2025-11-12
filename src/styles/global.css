@@ -10,7 +10,7 @@
 
 
 @layer base {
-  h1 { font-size: clamp(80px, 8vw, 140px); line-height: 0.8;font-family: var(--font-heading); }
+  h1 { font-size: clamp(80px, 8vw, 170px); line-height: 0.8;font-family: var(--font-heading); }
   h2 { font-size: clamp(70px, 6.2vw, 104px); line-height: 0.8;font-family: var(--font-heading); }
   h3 { font-size: clamp(46px, 5.4vw, 83px); line-height: 0.8;font-family: var(--font-heading); }
   h4 { font-size: clamp(31.07px, calc(15.2427px + 1.2873vw), 40.69px); line-height: 1.18;font-family: var(--font-heading); }
@@ -64,4 +64,24 @@
   4px 2px 0 #F8FAFC,
   4px 4px 0 #F8FAFC,
   3px 4px 0 #F8FAFC;
+  }
+
+.heading {
+    color: #ffffff; /* relleno */
+    text-shadow:
+      2px 0 #181818,
+      -2px 0 #181818,
+      0 2px #181818,
+      0 -2px #181818,
+      1px 1px #181818,
+      -1px -1px #181818,
+      1px -1px #181818,
+      -1px 1px #181818,
+      0.025em 0.025em 0 #181818,
+      0.03em 0.03em 0 #181818,
+      0.045em 0.045em 0 #181818,
+      0.06em 0.06em 0 #181818,
+      0.075em 0.075em 0 #181818,
+      0.09em 0.09em 0 #181818,
+      0.105em 0.105em 0 #181818;
   }
