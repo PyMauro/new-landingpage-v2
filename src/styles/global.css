@@ -12,7 +12,7 @@
 @layer base {
   h1 { font-size: clamp(80px, 8vw, 140px); line-height: 0.8;font-family: var(--font-heading); }
   h2 { font-size: clamp(70px, 6.2vw, 104px); line-height: 0.8;font-family: var(--font-heading); }
-  h3 { font-size: clamp(34px, 4.1vw, 83px); line-height: 1;font-family: var(--font-heading); }
+  h3 { font-size: clamp(46px, 5.4vw, 83px); line-height: 0.8;font-family: var(--font-heading); }
   h4 { font-size: clamp(31.07px, calc(15.2427px + 1.2873vw), 40.69px); line-height: 1.18;font-family: var(--font-heading); }
 
   p  { font-size: clamp(18px, calc(16.1818px + 0.4848vw), 22px); line-height: 1.1;font-family: var(--font-body);font-weight: 300; }
@@ -53,3 +53,15 @@
   line-height: 1;             /* keep stable */
   will-change: transform, opacity;
 }
+
+.card-shadow {
+    box-shadow:
+  2px 3px 0 #27272A,
+  1px -1px 0 #F8FAFC,
+  -1px -1px 0 #F8FAFC,
+  -1px 1px 0 #F8FAFC,
+  1px 4px 0 #F8FAFC,
+  4px 2px 0 #F8FAFC,
+  4px 4px 0 #F8FAFC,
+  3px 4px 0 #F8FAFC;
+  }

@@ -2,6 +2,8 @@
 //@ts-ignore
 import StructureBasicBlock from "../_structure/basicBlock.vue";
 import ServiceCard from "@components/vue/content/ServiceCard.astro"; // si ya lo convertiste a Astro
+import BrandButton from "../Brand/Button.vue";
+import Badge from "../_baseUi/badge.vue";
 
 // Assets
 import identidadVisual from "@assets/services/branding-portada.webp"
@@ -12,35 +14,58 @@ import desarrolloWeb from "@assets/services/desarollo-web-portada.webp"
 import gestionRedes from "@assets/services/gestion-de-redes-portada.webp"
 
 const services = [
-  { title: "Identidad Visual", image: identidadVisual },
-  { title: "Branding", bgColor: "bg-orange-300", image: branding },
-  { title: "Edicion de Video", bgColor: "bg-amber-300", image: edicionVideo },
-  { title: "Diseño Grafico", bgColor: "bg-emerald-300", image: disenoGrafico },
-  { title: "Desarollo Web", bgColor: "bg-violet-300", image: desarrolloWeb },
-  { title: "Gestion de Redes", bgColor: "bg-stone-950", image: gestionRedes },
+  { title: "Diseño gráfico que vende, no que solo se ve bonito.",serviceDescriptionBold:"Perfecto para negocios locales que necesitan materiales listos para mostrarse con nivel profesional.", bgColor: "bg-emerald-300",serviceDescription:"Tarjetas, cartelería, packaging, folletos y materiales promocionales coherentes con tu identidad visual, listos para imprimir o usar digitalmente.Perfecto para negocios locales que necesitan materiales listos para mostrarse con nivel profesional." ,image: disenoGrafico },
+  { btnBgColor:"bg-emerald-300",title: "Una Identidad que enamora e inspira confianza.",serviceDescriptionBold:"Ideal para alojamientos y negocios que buscan dejar de parecer “Otro x mas”.", bgColor: "bg-amber-300", serviceDescription:"Logo, paleta, tipografías y guías aplicables. Para que tu negocio inspire confianza y atraiga ventas. Ideal para alojamientos y negocios que buscan dejar de parecer “Otro x mas”." ,image: identidadVisual },
+  { title: "Renovacion Express",serviceDescription:"Un paquete intensivo de identidad visual completo en 7 días. Logo, paleta, aplicaciones y guía visual para relanzar tu marca sin demoras. ",serviceDescriptionBold:"Perfecto para temporada o relanzamientos rápidos.", bgColor: "bg-fuchsia-300",image: branding },
+  { title: "Contenido que llama, conecta y vende",serviceDescriptionBold:"Ideal para mantener activa tu marca y generar confianza constante.", bgColor: "bg-white",serviceDescription:"No se trata de publicar más, sino de comunicar mejor: visuales coherentes, textos con StoryTelling y resultados medibles." ,image: gestionRedes },
+  { title: "Sitios web que venden mientras dormís", bgColor: "bg-orange-400",serviceDescriptionBold:"Perfecto para negocios locales que necesitan materiales listos para mostrarse con nivel profesional.",serviceDescription:"Diseñamos webs,tiendas virtuales  y landings pensadas para convertir: rápidas, claras y autogestionables.", image: desarrolloWeb },
+  { btnBgColor:"bg-white",title: "Edicion de Video", bgColor: "bg-indigo-300",serviceDescription:"Graduación de Color, temática cinematografía, no se trata de grabar y que se vea bonito, se trata de que comunique y trasmita. " ,image: edicionVideo },
 ];
 ---
 <section id="our-services" class="w-full">
   <StructureBasicBlock extraBorders="bottom-border" padding="padding">
-    <StructureBasicBlock extraBorders="bottom-border">
-      <h2 text-split words-slide-up class="font-semibold text-neutral-100 font-heading py-4">
-        <span class="text-stone-700 pr-2 md:pr-8">3.</span>Nuestros Servicios
-      </h2>
-    </StructureBasicBlock>
+     <StructureBasicBlock extraBorders="no-borders" padding="padding">
+        <div class="w-full flex justify-center items-center gap-4 flex-col">
+          <Badge bgColor="bg-black" data-animate="from-bottom">
+            Conoce nuestros Servicios
+          </Badge>
+          <h2 text-split words-slide-up class="font-semibold text-neutral-300 font-heading w-full md:w-1/2 text-center text-balance">
+            PASA DE <span class="text-amber-300">INVISIBLE</span> A <span class="text-amber-300">INOLVIDABLE</span>
+          </h2>
+          <p class="text-neutral-500 md:w-2/3 text-center text-balance" text-split words-slide-up>Tu presencia digital, subida de nivel.</span></p>
+        </div>
+      </StructureBasicBlock>
 
-    <div class="w-full h-fit flex flex-col gap-2 p-4 md:p-8">
+    <div class="w-full h-fit flex flex-col gap-4 p-4 md:p-8">
      {services.map(service => {
   return (
     <ServiceCard
       data-animate="from-bottom"
       serviceTitle={service.title}
+      serviceDescription={service.serviceDescription}
+      serviceDescriptionBold={service.serviceDescriptionBold}
       bgColor={service.bgColor || undefined}
+      btnBgColor={service.btnBgColor}
       image={service.image}
     />
   );
 })}
     </div>
   </StructureBasicBlock>
+  
+  <article class="CTA w-full h-full py-4" data-animate="from-bottom">
+    <div class="bg-linear-to-br card-shadow from-amber-300 to-amber-600 gap-4 px-12 py-12 w-full h-full rounded-2xl flex flex-col justify-center items-center">
+      <h3 class="text-center text-balance leading-[0.9] text-4xl tracking-tight md:text-5xl font-body font-bold">SI ESTAS PERDIDO, TE ORIENTAMOS GRATIS</h3>
+      <p class="text-center text-balance text-neutral-700">La mayoría que nos contacta viene pensando que necesita “un logo”, “Mas contenido”. Pero enrealidad <strong class="medium">el problema que vez, normalmente solo es un síntoma, por eso te regalamos una reunión</strong> gratuita de 30 minutos para analizar la situacion actual de tu negocio.</p>
+       <BrandButton
+      client:load
+      class="w-full md:w-fit"
+      text="Conocer Servicio →"
+      bg-color='bg-white'
+      id="brand-cta-btn"
+    />
+    </div>
+  </article>
 </section>
 
 <script>
@@ -49,4 +74,14 @@ const services = [
   window.addEventListener('finishedPreloader', () => {
     initAllAnimations();
   });
+
+  
+  // Función de redirección
+  const redirectTo = (path: string) => window.location.href = path;
+  const ctaBtn = document.getElementById('brand-cta-btn')
+
+  ctaBtn?.addEventListener('click',() => {
+    redirectTo('#contactSection')
+  })
+
 </script>
