@@ -42,3 +42,14 @@
 @utility animate-dots {
   animation: dots 2s linear infinite;
 }
+
+[text-split] .word {
+  display: inline;            /* IMPORTANT: keep words in normal inline flow */
+  white-space: normal;        /* allow normal wrapping */
+}
+
+[text-split] .word .char {
+  display: inline-block;      /* transforms on chars won't affect line-height/wrapping */
+  line-height: 1;             /* keep stable */
+  will-change: transform, opacity;
+}

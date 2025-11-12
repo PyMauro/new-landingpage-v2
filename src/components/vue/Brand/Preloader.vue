@@ -39,7 +39,7 @@ onMounted(() => {
   <div class="w-full h-full" id="preloader-container">
     <div class="h-screen w-full fixed top-0 left-0 bg-black flex justify-center items-center z-[9999]">
       <div class="w-1/2 h-1/2 flex justify-center items-center gap-2" id="preloader-content">
-        <img id="hermesLogo" :src="hermesLogo.src" alt="Hermes Logo" class="w-24" />
+        <img fetchpriority="high" id="hermesLogo" :src="hermesLogo.src" alt="Hermes Logo" class="w-24" />
         <div class="flex flex-col w-56 ml-6" id="estudioHermesText">
           <p class="font-body leading-[90px] font-light text-[58.84px] text-white">Estudio</p>
           <p class="font-body text-[60.65px] leading-1 text-white font-semibold relative -left-7">Hermes</p>

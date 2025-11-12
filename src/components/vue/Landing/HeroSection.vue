@@ -5,20 +5,17 @@ import BrandButton from "../Brand/Button.vue";
 import {scrollTo} from '../../../utils/gsapClient'
 import { onMounted } from "vue";
 onMounted(() => {
-        window.addEventListener('finishedPreloader',() => {
-    setTimeout(() => {
-            initAllAnimations()
-        },1000)
-        })
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => import('@animations/initAnimations.js').then(m => m.initAllAnimations()));
+  } else {
+    setTimeout(() => import('@animations/initAnimations.js').then(m => m.initAllAnimations()), 500);
+  }
 })
 </script>
 
 <template>
-<section id="heroSection" class="w-full h-full">
-            <StructureBasicBlock extra-borders="bottom-border" class="py-12">
-                
-            </StructureBasicBlock>
-        <StructureBasicBlock extra-borders="bottom-border" class="py-8">
+<section id="heroSection" class="w-full">
+        <StructureBasicBlock extra-borders="full-borders" class="py-8">
         <StructureBasicBlock padding="padding">
             <div class="flex flex-col gap-4">
                 <h1 text-split words-slide-up class="font-heading  text-white font-semibold  tracking-[-1.2%] md:max-w-5/6 text-balance">

@@ -1,13 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroSection from "../components/vue/Landing/HeroSection.vue";
-import StructurePaddingContainer from "../components/vue/_structure/paddingContainer.vue";
-import LandingPorfolioSection from "../components/vue/Landing/PorfolioSection.vue";
-import LandingIntroSection from "../components/vue/Landing/IntroSection.astro";
-import LandingAboutUsSection from "../components/vue/Landing/aboutUsSection.astro";
-import LandingOurServices from "../components/vue/Landing/OurServices.vue";
-import ContactSection from "../components/vue/Landing/ContactSection.astro";
-import BrandFooter from "../components/vue/_baseUi/BrandFooter.astro";
+import HeroSection from "@components/vue/Landing/HeroSection.vue";
+import StructurePaddingContainer from "@components/vue/_structure/paddingContainer.vue";
+import LandingPorfolioSection from "@components/vue/Landing/PorfolioSection.astro";
+import LandingIntroSection from "@components/vue/Landing/IntroSection.astro";
+import LandingAboutUsSection from "@components/vue/Landing/aboutUsSection.astro";
+import LandingOurServices from "@components/vue/Landing/OurServices.astro";
+import ContactSection from "@components/vue/Landing/ContactSection.astro";
+import BrandFooter from "@components/vue/_baseUi/BrandFooter.astro";
 ---
 
 <Layout title="Hermes Estudio">
@@ -27,11 +27,11 @@ import BrandFooter from "../components/vue/_baseUi/BrandFooter.astro";
     <!-- Nuestros Servicios -->
     <StructurePaddingContainer>
         
-      <LandingOurServices client:only/>
+      <LandingOurServices />
     </StructurePaddingContainer>
   
     <!-- Our Work -->
-    <LandingPorfolioSection  client:only/>
+    <LandingPorfolioSection/>
   
     <!-- Contact Section -->
     <ContactSection/>

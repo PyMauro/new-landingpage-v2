@@ -2,12 +2,13 @@
 // @ts-ignore
 import StructureBasicBlock from "../_structure/basicBlock.vue";
 import StructurePaddingContainer from "../_structure/paddingContainer.vue";
+import OptimizedImage from '@components/vue/content/OptimizedImage.astro'
 import MeImg from '../../../assets/Me.png';
 import { Image } from 'astro:assets';
 ---
 
 <!-- About Us Section -->
-<section class="w-full h-full overflow-hidden" id="aboutUsSection">
+<section class="w-full overflow-hidden" id="aboutUsSection">
         <StructureBasicBlock
           extra-borders="bottom-border"
           class="bg-neutral-100 rounded-3xl"
@@ -46,7 +47,7 @@ import { Image } from 'astro:assets';
                     no solo sobrevivir a este avance cada vez mas veloz, sino crecer a la
                     velocidad del cambio.
                   </p>
-                  <Image
+                  <OptimizedImage
                   src={MeImg}
                   alt="Primera plana de Mauro sentado sobre un sofa futon, imagen con ruido vectorial."
                   class="relative md:absolute w-full -right-1/12 md:-right-3/4 md:-top-32 md:w-3/5 z-10"

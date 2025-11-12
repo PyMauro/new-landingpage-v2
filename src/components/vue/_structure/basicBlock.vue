@@ -1,19 +1,25 @@
 <template>
-    <div class="w-full h-fit border-l border-r border-l-stone-700 border-r-stone-700" :class="{
-  'border-l border-r border-l-stone-700 border-r-stone-700': true, // siempre
-  'border border-t-stone-700 border-b-stone-700': props.extraBorders === 'full-borders',
-  'border-t border-t-stone-700': props.extraBorders === 'top-border',
-  'border-b border-b-stone-700': props.extraBorders === 'bottom-border',
-}">
-        <slot name="no-padding">
-            <div class="w-full h-fit"></div>
-        </slot>
-        <div class="w-full h-fit" :class="{
-            'p-4': props.padding === 'padding',}">
-            <slot ></slot>
-        </div>
+  <div
+    class="w-full border-l border-r border-l-stone-700 border-r-stone-700"
+    :class="{
+      'border-t border-b border-t-stone-700 border-b-stone-700': props.extraBorders === 'full-borders',
+      'border-t border-t-stone-700': props.extraBorders === 'top-border',
+      'border-b border-b-stone-700': props.extraBorders === 'bottom-border',
+    }"
+  >
+    <slot name="no-padding" />
+
+    <div
+      class="w-full py-8"
+      :class="{
+        'p-4': props.padding === 'padding',
+      }"
+    >
+      <slot />
     </div>
+  </div>
 </template>
+
 <script setup lang="ts">
 const props = defineProps({
     extraBorders: {

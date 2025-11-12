@@ -60,15 +60,15 @@ const { title, mainBgColor, showPreloader = true } = Astro.props;
 </script>
   </head>
 
-  <body>
-    <div class:list={["relative", mainBgColor ? mainBgColor : "bg-black"]}>
+  <body class="min-h-full">
+    <div class:list={["relative","overflow-hidden", mainBgColor ? mainBgColor : "bg-black"]}>
       {showPreloader && (
         <>
           <Preloader client:only="vue" />
           <div
-            id="preloader-fallback"
-            class="absolute left-0 top-0 w-full h-[200vh] z-20 bg-black"
-          ></div>
+  id="preloader-fallback"
+  class="absolute inset-0 w-full h-full z-20 bg-black"
+></div>
         </>
       )}
 
@@ -78,7 +78,7 @@ const { title, mainBgColor, showPreloader = true } = Astro.props;
         </header>
       </StructurePaddingContainer>
 
-      <main class="add-texture overflow-x-hidden">
+      <main class="overflow-x-hidden">
         <slot />
       </main>
     </div>

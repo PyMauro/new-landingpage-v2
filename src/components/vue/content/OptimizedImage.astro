@@ -1,0 +1,26 @@
+---
+// @ts-ignore
+import { Image } from 'astro:assets';
+
+const { src, alt = '', widths = [320, 640, 855, 1200], sizes = '100vw', loading = 'lazy', decoding = 'async', fetchpriority = 'auto', class: className = '', style = '', dataAnimate = '' } = Astro.props;
+
+// Calculamos la relación de aspecto si el src tiene width/height
+const aspectRatio = src.width && src.height ? `${src.width} / ${src.height}` : undefined;
+---
+
+<div
+  class={`relative ${className}`}
+  style={style ? `${style}${aspectRatio ? `; aspect-ratio: ${aspectRatio};` : ''}` : aspectRatio ? `aspect-ratio: ${aspectRatio};` : undefined}
+  data-animate={dataAnimate}
+>
+  <Image
+    src={src}
+    alt={alt}
+    widths={widths}
+    sizes={sizes}
+    loading={loading}
+    decoding={decoding}
+    fetchpriority={fetchpriority}
+    class="w-full h-full object-cover"
+  />
+</div>

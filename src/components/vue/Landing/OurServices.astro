@@ -1,0 +1,52 @@
+---
+//@ts-ignore
+import StructureBasicBlock from "../_structure/basicBlock.vue";
+import ServiceCard from "@components/vue/content/ServiceCard.astro"; // si ya lo convertiste a Astro
+
+// Assets
+import identidadVisual from "@assets/services/branding-portada.webp"
+import branding from "@assets/services/branding-portada.webp"
+import edicionVideo from "@assets/services/edicion-de-video-portada.webp"
+import disenoGrafico from "@assets/services/diseño-grafico-portada.webp"
+import desarrolloWeb from "@assets/services/desarollo-web-portada.webp"
+import gestionRedes from "@assets/services/gestion-de-redes-portada.webp"
+
+const services = [
+  { title: "Identidad Visual", image: identidadVisual },
+  { title: "Branding", bgColor: "bg-orange-300", image: branding },
+  { title: "Edicion de Video", bgColor: "bg-amber-300", image: edicionVideo },
+  { title: "Diseño Grafico", bgColor: "bg-emerald-300", image: disenoGrafico },
+  { title: "Desarollo Web", bgColor: "bg-violet-300", image: desarrolloWeb },
+  { title: "Gestion de Redes", bgColor: "bg-stone-950", image: gestionRedes },
+];
+---
+<section id="our-services" class="w-full">
+  <StructureBasicBlock extraBorders="bottom-border" padding="padding">
+    <StructureBasicBlock extraBorders="bottom-border">
+      <h2 text-split words-slide-up class="font-semibold text-neutral-100 font-heading py-4">
+        <span class="text-stone-700 pr-2 md:pr-8">3.</span>Nuestros Servicios
+      </h2>
+    </StructureBasicBlock>
+
+    <div class="w-full h-fit flex flex-col gap-2 p-4 md:p-8">
+     {services.map(service => {
+  return (
+    <ServiceCard
+      data-animate="from-bottom"
+      serviceTitle={service.title}
+      bgColor={service.bgColor || undefined}
+      image={service.image}
+    />
+  );
+})}
+    </div>
+  </StructureBasicBlock>
+</section>
+
+<script>
+  // Inicializa animaciones GSAP
+  import { initAllAnimations } from '@animations/initAnimations.js';
+  window.addEventListener('finishedPreloader', () => {
+    initAllAnimations();
+  });
+</script>

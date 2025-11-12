@@ -1,0 +1,75 @@
+---
+import StructureBasicBlock from "../_structure/basicBlock.vue";
+import StructurePaddingContainer from "../_structure/paddingContainer.vue";
+import PortafolioCard from "@components/vue/content/PorfolioCard.astro";
+import sinGlu from '@assets/portfolio/singlu.webp'
+import femenina from '@assets/portfolio/femenina.webp'
+import rominaMacri from '@assets/portfolio/romina-macri.webp'
+import clickInformativo from '@assets/portfolio/clickInformativo.webp'
+
+
+const animatedEntry = true
+const cards = [
+  {
+    title: 'Identidad Visual: SinGlu, comida casera, sin gluten y 100% organica.',
+    serviceType: 'Identidad Visual',
+    urlImage: sinGlu
+  },
+  {
+    title: 'Branding: Femenina, un negocio amado por sus clientes.',
+    serviceType: 'Branding, Desarollo Web, Consultoria',
+    urlImage: femenina
+  },
+  {
+    title: 'Identidad Visual: Romina Macri, expandiendo la cardiología al publico.',
+    serviceType: 'Desarollo Web, Gestion de Redes',
+    urlImage: rominaMacri
+  },
+  {
+    title: 'Desarollo Web: Click Informativo, la voz de la sociedad.',
+    serviceType: 'Identidad Visual, Desarollo Web',
+    urlImage: clickInformativo
+  }
+];
+---
+
+<section id="portfolioSection" class="w-full">
+  <StructureBasicBlock extraBorders="bottom-border" class="bg-neutral-100 rounded-3xl">
+    <StructurePaddingContainer padding="padding">
+      <StructureBasicBlock extraBorders="bottom-border" padding="padding">
+        <h2 text-split words-slide-up class="font-semibold text-black font-heading">
+          <span class="text-stone-700 pr-2 md:pr-8">4.</span>Nuestro Trabajo Habla por Si Solo
+        </h2>
+      </StructureBasicBlock>
+
+      <StructureBasicBlock padding="padding">
+        <div class="w-full flex flex-col gap-2">
+          {cards.map(card => (
+            <div>
+              <PortafolioCard
+              
+                title={card.title}
+                serviceType={card.serviceType}
+                urlImage={card.urlImage}
+              />
+            </div>
+          ))}
+        </div>
+      </StructureBasicBlock>
+    </StructurePaddingContainer>
+  </StructureBasicBlock>
+</section>
+<script >
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  
+  function init() {
+    //@ts-ignore
+    import('@animations/initAnimations.js').then(module => {
+      module.initAllAnimations();
+    });
+  }
+</script>

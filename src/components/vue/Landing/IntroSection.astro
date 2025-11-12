@@ -1,47 +1,71 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from 'astro:assets'
 //@ts-ignore
-import StructureBasicBlock from "../_structure/basicBlock.vue";
-import IndifferenceImage from "../../../assets/phone-epidemic.webp";
+import StructureBasicBlock from "../_structure/basicBlock.vue"
+import IndifferenceImage from "../../../assets/phone-epidemic.webp"
+import OptimizedImage from '@components/vue/content/OptimizedImage.astro'
+const { width,height } = IndifferenceImage
 ---
 
-<section id="introSection" class="w-full h-full">
+<section 
+  id="introSection" 
+  class="relative w-full min-h-screen overflow-hidden"
+>
   <StructureBasicBlock extra-borders="bottom-border" padding="padding">
-    <template #no-padding>
-      <StructureBasicBlock extra-borders="bottom-border" padding="padding" class="mt-8">
-        <!-- <h2 class="font-semibold text-neutral-100 font-heading">
-          <span class="text-stone-700 pr-2 md:pr-8">1.</span>Bienvenido al Mundo Moderno
-        </h2> -->
-      </StructureBasicBlock>
-    </template>
-    <div class="flex flex-col gap-4 w-full">
-      <h2 text-split words-slide-up class="font-semibold text-neutral-100 font-heading">
-          <span class="text-stone-700 pr-2 md:pr-8">1.</span>Bienvenido al Mundo Moderno
-        </h2>
-      <p text-split words-slide-up class="font-body text-xl text-neutral-300">
-        Un mundo donde la atención se volvió el nuevo oro y cada vez es mas
-        escaso. Donde ya nadie tiene tiempo. Donde existen maquinas pensantes
-        que incluso controlan negocios enteros. Y si, suena loco pero es el
-        mundo en el que estamos ahora, y donde estas intentando hacer que tu
+    <div class="flex flex-col gap-6 w-full">
+      <!-- Título con espacio reservado -->
+      <h2 
+        text-split 
+        words-slide-up 
+        class="font-semibold text-neutral-100 font-heading text-3xl sm:text-4xl leading-tight"
+        style="min-height: 3.5rem;" 
+      >
+        <span class="text-stone-700 pr-2 md:pr-8">1.</span>
+        Bienvenido al Mundo Moderno
+      </h2>
+
+      <!-- Párrafo inicial -->
+      <p 
+        text-split 
+        words-slide-up 
+        class="font-body text-xl text-neutral-300 leading-relaxed"
+        style="min-height: 7rem;"
+      >
+        Un mundo donde la atención se volvió el nuevo oro y cada vez es más
+        escaso. Donde ya nadie tiene tiempo. Donde existen máquinas pensantes
+        que incluso controlan negocios enteros. Y sí, suena loco pero es el
+        mundo en el que estamos ahora, y donde estás intentando hacer que tu
         negocio funcione.
       </p>
-      <Image
-      src={IndifferenceImage}
-      alt="La indiferencia del consumidor"
-      class="w-full h-auto md:h-80 md:object-cover rounded-lg shadow-lg"
-      data-animate="from-bottom"
-      />
-      <p text-split words-slide-up class="font-body text-xl text-neutral-300">
-        Hoy en dia, hay mucha mas exposición. Pero eso a su vez, trae mas
+
+      <!-- Imagen con espacio reservado -->
+      <div 
+  class="relative rounded-2xl shadow-lg overflow-hidden"
+  style={`aspect-ratio: ${width} / ${height};`}
+  data-animate="from-bottom"
+>
+<OptimizedImage 
+  src={IndifferenceImage} 
+  alt="La indiferencia del consumidor" 
+  fetchpriority="high"
+  loading={false}
+  widths={[320, 640, 960]}
+  dataAnimate="blur-up" 
+  class="w-full h-full object-cover"
+/>
+</div>
+
+      <!-- Párrafo final -->
+      <p 
+        text-split 
+        words-slide-up 
+        class="font-body text-xl text-neutral-300 leading-relaxed"
+        style="min-height: 7rem;"
+      >
+        Hoy en día, hay mucha más exposición. Pero eso a su vez, trae más
         competencia. Hoy, la visibilidad en redes se volvió la diferencia entre
-        un negocio con futuro a uno que sobrevive.
+        un negocio con futuro y uno que apenas sobrevive.
       </p>
     </div>
   </StructureBasicBlock>
 </section>
-<script>
-//@ts-ignore
-import {initAllAnimations} from '@animations/initAnimations.js'
-
-initAllAnimations()
-</script>
