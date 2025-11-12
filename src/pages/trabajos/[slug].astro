@@ -16,8 +16,6 @@ export async function getStaticPaths() {
   return slugs.map((p) => ({ params: { slug: p.slug } }));
 }
 
-export const prerender = false;
-
 const { slug } = Astro.params;
 const project = await sanity.fetch(projectBySlugQuery, { slug });
 ---
