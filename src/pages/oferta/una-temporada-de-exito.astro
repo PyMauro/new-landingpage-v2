@@ -1,0 +1,368 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import BrandButton from "@components/vue/Brand/Button.vue";
+import portadaOferta from "@assets/spots/asegurate-una-buena-temporada-assets/portada-oferta.webp"
+import cariciasBrandboard from "@assets/spots/asegurate-una-buena-temporada-assets/Caricias-brandboard.webp"
+import cariciasSign from "@assets/spots/asegurate-una-buena-temporada-assets/caricias-al-sol-sign.webp"
+import womanAlbornoz from "@assets/spots/asegurate-una-buena-temporada-assets/woman-in-albornoz.webp"
+import chanclas from "@assets/spots/asegurate-una-buena-temporada-assets/chanclas-caricias-del-sol.webp"
+import toalla from "@assets/spots/asegurate-una-buena-temporada-assets/caricias-del-sol-toalla.webp"
+
+import toteBag from "@assets/spots/asegurate-una-buena-temporada-assets/tote-bag-mockup.webp"
+import sunbeds from "@assets/spots/asegurate-una-buena-temporada-assets/Sunbeds-Mockup.webp"
+import logoVar from "@assets/spots/asegurate-una-buena-temporada-assets/logo-variations.webp"
+import delantal from "@assets/spots/asegurate-una-buena-temporada-assets/delantal-caricias-de-sol-mockup.webp"
+import hat from "@assets/spots/asegurate-una-buena-temporada-assets/caricias-de-sol-hat.webp"
+import ContactForm from "@components/vue/functional/contactForm.vue";
+import BrandFooter from "@components/vue/_baseUi/BrandFooter.astro";
+
+
+//@ts-ignore
+import StructureBasicBlock from "../../components/vue/_structure/basicBlock.vue";
+---
+
+<Layout
+  title="Asegurate una buena temporada"
+  mainBgColor="bg-amber-50"
+  showPreloader={true}
+>
+  <!-- START Hero section Intro -->
+  <section id="heroSection" class="w-full overflow-hidden">
+    <StructureBasicBlock
+      padding="no-padding"
+      extra-borders="no-extra-borders"
+      class="bg-amber-50 h-full py-0"
+    >
+      <div slot="no-padding" class="py-0 my-0">
+        <div class="w-full h-screen bg-amber-50 py-0 relative overflow-hidden rounded-2xl p-2">
+          <div class="hero-mask absolute left-1/2 top-1/2 -translate-x-1/2  overflow-hidden rounded-2xl -translate-y-1/2 w-full h-full p-2">
+            <Image
+              src={portadaOferta} 
+              alt="portada de oferta de temporada" 
+              class="mask-portada w-full h-full object-cover object-center rounded-2xl"
+            />
+          </div>
+
+          <div class="hero-content-block relative z-10 w-full h-full flex justify-center flex-col items-center">
+                <div class="w-fit h-fit absolute -rotate-12 top-1/4 left-0 sm:top-[55%] sm:left-1/4 px-5 py-3 origin-top-left text-center sm:-rotate-3 bg-orange-300 rounded-2xl shadow-[2.281935453414917px_2.281935453414917px_0px_0px_rgba(253,186,116,1.00),-2.281935453414917px_2.281935453414917px_0px_0px_rgba(253,186,116,1.00),]  2.281935453414917px_-2.281935453414917px_0px_0px_rgba(253,186,116,1.00),-2.281935453414917px_-2.281935453414917px_0px_0px_rgba(253,186,116,1.00)]  outline-2 outline-offset-[-2.28px] outline-orange-200 inline-flex justify-start items-center gap-1">
+                    <p class="justify-start text-orange-900 caption font-light font-['Nohemi'] leading-5">Solo </p>
+                    <p class="justify-start text-orange-900 caption font-medium font-['Nohemi'] leading-5">6 cupos restantes.</p>
+                </div>
+                <h1 class="z-10 text-center text-gray-50 leading-[-1.2%] flex flex-col heading font-heading w-full md:w-3/5 justify-center">
+                <span class="md:self-start">CON ESTA PROMO</span>
+                <span class="text-orange-200">ASEGURATE UNA TEMPORADA</span>
+                <span class="md:self-end text-[clamp(70px, 2vw, 170px)]">LLENA DE RESERVAS</span>
+                </h1>
+                <div class="px-6 md:px-0 flex flex-col md:flex-row justify-center gap-4 w-full py-4 font-light">
+                <BrandButton data-animate="from-bottom" text="Reservar Cupo" bgColor="bg-amber-500 text-stone-800 px-4" href="#contactSection" />
+                </div>
+                <!-- Sticker -->
+                <div class="w-fit h-fit absolute top-1/6 rotate-12 -right-1 sm:top-52 sm:right-1/4 px-5 py-3 origin-top-left text-center sm:-rotate-3 bg-yellow-400 rounded-2xl shadow-[2.281935453414917px_2.281935453414917px_0px_0px_rgba(253,186,116,1.00),-2.281935453414917px_2.281935453414917px_0px_0px_rgba(253,186,116,1.00),]  2.281935453414917px_-2.281935453414917px_0px_0px_rgba(253,186,116,1.00),-2.281935453414917px_-2.281935453414917px_0px_0px_rgba(253,186,116,1.00)]  outline-2 outline-offset-[-2.28px] outline-orange-200 inline-flex justify-start items-center gap-1">
+                    <p class="justify-start text-orange-900 caption font-medium font-['Nohemi'] leading-5">Con un descuento  increible</p>
+                </div>
+          </div>
+        </div>
+      </div>
+    </StructureBasicBlock>
+  </section>
+
+  <!-- Seccion 2 -->
+  <section id="descriptionSection" class="w-full overflow-hidden min-h-screen">
+    <StructureBasicBlock
+      padding="no-padding"
+      extra-borders="no-extra-borders"
+      class="bg-amber-50 h-full py-0"
+      >
+      <div slot="no-padding" class="my-0 p-4">
+        <div class=" w-full rounded-2xl bg-blue-900 px-4  sm:px-8 py-16 flex flex-col items-center">
+            <h2 text-split words-slide-up class="text-center sm:text-left heading flex flex-col justify-center items-center font-heading">
+                <span>Hay muchos hoteles y alojamientos,</span>
+                <span>Pero pocos destacan. </span>
+            </h2>
+            <div class="flex flex-col gap-4 w-full sm:w-3/4 py-8">
+                <p text-split words-slide-up class="text-center text-neutral-100">Y la diferencia esta a la vista, <strong class="font-bold">no todos te hacen sentir algo al verlos.</strong><br>  Los turistas buscan conectar con un lugar, buscan asegurarse que sea el indicado.</p>
+                <p text-split words-slide-up class="text-center text-neutral-100">Si queres que decidan reservar al instante de ver tu alojamiento, debe enamorar a primera vista. Y <strong class="font-bold">ese es mi trabajo, traducir ideas identidades visuales que enamoren.</strong> </p>
+            </div>
+            <div class="flex flex-col w-full gap-2 px-2">
+                  <Image 
+                    data-animate="from-bottom"
+                    src={cariciasBrandboard}
+                    format="webp"
+                    loading='lazy'
+                    widths={[320, 640, 765,1200]}
+                    alt="Caricias de sol totebag"
+                    class="hidden sm:block  rounded-xl w-full max-h-1/2 aspect-video  object-cover"
+                    />
+                    <div class="flex sm:hidden flex-col gap-2">
+                                <Image 
+                                    data-animate="from-bottom"
+                                    src={sunbeds}
+                                    format="webp"
+                                    loading='lazy'
+                                    widths={[320, 640, 765,1200]}
+                                    alt="Caricias de sol sunbeds"
+                                    class="w-full block sm:hidden  rounded-xl max-h-1/2 aspect-video  object-cover"
+                            />
+                                   <Image 
+                                    data-animate="from-bottom"
+                                    src={toteBag}
+                                    format="webp"
+                                    loading='lazy'
+                                    widths={[320, 640, 765,1200]}
+                                    alt="Caricias de sol totebag"
+                                    class="w-full block sm:hidden  rounded-xl max-h-1/2 aspect-video  object-cover"
+                            />
+                            <Image 
+                                    data-animate="from-bottom"
+                                    src={logoVar}
+                                    format="webp"
+                                    loading='lazy'
+                                    widths={[320, 640, 765,1200]}
+                                    alt="Caricias de sol Logo variations"
+                                    class="block sm:hidden  rounded-xl w-full max-h-1/2 aspect-video  object-cover"
+                            />
+                            <Image 
+                                    data-animate="from-bottom"
+                                    src={cariciasBrandboard}
+                                    format="webp"
+                                    loading='lazy'
+                                    widths={[320, 640, 765,1200]}
+                                    alt="Caricias de sol Brandboard"
+                                    class="block sm:hidden  rounded-xl w-full max-h-1/2 aspect-video  object-cover"
+                            />
+                            <Image 
+                                    data-animate="from-bottom"
+                                    src={delantal}
+                                    format="webp"
+                                    loading='lazy'
+                                    widths={[320, 640, 765,1200]}
+                                    alt="Caricias de sol Brandboard"
+                                    class="block sm:hidden  rounded-xl w-full max-h-1/2 aspect-video  object-cover"
+                            />
+
+                            <Image 
+                                    data-animate="from-bottom"
+                                    src={hat}
+                                    format="webp"
+                                    loading='lazy'
+                                    widths={[320, 640, 765,1200]}
+                                    alt="Caricias de sol Brandboard"
+                                    class="block sm:hidden  rounded-xl w-full max-h-1/2 aspect-video  object-cover"
+                            />
+                    </div>
+                <div class="flex-col md:flex-row flex gap-2 w-full">
+                    <Image 
+                    data-animate="from-bottom"
+                    src={cariciasSign}
+                    format="webp"
+                    loading='lazy'
+                    class='w-full md:w-1/2 h-full max-h-1/2 rounded-xl aspect-video  object-cover'
+                    widths={[320, 640, 765,1200]}
+                    alt="Caricias de sol cartel render"
+                    />
+                    <Image 
+                        data-animate="from-bottom"
+                        src={womanAlbornoz}
+                        format="webp"
+                        loading='lazy'
+                        class='w-full md:w-1/2  object-cover h-full max-h-1/2 rounded-xl aspect-video object-bottom'
+                        widths={[320, 640,765]}
+                        alt="Caricias de sol Moodboard"
+                    />
+                </div>
+                <div class="flex flex-col md:flex-row gap-2 w-full">
+                    <Image 
+                    data-animate="from-bottom"
+                    src={chanclas}
+                    format="webp"
+                    loading='lazy'
+                    class='w-full md:w-1/2 h-full max-h-1/2 rounded-xl aspect-video  object-cover'
+                    widths={[320, 640, 765,1200]}
+                    alt="Caricias de sol chanclas"
+                    />
+                    <Image 
+                        data-animate="from-bottom"
+                        src={toalla}
+                        format="webp"
+                        loading='lazy'
+                        class='w-full md:w-1/2 h-full max-h-1/2 rounded-xl aspect-video object-cover'
+                        widths={[320, 640,765]}
+                        alt="Caricias de sol toalla"
+                    />
+                </div>
+            </div>
+            <div class="flex flex-col items-center gap-4 sm:w-4/5 py-8 ">
+                <p text-split words-slide-up class="w-full text-center text-neutral-100">Si te gustaria que tu alojamiento se viera como las imagenes de arriba y entendes la importancia de que tu alojamiento se vea profesional, <strong class="font-bold">este es tu momento</strong>.</p>
+                <p text-split words-slide-up class="w-full text-center text-neutral-100"> Una identidad visual bien hecha y estrategica, es atemporal, <strong class="font-bold">es una inversion de una vez y que asegura una presencia profesional</strong> por todo el tiempo que dure tu alojamiento.</p>
+                <div data-animate="from-bottom">
+                    <BrandButton text="Quiero renovar mi presencia" bgColor="bg-amber-500 text-stone-800 px-4" href="#contactSection" />
+                </div>
+            </div>
+        </div>
+      </div>
+    </StructureBasicBlock>
+</section>
+
+  <!-- Seccion 3 -->
+  <section id="CTASection" class="w-full overflow-hidden min-h-screen">
+    <StructureBasicBlock
+      padding="no-padding"
+      extra-borders="no-extra-borders"
+      class="bg-amber-50 h-full py-0"
+      >
+      <div slot="no-padding" class="my-0 p-4">
+        <div class=" w-full rounded-2xl gap-4 bg-orange-300 px-4 sm:px-8 py-16 flex flex-col items-center">
+            <div class="relative w-full flex justify-center">
+                                <!-- Sticker -->
+                <div data-animate="from-bottom" class="md:w-1/4 h-fit absolute -top-10 rotate-3 left-1/12 sm:-top-8 md:left-[calc(50%-120px)] lg:right-[calc(30%-120px)] px-5 py-3 origin-top-left text-center sm:-rotate-3 bg-yellow-400 rounded-2xl shadow-[2.281935453414917px_2.281935453414917px_0px_0px_rgba(253,186,116,1.00),-2.281935453414917px_2.281935453414917px_0px_0px_rgba(253,186,116,1.00),]  2.281935453414917px_-2.281935453414917px_0px_0px_rgba(253,186,116,1.00),-2.281935453414917px_-2.281935453414917px_0px_0px_rgba(253,186,116,1.00)]  outline-2 outline-offset-[-2.28px] outline-orange-200 inline-flex justify-start items-center gap-1">
+                    <p class="justify-start w-full text-orange-900 caption font-medium font-['Nohemi'] leading-5">(Encima con un descuentazo)</p>
+                </div>
+                <h2 text-split words-slide-up class="text-6xl flex md:hidden z-10 text-center text-gray-50 leading-[0.9] flex-col heading font-heading w-full md:w-4/5 justify-center">
+                    <span class="">Nos Aseguramos que tu alojamiento</span>
+                    <span class="text-amber-300">Tenga la presencia que se merece</span>
+                </h2>
+                <h2 text-split words-slide-up class="hidden md:flex z-10 text-center text-gray-50 leading-[-1.2%] flex-col heading font-heading w-full md:w-4/5 justify-center">
+                    <span class="">Nos Aseguramos que tu alojamiento</span>
+                    <span class="text-amber-300">Tenga la presencia que se merece</span>
+                </h2>
+            </div>
+            <div class="flex flex-col items-center gap-2 pt-4 md:pt-6">
+                <p text-split words-slide-up class="text-center font-medium w-full md:max-w-1/2">Armamos un Paquete completo con todo lo que necesitás para que tu marca inspire confianza y profesionalismo:</p>
+                <div class="flex flex-row flex-wrap justify-center w-full md:max-w-3/4 text-sky-900 gap-x-2 gap-y-0 font-semibold">
+                    <p text-split words-slide-up class="font-semibold text-center">Diseño de logo</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">Paleta de colores</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">Un Manual de uso de la identidad de +20 paginas</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">Tipos de letra</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">Combinaciones de fuentes</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">Variaciones de Logo</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">Aplicaciones Visuales</p>
+                </div>
+                <div class="flex flex-col gap-2">
+                <p text-split words-slide-up class="text-center font-medium">Todo eso mas contenido diseñado para convertir.:</p>
+                <div class="flex flex-row flex-wrap justify-center items-center w-full  text-sky-900 gap-x-2 gap-y-0 font-semibold">
+                    <p text-split words-slide-up class="font-semibold text-center">5 historias para redes</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">1 Reel/Tik Tok publicitable</p><span>-</span>
+                    <p text-split words-slide-up class="font-semibold text-center">2 Carrouseles Optimizados para presentarte</p>
+                </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </StructureBasicBlock>
+  </section>
+  <!-- Contact Section -->
+    <!-- START Contact Section -->
+    <section class="w-full">
+        <StructureBasicBlock
+          extra-borders="bottom-border"
+          class="min-h-full"
+        >
+              <div slot="no-padding" class="my-0 p-4">
+                  <div class=" w-full rounded-2xl gap-4 bg-violet-300 px-4 sm:px-8 flex flex-col items-center">
+                        
+          <div class="w-full flex flex-col gap-4 py-4 items-center">
+            <div class="flex flex-col gap-2">
+              <h2
+                text-split
+                words-slide-from-right
+                class="heading font-body text-center px-1 font-bold leading-[95%] tracking-tight py-4 text-balance text-6xl "
+              >
+                que tu alojamiento sea un iman de reservas nunca estuvo tan cerca ¿Te lo vas a perder?
+              </h2>
+              <p  text-split
+                words-slide-from-right class="text-xl font-medium font-body text-center px-8" >👉 Reservá tu cita ahora y asegurá tu cupo antes de que se acaben.</p>
+            </div>
+            <ContactForm client:visible />
+          </div>
+        </div>
+    </div>
+        </StructureBasicBlock>
+      <!-- END Contact Section -->
+
+          <!-- Brand Footer -->
+      <BrandFooter isLanding={false}/>
+  <script>
+    import gsap from 'gsap'
+    // Carga diferida de animaciones generales (sin tocar)
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() =>
+      import('@animations/initAnimations.js').then(m => m.initAllAnimations())
+    );
+  } else {
+    setTimeout(() =>
+      import('@animations/initAnimations.js').then(m => m.initAllAnimations()), 500
+    );
+  }
+
+  // ⚡ Escuchar el evento del preloader
+  const handlePreloaderEnd = () => {
+    setTimeout(
+      requestAnimationFrame(() => {
+        const heroContent = document.querySelector('.hero-content-block');
+        const mask = document.querySelector('.hero-mask');
+  
+        const tl = gsap.timeline();
+  
+        // 1️⃣ Portada (mask-portada) aparece
+        tl.from(".mask-portada", { 
+          scale: 2, 
+          opacity: 0,
+          duration: 1.6,
+          ease: "power3.out"
+        })
+  
+        // 2️⃣ Cierre de máscara
+        .to(mask, { 
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          scale: 0.95,
+          duration: 1.4,
+          ease: "power4.out"
+        }, "-=0.6")
+  
+        // 3️⃣ Entrada del contenido (texto y botones)
+        .from(heroContent, { 
+          opacity: 0, 
+          y: 80, 
+          scale: 0.95, 
+          duration: 1.4, 
+          ease: "power2.out" 
+        }, "-=1");
+      })
+    ,400)
+  };
+
+  // Si el preloader ya terminó antes del mount (por recarga), disparamos igual
+  if (window.preloaderFinished) {
+    handlePreloaderEnd();
+  } else {
+    // Escuchamos el evento global
+    window.addEventListener('finishedPreloader', handlePreloaderEnd, { once: true });
+  }
+  </script>
+  <script>
+     window.addEventListener("finishedPreloader", async () => {
+        const { initAllAnimations } = await import(
+        //@ts-ignore
+          "@animations/initAnimations.js"
+        );
+        initAllAnimations();
+      });
+    </script>
+</Layout>
+
+<style scoped>
+.hero-mask {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: polygon(30% 30%, 70% 30%, 70% 70%, 30% 70%);
+}
+
+.mask-portada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* se adapta al contenedor */
+  object-position: center; /* centrada */
+}
+</style>
