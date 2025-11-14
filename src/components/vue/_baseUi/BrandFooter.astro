@@ -7,7 +7,7 @@ import StructurePaddingContainer from "../_structure/paddingContainer.vue";
 import { Icon } from 'astro-icon/components'; 
 const thisYear = new Date().getFullYear();
 const actualYearString = thisYear.toString();
-
+const { isLanding = true } = Astro.props
 ---
 
 <footer class="w-full h-full border-t-3xl overflow-hidden mt-32 lg:mt-0">
@@ -46,6 +46,7 @@ const actualYearString = thisYear.toString();
               class="w-full h-fit flex flex-col md:flex-row px-2 md:px-4 gap-2"
             >
               <!-- Services Link -->
+              { isLanding ? 
               <div
                 class="w-full md:w-1/2 flex-col md:flex-row flex justify-center"
               >
@@ -73,7 +74,8 @@ const actualYearString = thisYear.toString();
                       >5. Contactanos</a>
                   </li>
                 </ul>
-              </div>
+              </div> : ''
+              }
                             <!-- Services Link -->
               <div
                 class="w-full md:w-1/2 flex flex-col md:flex-row justify-center"
@@ -81,32 +83,52 @@ const actualYearString = thisYear.toString();
                 <h3 class="font-semibold font-heading">Servicios</h3>
                 <ul class="flex flex-col gap-1 pl-4">
                   <li>
+                    {isLanding ?  
                     <a href="#our-services" class="underline text-neutral-700 text-lg"
+                      >Identidad Visual</a> : 
+                      <a href="servicios/identidad-visual" class="underline text-neutral-700 text-lg"
                       >Identidad Visual</a>
+                    }
                   </li>
                   <li>
-                    <a href="#our-services" class="underline text-neutral-700 text-lg"
-                      >Identidad Visual</a>
+                     {isLanding ?  
+                      <a href="#our-services" class="underline text-neutral-700 text-lg"
+                        >Edicion de Video</a> : 
+                      <a href="servicios/edicion-de-video" class="underline text-neutral-700 text-lg"
+                        >Edicion de Video</a>
+                    }
                   </li>
                   <li>
-                    <a href="#our-services" class="underline text-neutral-700 text-lg"
-                      >Edicion de Video</a>
-                  </li>
-                  <li>
-                    <a href="#our-services" class="underline text-neutral-700 text-lg"
+                      {isLanding ?  
+                          <a href="#our-services" class="underline text-neutral-700 text-lg"
+                      >Desarollo Web</a> : 
+                     <a href="servicios/desarollo-web" class="underline text-neutral-700 text-lg"
                       >Desarollo Web</a>
+                    }
+
                   </li>
                   <li>
-                    <a href="#our-services" class="underline text-neutral-700 text-lg"
+                    {isLanding ?  <a href="#our-services" class="underline text-neutral-700 text-lg"
+                      >Creacion de Contenido</a> : 
+                      <a href="servicios/gestion-contenido" class="underline text-neutral-700 text-lg"
                       >Creacion de Contenido</a>
+                    }
                   </li>
                   <li>
+                    {isLanding ? 
                     <a href="#our-services" class="underline text-neutral-700 text-lg"
-                      >Creacion de Contenido</a>
+                      >Campañas de Publicidad Meta Ads</a> : 
+                      <a href="servicios/campanas-meta-ads" class="underline text-neutral-700 text-lg"
+                      >Campañas de Publicidad Meta Ads</a>
+                    }
                   </li>
                   <li>
+                    {isLanding ?  
                     <a href="#our-services" class="underline text-neutral-700 text-lg"
+                      >Diseño Grafico</a> : 
+                      <a href="servicios/identidad-visual" class="underline text-neutral-700 text-lg"
                       >Diseño Grafico</a>
+                    }
                   </li>
                 </ul>
               </div>
