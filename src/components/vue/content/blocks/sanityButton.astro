@@ -1,0 +1,19 @@
+---
+import BrandButton from '@components/vue/Brand/Button.vue'; // tu botón original Vue
+const { node } = Astro.props;
+function clean(str) {
+  return str?.replace(/[\u200B-\u200D\uFEFF]/g, '') || '';
+}
+
+const cleanBg = clean(node.bgColor) || 'bg-amber-400';
+---
+
+<div class="w-full flexpy-4">
+  <BrandButton
+    client:load
+    text={node.text}
+    href={node.href}
+    bgColor={cleanBg}
+    class="text-stone-200"
+  />
+</div>

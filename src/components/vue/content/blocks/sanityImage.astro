@@ -1,0 +1,24 @@
+---
+// src/components/blocks/SanityImage.astro
+import { urlFor } from '@utils/sanityUrlFor.js';
+
+const { node } = Astro.props;
+const { alt, caption } = node;
+
+// Generamos la URL optimizada (ancho 1200px, formato auto)
+const imageUrl = urlFor(node).width(1200).auto('format').url();
+---
+
+<figure class="my-10 w-full">
+  <img 
+    src={imageUrl} 
+    alt={alt || "Imagen de la propuesta"} 
+    class="w-full h-auto rounded-lg shadow-lg object-cover"
+    loading="lazy" 
+  />
+  {caption && (
+    <figcaption class="text-center text-gray-400 text-sm mt-2 font-light">
+      {caption}
+    </figcaption>
+  )}
+</figure>
