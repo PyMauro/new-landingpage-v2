@@ -23,8 +23,41 @@
     
 }
 
+@layer components {
+  /* SOLO p directos renderizados por PortableText, NO componentes */
+  .proposal-prose > p {
+    @apply text-neutral-400 leading-relaxed mb-6;
+  }
 
+  .proposal-prose > h2 {
+    @apply text-white font-bold mt-14 mb-6;
+  }
 
+  .proposal-prose > h3 {
+    @apply text-amber-200 font-bold mt-10 mb-4;
+  }
+
+  /* También afecta a spans dentro de block portable text */
+  .proposal-prose > p > span {
+    @apply text-neutral-300;
+  }
+  .proposal-prose > blockquote {
+    @apply bg-neutral-100 text-neutral-900 
+           rounded-2xl 
+           p-8 
+           my-10 
+           text-center 
+           font-body 
+           text-lg
+           md:text-xl
+           border border-neutral-200 
+           shadow-sm;
+  }
+
+  .proposal-prose > blockquote p {
+    @apply m-0 leading-relaxed text-balance font-medium;
+  }
+}
 @keyframes dots {
   0% {
     background-position:
