@@ -2,7 +2,7 @@
 import { sanity } from "../../lib/sanityClient";
 import { projectBySlugQuery } from "../../lib/queries";
 import { PortableText } from "astro-portabletext";
-import Layout from "src/layouts/Layout.astro";
+import SanityLayout from "src/layouts/sanityLayout.astro";
 import BrandFooter from "@components/vue/_baseUi/BrandFooter.astro";
 import ContactSection from "@components/vue/Landing/ContactSection.astro";
 //@ts-ignore
@@ -19,7 +19,7 @@ const { slug } = Astro.params;
 const project = await sanity.fetch(projectBySlugQuery, { slug });
 ---
 
-<Layout title={project.title} showPreloader={true}>
+<SanityLayout title={project.title} showPreloader={true}>
 <StructureBasicBlock extraBorders="bottom-border" padding="no-padding">
   <StructureBasicBlock extraBorders="bottom-border" padding="padding">
 {!project ? (
@@ -134,4 +134,4 @@ const project = await sanity.fetch(projectBySlugQuery, { slug });
     
       <!-- Brand Footer -->
       <BrandFooter/>
-</Layout>
+</SanityLayout>
