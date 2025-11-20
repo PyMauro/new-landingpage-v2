@@ -1,0 +1,102 @@
+---
+import StructurePaddingContainer from "../components/vue/_structure/paddingContainer.vue";
+import "../styles/global.css";
+import OverlayNavbar from "@components/vue/_baseUi/overlayNavbar.vue";
+import Preloader from "@components/vue/Brand/Preloader.vue";
+
+interface Props {
+  title: string;
+  mainBgColor?: string;
+  showPreloader?: boolean; // 👈 nuevo prop
+}
+
+// Valores por defecto
+const { title, mainBgColor, showPreloader = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/hermes-logo.svg" />
+    <link rel="preload" href="/fonts/MangoGrotesque-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Nohemi-Light.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Nohemi-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Nohemi-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <title>{title}</title>
+
+    <!-- Descripción general -->
+    <meta
+      name="description"
+      content="Estudio creativo enfocado en branding, diseño web y desarrollo visual. Hermes: evolución, estrategia, diseño y empatía. Creamos marcas que enamoran a primera vista."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:image" content='/menu-media.webp' />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta
+      property="og:description"
+      content="Hermes: evolución, estrategia, diseño y empatía. Creamos marcas que enamoran a primera vista."
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta
+      name="twitter:description"
+      content="Hermes: evolución, estrategia, diseño y empatía. Creamos marcas que enamoran a primera vista."
+    />
+    <meta name="twitter:image" content="/og-image.jpg" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FPX8SHDQ7C"></script>
+<script>
+  //@ts-ignore
+  window.dataLayer = window.dataLayer || [];
+  //@ts-ignore
+  function gtag(){dataLayer.push(arguments);}
+  //@ts-ignore
+  gtag('js', new Date());
+//@ts-ignore
+  gtag('config', 'G-FPX8SHDQ7C');
+</script>
+  </head>
+
+  <body class="min-h-full">
+    <div class:list={["relative","overflow-hidden", mainBgColor ? mainBgColor : "bg-black"]}>
+       {showPreloader && (
+        <>
+          <Preloader client:only="vue" />
+          <div
+  id="preloader-fallback"
+  class="absolute inset-0 w-full h-full z-20 bg-black"
+></div>
+        </>
+      )}
+      <StructurePaddingContainer>
+        <header>
+          <OverlayNavbar client:load/>
+        </header>
+      </StructurePaddingContainer>
+
+      <main class="overflow-x-hidden">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .bg-noise {
+    background-image: url("../assets/noise.svg");
+    background-repeat: repeat;
+    background-size: auto;
+  }
+</style>
