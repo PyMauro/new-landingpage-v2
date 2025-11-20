@@ -1,0 +1,102 @@
+---
+import { PortableText } from 'astro-portabletext';
+import { sanity } from '../../lib/sanityClient';
+import BrandFooter from '@components/vue/_baseUi/BrandFooter.astro';
+// Importamos los componentes de bloque
+import YoutubeEmbed from '@components/vue/content/blocks/youtubeEmbed.astro';
+import SanityImage from  '@components/vue/content/blocks/sanityImage.astro';
+import SanityLayout from '../../layouts/sanityLayout.astro';
+import SanityButton from '@components/vue/content/blocks/sanityButton.astro';
+
+
+export async function getStaticPaths() {
+  const query = `*[_type == "propuesta"]{ "slug": slug.current }`;
+  const propuestas = await sanity.fetch(query);
+  
+  return propuestas.map((prop) => ({
+    params: { slug: prop.slug },
+  }));
+}
+// 2. Obtener datos de la propuesta actual
+const { slug } = Astro.params;
+const query = `*[_type == "propuesta" && slug.current == $slug][0]`;
+const propuesta = await sanity.fetch(query, { slug });
+// 3. Mapeo de componentes para Portable Text
+
+
+const components = {
+  type: {
+    image: SanityImage,       // Mapea el tipo 'image' de Sanity a tu componente
+    youtubeEmbed: YoutubeEmbed,
+    sanityButton: SanityButton
+}}
+
+---
+
+<SanityLayout showPreloader={true} title={propuesta?.title || "Propuesta"}>
+  <main class="min-h-screen bg-[#0a0a0a] text-gray-200 py-20 px-4 sm:px-6 lg:px-8">
+    
+    <article class="max-w-4xl mx-auto">
+      <header class="mb-16 text-center">
+        <p class="text-purple-400 font-medium uppercase mb-2">Propuesta</p>
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+          {propuesta?.title}
+        </h1>
+        <div class="h-1 w-24 bg-purple-300 mx-auto rounded-full"></div>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none proposal-prose">
+        <PortableText value={propuesta?.body} components={components} />
+      </div>  
+<!-- 
+      <div class="mt-20 pt-10 border-t border-gray-800 text-center">
+        <a href="#contacto" class="inline-block bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-purple-500 hover:text-white transition-colors duration-300">
+          Aceptar Propuesta
+        </a>
+      </div> -->
+    </article>
+    <div class="my-8">
+      <BrandFooter isLanding={false} />
+    </div>
+
+  </main>
+<script>
+  import { initAllAnimations } from "src/animations/initAnimations";
+  window.addEventListener('DOMContentLoaded',() => {
+    document.querySelectorAll("blockquote").forEach(el => {
+      el.classList.add("card-shadow");
+      el.classList.add("text-balance")
+      el.setAttribute("data-animate", "from-bottom");
+    });
+  
+     document.querySelectorAll(".proposal-prose p,.proposal-prose h1,.proposal-prose h2,.proposal-prose h3").forEach(el => {
+      el.setAttribute("text-split","");
+      el.setAttribute("words-slide-from-right","");
+    });
+    initAllAnimations()
+  })
+</script>
+
+<style scoped>
+@reference "tailwindcss";
+p {
+  @apply text-neutral-700 leading-relaxed mb-6;
+}
+
+.prose h2 {
+  @apply text-white text-3xl font-bold mt-14 mb-6;
+}
+
+.prose h3 {
+  @apply text-purple-300 text-2xl font-bold mt-10 mb-4;
+}
+
+.prose strong {
+  @apply text-purple-400;
+}
+
+.prose a {
+  @apply text-purple-300 underline decoration-purple-500 hover:text-purple-100;
+}
+
+</style>
