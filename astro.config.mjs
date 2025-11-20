@@ -5,11 +5,8 @@ import { fileURLToPath } from 'node:url'
 
 
 import tailwindcss from '@tailwindcss/vite';
-
 import vue from '@astrojs/vue';
-
 import icon from "astro-icon";
-
 import sanity from '@sanity/astro';
 
 // https://astro.build/config
@@ -30,6 +27,7 @@ export default defineConfig({
         '@assets' : fileURLToPath(new URL('./src/assets', import.meta.url)),
         '@components' : fileURLToPath(new URL('./src/components', import.meta.url)),
         '@animations' : fileURLToPath(new URL('./src/animations', import.meta.url)),
+        '@utils' : fileURLToPath(new URL('./src/utils', import.meta.url)),
       }
     }
   },
@@ -37,7 +35,7 @@ export default defineConfig({
   integrations: [vue(), icon(), sanity({
       projectId: 'zahdcxw4',
       dataset: 'production',
-      useCdn: false //cambiar esto si la build no va a ser estatica.
+      useCdn: false, //cambiar esto si la build no va a ser estatica.
   }
   )],
   experimental: {
