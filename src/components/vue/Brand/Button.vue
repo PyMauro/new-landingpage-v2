@@ -6,7 +6,7 @@
     :class="btnClassWithBg" class="py-2"
   >
     <p
-      class="caption relative flex font-body items-center justify-center py-2 px-5 gap-1 drop-shadow-[0_-1px_0_rgba(255,255,255,0.25)] active:translate-y-[2px]"
+      class="caption relative flex font-body mb-0 items-center justify-center py-2 px-5 gap-1 drop-shadow-[0_-1px_0_rgba(255,255,255,0.25)] active:translate-y-[2px]"
     >
       {{props.text}}
     </p>
@@ -37,5 +37,5 @@ const handleClick = () => {
   if (props.href) window.location.href = props.href
 }
 
-const btnClassWithBg = `${props.bgColor} relative pointer-events-none border border-white/30 rounded-full before:content-[''] before:absolute before:inset-0 before:rounded-full before:opacity-25 before:bg-[radial-gradient(rgb(255_255_255/_80%)_20%,transparent_20%),radial-gradient(rgb(255_255_255/_100%)_20%,transparent_20%)] before:bg-[length:8px_8px] before:[background-position:0_0,4px_4px] before:mix-blend-hard-light before:animate-[dots_0.5s_linear_infinite]`
+const btnClassWithBg = `relative pointer-events-none border border-white/30 rounded-full before:content-[''] before:absolute before:inset-0 before:rounded-full before:opacity-25 before:bg-[radial-gradient(rgb(255_255_255/_80%)_20%,transparent_20%),radial-gradient(rgb(255_255_255/_100%)_20%,transparent_20%)] before:bg-[length:8px_8px] before:[background-position:0_0,4px_4px] before:mix-blend-hard-light before:animate-[dots_0.5s_linear_infinite] ${props.bgColor} `
 </script>
